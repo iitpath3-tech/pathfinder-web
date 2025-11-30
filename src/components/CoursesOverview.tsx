@@ -6,29 +6,29 @@ import { Button } from "@/components/ui/button";
 const courses = [
   {
     icon: BookOpen,
-    title: "Foundation Builder",
-    description: "Strong fundamentals for Classes 7-10. Build a solid base for competitive exams.",
+    title: "Foundation Program (Classes 8-10)",
+    description: "Build strong fundamentals in Physics, Chemistry, and Mathematics for competitive exams. Early bird batches for NTSE, Olympiads, and JSTSE preparation.",
     gradient: "from-blue-500 to-cyan-500",
     link: "/courses#foundation",
   },
   {
     icon: Rocket,
-    title: "Engineering (JEE)",
-    description: "Comprehensive preparation for JEE Main & Advanced with expert faculty.",
+    title: "JEE Main & Advanced",
+    description: "Comprehensive 2-year program covering complete syllabus with daily practice problems, weekly tests, and intensive rank booster modules.",
     gradient: "from-primary to-blue-600",
     link: "/courses#engineering",
   },
   {
     icon: Stethoscope,
-    title: "Medical (NEET)",
-    description: "Focused training for NEET with proven teaching methodologies.",
+    title: "NEET & AIIMS",
+    description: "Specialized 2-year medical preparation program with integrated Biology, Physics, and Chemistry modules and regular NEET pattern tests.",
     gradient: "from-accent to-red-600",
     link: "/courses#medical",
   },
   {
     icon: Trophy,
-    title: "Olympiad Preparation",
-    description: "5-stage comprehensive training for international olympiad success.",
+    title: "Olympiad Training",
+    description: "Advanced training for NSEP, NSEC, NSEA, NMTC, PRMO, and other national/international Olympiads with specialized faculty.",
     gradient: "from-yellow-500 to-orange-500",
     link: "/courses#olympiad",
   },
@@ -49,7 +49,7 @@ const CoursesOverview = () => {
             Our <span className="text-gradient-primary">Courses</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Choose the right path for your academic journey with our specialized programs.
+            Choose from our carefully designed programs tailored to meet your academic goals and aspirations.
           </p>
         </motion.div>
 

@@ -12,49 +12,49 @@ interface Topper {
 
 const jeeToppers: Topper[] = [
   {
-    name: "Rajesh Kumar",
-    rank: "AIR 47",
+    name: "Arjun Mehta",
+    rank: "AIR 32",
     achievement: "JEE Advanced 2024",
-    college: "IIT Bombay",
-    quote: "IIT PATH's faculty made complex concepts simple.",
+    college: "IIT Bombay (Computer Science)",
+    quote: "The structured approach and personalized attention at IIT PATH were instrumental in my success.",
   },
   {
-    name: "Priya Sharma",
-    rank: "AIR 126",
+    name: "Sneha Patel",
+    rank: "AIR 67",
     achievement: "JEE Advanced 2024",
-    college: "IIT Delhi",
-    quote: "The test series prepared me perfectly for the actual exam.",
+    college: "IIT Delhi (Electrical Engineering)",
+    quote: "Daily practice problems and weekly tests kept me consistently prepared throughout my journey.",
   },
   {
-    name: "Amit Patel",
-    rank: "AIR 203",
+    name: "Rohan Gupta",
+    rank: "AIR 124",
     achievement: "JEE Advanced 2024",
-    college: "IIT Madras",
-    quote: "Supportive environment and excellent teaching methodology.",
+    college: "IIT Madras (Mechanical Engineering)",
+    quote: "The faculty's deep conceptual clarity and doubt-clearing sessions made all the difference.",
   },
 ];
 
 const neetToppers: Topper[] = [
   {
-    name: "Sneha Reddy",
-    rank: "AIR 89",
+    name: "Aditi Sharma",
+    rank: "AIR 45",
     achievement: "NEET 2024",
     college: "AIIMS Delhi",
-    quote: "The biology faculty at IIT PATH is exceptional.",
+    quote: "The integrated approach to Biology, Physics, and Chemistry made my preparation seamless.",
   },
   {
-    name: "Vikram Singh",
-    rank: "AIR 142",
+    name: "Karan Verma",
+    rank: "AIR 98",
     achievement: "NEET 2024",
-    college: "AIIMS Jodhpur",
-    quote: "Regular tests helped me improve consistently.",
+    college: "AIIMS Bhopal",
+    quote: "Regular assessments and performance analytics helped me identify and improve weak areas.",
   },
   {
-    name: "Ananya Gupta",
-    rank: "AIR 267",
+    name: "Meera Iyer",
+    rank: "AIR 176",
     achievement: "NEET 2024",
-    college: "JIPMER",
-    quote: "IIT PATH's study material is comprehensive and well-structured.",
+    college: "Christian Medical College, Vellore",
+    quote: "The subject-wise expert faculty and comprehensive study material were key to my success.",
   },
 ];
 
@@ -90,7 +90,7 @@ const ToppersCarousel = ({ category }: { category: "JEE" | "NEET" }) => {
           {category} <span className="text-gradient-primary">Toppers</span>
         </h2>
         <p className="text-lg text-muted-foreground">
-          Celebrating our students' remarkable achievements
+          Celebrating the outstanding achievements of our students
         </p>
       </motion.div>
 

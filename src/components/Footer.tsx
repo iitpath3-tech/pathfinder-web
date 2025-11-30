@@ -22,7 +22,7 @@ const Footer = () => {
             </div>
             <p className="text-background/70 leading-relaxed mb-4">
               India's premier coaching institute for IIT-JEE, NEET, and Olympiad preparation. 
-              Building future leaders since 2010.
+              Building future engineers and doctors since 2009.
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-full bg-background/10 hover:bg-primary transition-colors duration-300 flex items-center justify-center">
@@ -130,19 +130,19 @@ const Footer = () => {
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
                 <span className="text-background/70">
                   IIT PATH Coaching Center<br />
-                  Mumbai, Maharashtra, India
+                  Andheri West, Mumbai, Maharashtra 400058
                 </span>
               </li>
               <li className="flex gap-3">
                 <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                <a href="tel:+911234567890" className="text-background/70 hover:text-primary transition-colors">
-                  +91 123 456 7890
+                <a href="tel:+912226781234" className="text-background/70 hover:text-primary transition-colors">
+                  +91 22 2678 1234
                 </a>
               </li>
               <li className="flex gap-3">
                 <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                <a href="mailto:info@iitpath.edu" className="text-background/70 hover:text-primary transition-colors">
-                  info@iitpath.edu
+                <a href="mailto:info@iitpath.com" className="text-background/70 hover:text-primary transition-colors">
+                  info@iitpath.com
                 </a>
               </li>
             </ul>
@@ -158,7 +158,7 @@ const Footer = () => {
           className="border-t border-background/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p className="text-background/60 text-sm">
-            © {currentYear} IIT PATH. All rights reserved.
+            © 2009-{currentYear} IIT PATH Coaching Institute. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
             <Link to="/privacy" className="text-background/60 hover:text-primary transition-colors">

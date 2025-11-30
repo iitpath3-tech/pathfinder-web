@@ -5,25 +5,25 @@ import { Users, Award, Trophy, Calendar } from "lucide-react";
 const stats = [
   {
     icon: Users,
-    value: 10,
+    value: 25,
     suffix: "+",
-    label: "IITians on Faculty",
+    label: "IITians & PhDs on Faculty",
   },
   {
     icon: Award,
-    value: 1000,
+    value: 1200,
     suffix: "+",
     label: "IIT & AIIMS Selections",
   },
   {
     icon: Trophy,
-    value: 12,
-    suffix: "",
+    value: 15,
+    suffix: "+",
     label: "International Gold Medals",
   },
   {
     icon: Calendar,
-    value: 14,
+    value: 15,
     suffix: "+",
     label: "Years of Excellence",
   },
@@ -78,7 +78,7 @@ const StatsSection = () => {
             Excellence in <span className="text-gradient-primary">Numbers</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Our track record speaks for itself. Join thousands of successful students.
+            Our impressive track record reflects our commitment to excellence. Join thousands of successful students who achieved their dreams with us.
           </p>
         </motion.div>
 

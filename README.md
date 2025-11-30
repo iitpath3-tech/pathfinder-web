@@ -1,56 +1,40 @@
-# Welcome to your Lovable project
+# IIT PATH - Premier Coaching Institute
 
-## Project info
+## Project Overview
 
-**URL**: https://lovable.dev/projects/75909630-51e2-4e3e-9b40-07ed4026227b
+This is the official website for IIT PATH, India's leading coaching institute for IIT-JEE, NEET, and Olympiad preparation.
 
-## How can I edit this code?
+## How to Work with This Code
 
-There are several ways of editing your application.
+There are several ways to work with this project.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/75909630-51e2-4e3e-9b40-07ed4026227b) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+**Local Development Setup**
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
 Follow these steps:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Step 1: Clone the repository
+git clone <repository-url>
 
 # Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+cd pathfinder-web
 
 # Step 3: Install the necessary dependencies.
-npm i
+npm install
 
 # Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+**Editing Files Directly**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- Navigate to the desired file(s) in the src directory.
+- Edit the files using your preferred code editor.
+- Save your changes and refresh the browser to see updates.
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
+## Technologies Used
 
 This project is built with:
 
@@ -60,14 +44,21 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/75909630-51e2-4e3e-9b40-07ed4026227b) and click on Share -> Publish.
+To build the project for production:
 
-## Can I connect a custom domain to my Lovable project?
+```sh
+npm run build
+```
 
-Yes, you can!
+The built files will be in the `dist` directory, which can be deployed to any static hosting service.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Project Structure
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- `src/` - Contains all source code
+- `src/components/` - Reusable UI components
+- `src/pages/` - Page components
+- `src/App.tsx` - Main application component
+- `public/` - Static assets
+- `index.html` - Main HTML file

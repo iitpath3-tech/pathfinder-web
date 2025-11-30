@@ -11,33 +11,33 @@ import {
 const features = [
   {
     icon: Heart,
-    title: "Child-Centric Approach",
-    description: "Personalized attention and care for every student's unique learning journey.",
+    title: "Personalized Learning Approach",
+    description: "Individual attention with customized study plans based on your strengths and weaknesses.",
   },
   {
     icon: GraduationCap,
-    title: "Experienced Faculty",
-    description: "Learn from IITians, PhDs, and Doctors with proven teaching excellence.",
+    title: "IITian & PhD Faculty",
+    description: "Learn from 25+ IITians and PhDs with proven track records in competitive exam preparation.",
   },
   {
     icon: BookOpen,
-    title: "Extensive Study Material",
-    description: "Comprehensive resources designed by experts to cover every concept thoroughly.",
+    title: "Comprehensive Study Material",
+    description: "Well-researched, exam-oriented material covering NCERT, Exemplar, and advanced problems.",
   },
   {
     icon: ClipboardCheck,
-    title: "Regular Assessments",
-    description: "Frequent tests and detailed performance analysis to track your progress.",
+    title: "Weekly Assessments",
+    description: "Regular tests with detailed performance analysis and rank prediction reports.",
   },
   {
     icon: MessageCircle,
-    title: "Doubt Sessions",
-    description: "One-on-one doubt clearing sessions to ensure conceptual clarity.",
+    title: "Dedicated Doubt Clearing",
+    description: "Subject-wise doubt sessions with faculty and dedicated mentorship program.",
   },
   {
     icon: Users2,
-    title: "Competitive Peer Group",
-    description: "Learn and grow with motivated students who share your ambitions.",
+    title: "All India Test Series",
+    description: "Participate in national-level test series to benchmark your preparation.",
   },
 ];
 
@@ -56,7 +56,7 @@ const WhyChooseUs = () => {
             Why Choose <span className="text-gradient-primary">IIT PATH</span>?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We provide everything you need to excel in your preparation journey.
+            Our unique approach and proven methodologies set us apart from other coaching institutes.
           </p>
         </motion.div>
 

@@ -18,14 +18,14 @@ const CTASection = () => {
           className="text-center max-w-4xl mx-auto"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
-            Start Your Journey to
+            Transform Your Dreams Into Reality
             <br />
-            IIT & AIIMS Today
+            With IIT PATH
           </h2>
           
           <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed">
-            Join thousands of successful students who have achieved their dreams with IIT PATH.
-            Your success story starts here.
+            Join 1200+ successful students who transformed their dreams into reality with IIT PATH.
+            Your success story begins today.
           </p>
           
           <motion.div
@@ -60,7 +60,7 @@ const CTASection = () => {
             viewport={{ once: true }}
             className="mt-8 text-white/80"
           >
-            Limited seats available • Admissions closing soon
+            Limited seats available for upcoming batch • Early bird admissions open now
           </motion.p>
         </motion.div>
       </div>

@@ -10,23 +10,23 @@ import heroOlympiad from "@/assets/hero-olympiad.jpg";
 const slides = [
   {
     image: heroClassroom,
-    title: "India's Premier Coaching",
-    subtitle: "For IIT-JEE, NEET & Olympiads",
+    title: "India's Premier IIT-JEE Coaching",
+    subtitle: "Expert Faculty, Proven Results, Guaranteed Success",
   },
   {
     image: heroCampus,
-    title: "14+ Years of Excellence",
-    subtitle: "Building Future Leaders",
+    title: "15+ Years of Academic Excellence",
+    subtitle: "Building Future Engineers & Doctors",
   },
   {
     image: heroSuccess,
-    title: "1000+ IIT & AIIMS Selections",
-    subtitle: "Your Success is Our Mission",
+    title: "1200+ IIT & AIIMS Selections",
+    subtitle: "Join Our League of Top Rankers",
   },
   {
     image: heroOlympiad,
-    title: "12 International Gold Medals",
-    subtitle: "Creating Olympiad Champions",
+    title: "15 International Gold Medals",
+    subtitle: "Dominating National & International Olympiads",
   },
 ];
 
