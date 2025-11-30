@@ -36,7 +36,7 @@ const About = () => {
             >
               <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 md:p-12 shadow-xl border border-primary/20 mb-16 hover:shadow-2xl transition-all duration-500">
                 <p className="text-lg md:text-xl leading-relaxed text-foreground mb-4">
-                  Founded in 2009, IIT PATH has emerged as one of India's premier coaching institutes for IIT-JEE, NEET, and Olympiad preparation. With over 15 years of excellence, we have consistently produced top rankers who have secured admissions to prestigious institutions like IITs, NITs, AIIMS, and other renowned universities.
+                  IIT PATH was established in 2010 by Dr. Azajul Haque Since inception, we believe in providing the highest quality of education while coaching our students for competitive exams. We are committed to make the process of learning fundamentally strong and enjoyable for the aspirants by using innovative teaching methods and having passionate and dedicated team of Doctorates & Doctors to give them thorough conceptual clarity. This strategy is the sole reason behind us being able to produce extraordinary results every year in our 4 definite integrals - Engineering, Medical, Foundation Builder and Education Abroad. We have consistently produced top results in competitive exams like JEE, NEET and Olympiads. We have a presence across India and have one of the largest pools of experienced faculties.
                 </p>
               </div>
             </motion.div>
@@ -82,6 +82,34 @@ const About = () => {
                 </div>
               </motion.div>
             </div>
+            
+            {/* Director's Message Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="mb-20"
+            >
+              <h2 className="text-4xl font-display font-bold text-center mb-12 text-gradient-primary">Director's Message</h2>
+              <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 md:p-12 shadow-xl border border-primary/20 mb-16 hover:shadow-2xl transition-all duration-500">
+                <p className="text-lg md:text-xl leading-relaxed text-foreground mb-4">
+                  Dear Parents and Students,
+                </p>
+                <p className="text-lg md:text-xl leading-relaxed text-foreground mb-4">
+                  “IIT PATH” has worked with a mission to provide the best possible support and mentorship to students to help them crack the toughest Engineering/ Medical entrance exams in the world. We consider ourselves blessed to have guided thousands of students to IITs, AIIMS and other top Engineering & Medical Colleges year after year.
+                </p>
+                <p className="text-lg md:text-xl leading-relaxed text-foreground mb-4">
+                  We have been able to convert so many students into national assets because of our child centric approach and feedback driven mechanism. Our faculty team consists mostly of Doctorates and Doctors who are passionate about teaching and dedicated to building the future of their students. The success of IIT PATH is based on the success of our students. We infuse in them the attitude that does not let them settle before mounting the heights of success and deriving the best not only academically but also socially.
+                </p>
+                <p className="text-lg md:text-xl leading-relaxed text-foreground mb-4">
+                  Our most important philosophy is “Money will never be a barrier between a meritorious student and quality education at IIT PATH we feel very passionate about providing an academic platform to deserving and meritorious students from the weaker and under privileged sections of our society and giving them a fair opportunity to study with the best.
+                </p>
+                <p className="text-lg md:text-xl leading-relaxed text-foreground">
+                  I thank you for showing interest in IIT PATH. I am sure your child will be able to achieve his/her dream of becoming a successful Engineer or a Doctor with IIT PATH.
+                </p>
+              </div>
+            </motion.div>
             
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -151,6 +179,212 @@ const About = () => {
                     <p className="text-muted-foreground">{achievement.desc}</p>
                   </motion.div>
                 ))}
+              </div>
+            </motion.div>
+            
+            {/* Our Social Initiatives Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="mb-20"
+            >
+              <h2 className="text-4xl font-display font-bold text-center mb-12 text-gradient-primary">Our Social Initiatives</h2>
+              
+              <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 md:p-12 shadow-xl border border-primary/20 mb-16 hover:shadow-2xl transition-all duration-500">
+                <p className="text-lg md:text-xl leading-relaxed text-foreground mb-6">
+                  Mr. Praveen Tyagi, who hails from a small village in Ghaziabad(UP), understands the "Importance of Education" & believes in the philosophy "Money will not be a barrier between a meritorious student & quality education at IIT PATH".
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Super 50 Batch 2021 */}
+                <motion.div 
+                  className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="bg-gradient-to-r from-blue-500 to-blue-700 w-16 h-16 rounded-lg flex items-center justify-center mr-4">
+                      <span className="text-white font-bold text-xl">2021</span>
+                    </div>
+                    <h3 className="text-2xl font-display font-bold text-gradient-primary">Super "50" Batch (Mumbai)</h3>
+                  </div>
+                  <p className="text-muted-foreground mb-4">
+                    24 out of 26 students have been admitted to prestigious Institutions like IITs/NITs & 21 out of 24 students have got admitted to Top Medical colleges.
+                  </p>
+                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 flex items-center justify-center text-gray-500">
+                    Image Placeholder: Super 50 Batch 2021
+                  </div>
+                </motion.div>
+                
+                {/* Super 50 Batch 2019 */}
+                <motion.div 
+                  className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="bg-gradient-to-r from-orange-500 to-orange-700 w-16 h-16 rounded-lg flex items-center justify-center mr-4">
+                      <span className="text-white font-bold text-xl">2019</span>
+                    </div>
+                    <h3 className="text-2xl font-display font-bold text-gradient-accent">Super "50" Batch (Mumbai)</h3>
+                  </div>
+                  <p className="text-muted-foreground mb-4">
+                    The initiative of empowering the tribal students is taken up by the Tribal Development Department, Govt. of Maharashtra and IIT PATH Educational Trust. This scheme of Super 50 is proposed for the benefit and upliftment of the tribal community, which enables the tribal students to fulfil their dream of becoming eminent engineers and doctors. 50 meritorious students were selected on the basis of an examination from the lot of 16000 students.
+                  </p>
+                  <p className="text-muted-foreground mb-4">
+                    Super 50 batch of 2019 was launched in gracious presence of Hon. Dr. Ashok Uike, Minister of Tribal Development, Dr. Parinay Fuke, Minister of State for Public Works, Tribal Development and Forest, Govt. of Maharashtra, Mrs. Manisha Verma, Principal Secretary, Tribal Development Department, Shri Rajendra Gavit MP Palghar, Shri Paskal Dhanare MLA Dahanu. Harishchandr Bhoye, Tribal Aghadi BJP Maharahtra,SantoshJanatheSecretary BJP Palghar district, Mr. PraveenTyagi,Trustee,IIT PATH Educational Trust
+                  </p>
+                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 flex items-center justify-center text-gray-500">
+                    Image Placeholder: Super 50 Batch 2019 Launch Event
+                  </div>
+                </motion.div>
+                
+                {/* Super 50 Girls Batch 2014 */}
+                <motion.div 
+                  className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="bg-gradient-to-r from-purple-500 to-purple-700 w-16 h-16 rounded-lg flex items-center justify-center mr-4">
+                      <span className="text-white font-bold text-xl">2014</span>
+                    </div>
+                    <h3 className="text-2xl font-display font-bold text-purple-600">Training "Super 50 girls" batch</h3>
+                  </div>
+                  <p className="text-muted-foreground mb-4">
+                    IIT PATH had run a project under the women welfare policy in collaboration with Women and Child Welfare Department, Maharashtra Government for 2 years in which 50 deserving girls get free training for the preparation of JEE Main, JEE Advanced and HSC.
+                  </p>
+                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 flex items-center justify-center text-gray-500">
+                    Image Placeholder: Super 50 Girls Batch
+                  </div>
+                </motion.div>
+                
+                {/* Super 50 Batch 2013 */}
+                <motion.div 
+                  className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="bg-gradient-to-r from-green-500 to-green-700 w-16 h-16 rounded-lg flex items-center justify-center mr-4">
+                      <span className="text-white font-bold text-xl">2013</span>
+                    </div>
+                    <h3 className="text-2xl font-display font-bold text-green-600">Super "50" Batch (Ghaziabad and Delhi/ NCR)</h3>
+                  </div>
+                  <p className="text-muted-foreground mb-4">
+                    The goal of Super "50" batch is to ensure a level play field for the meritorious yet underprivileged students of Ghaziabad/NCR by providing quality education for school/board curriculum and the most prestigious national & international-level Engineering and Medical entrance exams.
+                  </p>
+                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 flex items-center justify-center text-gray-500">
+                    Image Placeholder: Super 50 Batch Ghaziabad/Delhi NCR
+                  </div>
+                </motion.div>
+                
+                {/* SC Children Training 2010 */}
+                <motion.div 
+                  className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="bg-gradient-to-r from-red-500 to-red-700 w-16 h-16 rounded-lg flex items-center justify-center mr-4">
+                      <span className="text-white font-bold text-xl">2010</span>
+                    </div>
+                    <h3 className="text-2xl font-display font-bold text-red-600">Training the SC children</h3>
+                  </div>
+                  <p className="text-muted-foreground mb-4">
+                    IIT PATH collaborated with the Social Welfare Department of the Maharashtra Government for a new social scheme. Based on it, we had offered free training & accommodation to the meritorious and underprivileged Scheduled Caste children for Boards, Engineering & Medical entrance exams.
+                  </p>
+                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 flex items-center justify-center text-gray-500">
+                    Image Placeholder: SC Children Training Program
+                  </div>
+                </motion.div>
+                
+                {/* Underprivileged Students 2009 */}
+                <motion.div 
+                  className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="bg-gradient-to-r from-yellow-500 to-yellow-700 w-16 h-16 rounded-lg flex items-center justify-center mr-4">
+                      <span className="text-white font-bold text-xl">2009</span>
+                    </div>
+                    <h3 className="text-2xl font-display font-bold text-yellow-600">Training the underprivileged meritorious students</h3>
+                  </div>
+                  <p className="text-muted-foreground mb-4">
+                    Starting in 2009, IIT PATH got a chance to administer the MCGM till 2013. During these four years, we gave our best to guide and polish the BPL (Below Poverty Line) students in every possible way to provide equal opportunity for deserving students and brighten their future.
+                  </p>
+                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 flex items-center justify-center text-gray-500">
+                    Image Placeholder: MCGM Collaboration
+                  </div>
+                </motion.div>
+                
+                {/* Mumbai Police Constables Children */}
+                <motion.div 
+                  className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border lg:col-span-2"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="bg-gradient-to-r from-indigo-500 to-indigo-700 w-16 h-16 rounded-lg flex items-center justify-center mr-4">
+                      <span className="text-white font-bold text-xl">2009</span>
+                    </div>
+                    <h3 className="text-2xl font-display font-bold text-indigo-600">Free education for the children of Mumbai Police Constables</h3>
+                  </div>
+                  <p className="text-muted-foreground mb-4">
+                    After Taj terror attack in 2008, Tyagi sir's heart went out for those Policemen & their family members who lost their lives & were badly injured. Tyagi sir then decided to provide free education to all the children of police constables in Maharashtra.
+                  </p>
+                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 flex items-center justify-center text-gray-500">
+                    Image Placeholder: Mumbai Police Constables Children Program
+                  </div>
+                </motion.div>
+                
+                {/* Single Parent Support */}
+                <motion.div 
+                  className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border lg:col-span-2"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="bg-gradient-to-r from-pink-500 to-pink-700 w-16 h-16 rounded-lg flex items-center justify-center mr-4">
+                      <span className="text-white font-bold text-xl">Ongoing</span>
+                    </div>
+                    <h3 className="text-2xl font-display font-bold text-pink-600">Helping the single parent in their child's education</h3>
+                  </div>
+                  <p className="text-muted-foreground mb-4">
+                    IIT PATH actively supports the education of the meritorious children of single parent who are not able to afford their child's education. The institute provides scholarships and the best possible resources to the children of single parent.
+                  </p>
+                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 flex items-center justify-center text-gray-500">
+                    Image Placeholder: Single Parent Support Program
+                  </div>
+                </motion.div>
               </div>
             </motion.div>
           </div>

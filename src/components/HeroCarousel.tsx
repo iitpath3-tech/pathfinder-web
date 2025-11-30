@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import heroClassroom from "@/assets/hero-classroom.jpg";
 import heroCampus from "@/assets/hero-campus.jpg";
 import heroSuccess from "@/assets/hero-success.jpg";
@@ -32,6 +33,7 @@ const slides = [
 
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -46,6 +48,10 @@ const HeroCarousel = () => {
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const handleEnrollClick = () => {
+    navigate('/contact');
   };
 
   return (
@@ -90,7 +96,7 @@ const HeroCarousel = () => {
                 transition={{ delay: 0.6, duration: 0.6 }}
                 className="flex flex-col sm:flex-row gap-4 justify-center"
               >
-                <Button variant="hero" size="lg" className="sm:size-xl">
+                <Button variant="hero" size="lg" className="sm:size-xl" onClick={handleEnrollClick}>
                   Enroll Now
                 </Button>
                 <Button variant="outline" size="lg" className="sm:size-xl bg-white/10 border-white text-white hover:bg-white hover:text-primary">

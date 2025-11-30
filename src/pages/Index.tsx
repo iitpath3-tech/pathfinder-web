@@ -6,6 +6,8 @@ import CoursesOverview from "@/components/CoursesOverview";
 import ToppersCarousel from "@/components/ToppersCarousel";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import MethodologySection from "@/components/MethodologySection";
+import ProgramDesignSection from "@/components/ProgramDesignSection";
 import {
   Accordion,
   AccordionContent,
@@ -22,7 +24,9 @@ const Index = () => {
         <HeroCarousel />
         <StatsSection />
         <WhyChooseUs />
+        <MethodologySection />
         <CoursesOverview />
+        <ProgramDesignSection />
         <section className="section-padding bg-background">
           <div className="container-custom">
             <ToppersCarousel category="JEE" />

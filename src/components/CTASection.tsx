@@ -1,8 +1,15 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Download, Calendar } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const CTASection = () => {
+  const navigate = useNavigate();
+  
+  const handleContactClick = () => {
+    navigate('/contact');
+  };
+  
   return (
     <section className="section-padding bg-gradient-to-br from-primary via-primary to-accent relative overflow-hidden">
       {/* Decorative Elements */}
@@ -38,9 +45,10 @@ const CTASection = () => {
             <Button
               size="lg"
               className="sm:size-xl bg-white text-primary hover:bg-white/90 hover:scale-105 shadow-2xl min-w-[180px] sm:min-w-[200px]"
+              onClick={handleContactClick}
             >
               <Calendar className="mr-2 h-5 w-5" />
-              Book Free Demo
+              Contact Us
             </Button>
             
             <Button

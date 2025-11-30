@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
@@ -9,6 +9,11 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCoursesOpen, setIsCoursesOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleEnrollClick = () => {
+    navigate('/contact');
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -125,8 +130,8 @@ const Navbar = () => {
               Contact
             </Link>
 
-            <Button variant="hero" size="lg" asChild>
-              <Link to="/contact">Enroll Now</Link>
+            <Button variant="hero" size="lg" onClick={handleEnrollClick}>
+              Enroll Now
             </Button>
           </div>
 
@@ -198,10 +203,11 @@ const Navbar = () => {
                 >
                   Contact
                 </Link>
-                <Button variant="hero" size="lg" className="w-full" asChild>
-                  <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                    Enroll Now
-                  </Link>
+                <Button variant="hero" size="lg" className="w-full" onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  handleEnrollClick();
+                }}>
+                  Enroll Now
                 </Button>
               </div>
             </motion.div>
