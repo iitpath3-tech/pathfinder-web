@@ -49,7 +49,7 @@ const HeroCarousel = () => {
   };
 
   return (
-    <div className="relative h-[600px] md:h-[700px] overflow-hidden mt-16 md:mt-20">
+    <div className="relative h-[500px] sm:h-[600px] md:h-[700px] overflow-hidden mt-16 md:mt-20">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
@@ -90,10 +90,10 @@ const HeroCarousel = () => {
                 transition={{ delay: 0.6, duration: 0.6 }}
                 className="flex flex-col sm:flex-row gap-4 justify-center"
               >
-                <Button variant="hero" size="xl">
+                <Button variant="hero" size="lg" className="sm:size-xl">
                   Enroll Now
                 </Button>
-                <Button variant="outline" size="xl" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary">
+                <Button variant="outline" size="lg" className="sm:size-xl bg-white/10 border-white text-white hover:bg-white hover:text-primary">
                   Download Brochure
                 </Button>
               </motion.div>

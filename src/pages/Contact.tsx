@@ -16,7 +16,7 @@ const Contact = () => {
               We're here to help you start your journey to success
             </p>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
               <div className="prose prose-lg max-w-none text-foreground">
                 <h2 className="text-3xl font-display font-bold mb-6">Contact Information</h2>
                 
@@ -76,17 +76,17 @@ const Contact = () => {
                 
                 <h2 className="text-3xl font-display font-bold mt-12 mb-6">Follow Us</h2>
                 <div className="flex space-x-4">
-                  <a href="#" className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center hover:scale-110 transition-transform duration-300">
-                    <Facebook className="h-6 w-6" />
+                  <a href="#" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary text-white flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                    <Facebook className="h-5 w-5 sm:h-6 sm:w-6" />
                   </a>
-                  <a href="#" className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center hover:scale-110 transition-transform duration-300">
-                    <Instagram className="h-6 w-6" />
+                  <a href="#" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary text-white flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                    <Instagram className="h-5 w-5 sm:h-6 sm:w-6" />
                   </a>
-                  <a href="#" className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center hover:scale-110 transition-transform duration-300">
-                    <Youtube className="h-6 w-6" />
+                  <a href="#" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary text-white flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                    <Youtube className="h-5 w-5 sm:h-6 sm:w-6" />
                   </a>
-                  <a href="#" className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center hover:scale-110 transition-transform duration-300">
-                    <Linkedin className="h-6 w-6" />
+                  <a href="#" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary text-white flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                    <Linkedin className="h-5 w-5 sm:h-6 sm:w-6" />
                   </a>
                 </div>
               </div>
@@ -99,7 +99,7 @@ const Contact = () => {
                     <input
                       type="text"
                       id="name"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                      className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
                       placeholder="Enter your full name"
                     />
                   </div>
@@ -109,7 +109,7 @@ const Contact = () => {
                     <input
                       type="email"
                       id="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                      className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
                       placeholder="Enter your email address"
                     />
                   </div>
@@ -119,7 +119,7 @@ const Contact = () => {
                     <input
                       type="tel"
                       id="phone"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                      className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
                       placeholder="Enter your phone number"
                     />
                   </div>
@@ -128,7 +128,7 @@ const Contact = () => {
                     <label htmlFor="course" className="block text-lg font-medium mb-2">Course Interested In</label>
                     <select
                       id="course"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                      className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
                     >
                       <option value="">Select a course</option>
                       <option value="foundation">Foundation Program (Classes 8-10)</option>
@@ -144,14 +144,14 @@ const Contact = () => {
                     <textarea
                       id="message"
                       rows={5}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                      className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
                       placeholder="Enter your message or questions"
                     ></textarea>
                   </div>
                   
                   <button
                     type="submit"
-                    className="w-full bg-primary text-white py-3 px-6 rounded-lg font-display font-semibold text-lg hover:bg-primary-dark transition-colors duration-300"
+                    className="w-full bg-primary text-white py-2 px-4 sm:py-3 sm:px-6 rounded-lg font-display font-semibold text-base sm:text-lg hover:bg-primary-dark transition-colors duration-300"
                   >
                     Send Message
                   </button>

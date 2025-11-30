@@ -108,7 +108,7 @@ const ToppersCarousel = ({ category }: { category: "JEE" | "NEET" }) => {
               transition={{ duration: 0.5 }}
               className="min-w-full px-4"
             >
-              <div className="max-w-4xl mx-auto bg-card rounded-2xl shadow-xl p-8 md:p-12">
+              <div className="max-w-4xl mx-auto bg-card rounded-2xl shadow-xl p-6 sm:p-8 md:p-12">
                 <div className="flex flex-col md:flex-row items-center gap-8">
                   <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white text-4xl font-bold flex-shrink-0">
                     {topper.name.charAt(0)}
@@ -144,15 +144,15 @@ const ToppersCarousel = ({ category }: { category: "JEE" | "NEET" }) => {
         {/* Navigation */}
         <button
           onClick={prevTopper}
-          className="absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-primary/20 backdrop-blur-sm hover:bg-primary/30 transition-all duration-300 flex items-center justify-center text-primary"
+          className="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/20 backdrop-blur-sm hover:bg-primary/30 transition-all duration-300 flex items-center justify-center text-primary"
         >
-          <ChevronLeft className="h-6 w-6" />
+          <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
         </button>
         <button
           onClick={nextTopper}
-          className="absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-primary/20 backdrop-blur-sm hover:bg-primary/30 transition-all duration-300 flex items-center justify-center text-primary"
+          className="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/20 backdrop-blur-sm hover:bg-primary/30 transition-all duration-300 flex items-center justify-center text-primary"
         >
-          <ChevronRight className="h-6 w-6" />
+          <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
         </button>
 
         {/* Dots */}

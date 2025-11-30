@@ -82,7 +82,7 @@ const StatsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -90,7 +90,7 @@ const StatsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-card rounded-xl p-8 text-center hover-lift shadow-md hover:shadow-xl transition-all duration-300"
+              className="bg-card rounded-xl p-6 sm:p-8 text-center hover-lift shadow-md hover:shadow-xl transition-all duration-300"
             >
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-light mb-6">
                 <stat.icon className="h-8 w-8 text-primary" />

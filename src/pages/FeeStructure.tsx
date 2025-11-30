@@ -1,174 +1,212 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { motion } from "framer-motion";
 
 const FeeStructure = () => {
+  // Program data
+  const programs = [
+    {
+      title: "Foundation Program",
+      subtitle: "Classes 8-10",
+      color: "from-blue-500 to-cyan-500",
+      batches: [
+        { type: "Weekend Batch", duration: "1 Year", fee: "₹25,000", features: "PCM/PMB, 8 hours/week" },
+        { type: "Regular Batch", duration: "1 Year", fee: "₹45,000", features: "PCM/PMB, 15 hours/week" },
+        { type: "Fast Track", duration: "6 Months", fee: "₹30,000", features: "Intensive, 20 hours/week" }
+      ]
+    },
+    {
+      title: "JEE Main & Advanced",
+      subtitle: "Engineering Aspirants",
+      color: "from-primary to-blue-600",
+      batches: [
+        { type: "2-Year Integrated", duration: "Class 11-12", fee: "₹1,25,000", features: "Complete syllabus, DPPs, Tests" },
+        { type: "1-Year Target", duration: "Class 12/Dropper", fee: "₹95,000", features: "Revision, Tests, Rank Booster" },
+        { type: "Rank Booster", duration: "6 Months", fee: "₹65,000", features: "Intensive, Mock Tests, Analysis" }
+      ]
+    },
+    {
+      title: "NEET & AIIMS",
+      subtitle: "Medical Aspirants",
+      color: "from-green-500 to-emerald-500",
+      batches: [
+        { type: "2-Year Integrated", duration: "Class 11-12", fee: "₹1,35,000", features: "Complete syllabus, DPPs, Tests" },
+        { type: "1-Year Target", duration: "Class 12/Dropper", fee: "₹1,05,000", features: "Revision, Tests, Rank Booster" },
+        { type: "Crash Course", duration: "3 Months", fee: "₹55,000", features: "Intensive, Mock Tests, Analysis" }
+      ]
+    },
+    {
+      title: "Olympiad Training",
+      subtitle: "Competitive Excellence",
+      color: "from-purple-500 to-indigo-500",
+      batches: [
+        { type: "Foundation Olympiad", duration: "1 Year", fee: "₹35,000", features: "Classes 8-10, NTSE/NMTC" },
+        { type: "Advanced Olympiad", duration: "1 Year", fee: "₹55,000", features: "Classes 11-12, PRMO/RMO/INO" },
+        { type: "Specialized Training", duration: "6 Months", fee: "₹40,000", features: "Subject-specific, Intensive" }
+      ]
+    }
+  ];
+
+  const benefits = [
+    { title: "Installment Plans", desc: "Flexible payment options with zero interest", icon: "💳" },
+    { title: "Early Bird Discount", desc: "10% discount for early admissions", icon: "⏰" },
+    { title: "Scholarships", desc: "Merit-based scholarships for top performers", icon: "🎓" },
+    { title: "Sibling Discount", desc: "15% discount for siblings", icon: "👨‍👩‍👧‍👦" },
+    { title: "Referral Bonus", desc: "₹5,000 credit for successful referrals", icon: "🎁" }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
       <main className="pt-20">
         <div className="section-padding">
           <div className="container-custom">
-            <h1 className="text-4xl md:text-5xl font-display font-bold text-center mb-6">
-              Fee <span className="text-gradient-primary">Structure</span>
-            </h1>
-            <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
-              Transparent and affordable pricing for quality education
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
+              <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">
+                Fee <span className="text-gradient-primary">Structure</span>
+              </h1>
+              <motion.p 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+                className="text-xl text-muted-foreground max-w-3xl mx-auto"
+              >
+                Transparent and affordable pricing for quality education
+              </motion.p>
+            </motion.div>
             
-            <div className="prose prose-lg max-w-none mx-auto text-foreground">
-              <p className="mb-6">
-                At IIT PATH, we believe in making quality education accessible to all deserving students. Our fee structure is designed to be transparent, affordable, and flexible to accommodate different financial situations.
-              </p>
-              
-              <h2 className="text-3xl font-display font-bold mt-12 mb-6">Foundation Program (Classes 8-10)</h2>
-              <div className="overflow-x-auto mb-8">
-                <table className="min-w-full border-collapse border border-gray-300">
-                  <thead>
-                    <tr className="bg-gray-100">
-                      <th className="border border-gray-300 px-4 py-2 text-left">Batch Type</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Duration</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Fee (INR)</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Features</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td className="border border-gray-300 px-4 py-2">Weekend Batch</td>
-                      <td className="border border-gray-300 px-4 py-2">1 Year</td>
-                      <td className="border border-gray-300 px-4 py-2">₹25,000</td>
-                      <td className="border border-gray-300 px-4 py-2">PCM/PMB, 8 hours/week</td>
-                    </tr>
-                    <tr className="bg-gray-50">
-                      <td className="border border-gray-300 px-4 py-2">Regular Batch</td>
-                      <td className="border border-gray-300 px-4 py-2">1 Year</td>
-                      <td className="border border-gray-300 px-4 py-2">₹45,000</td>
-                      <td className="border border-gray-300 px-4 py-2">PCM/PMB, 15 hours/week</td>
-                    </tr>
-                    <tr>
-                      <td className="border border-gray-300 px-4 py-2">Fast Track</td>
-                      <td className="border border-gray-300 px-4 py-2">6 Months</td>
-                      <td className="border border-gray-300 px-4 py-2">₹30,000</td>
-                      <td className="border border-gray-300 px-4 py-2">Intensive, 20 hours/week</td>
-                    </tr>
-                  </tbody>
-                </table>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="mb-20"
+            >
+              <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 md:p-12 shadow-xl border border-primary/20 mb-16 hover:shadow-2xl transition-all duration-500">
+                <p className="text-lg md:text-xl leading-relaxed text-foreground mb-4">
+                  At IIT PATH, we believe in making quality education accessible to all deserving students. Our fee structure is designed to be transparent, affordable, and flexible to accommodate different financial situations.
+                </p>
               </div>
-              
-              <h2 className="text-3xl font-display font-bold mt-12 mb-6">JEE Main & Advanced Program</h2>
-              <div className="overflow-x-auto mb-8">
-                <table className="min-w-full border-collapse border border-gray-300">
-                  <thead>
-                    <tr className="bg-gray-100">
-                      <th className="border border-gray-300 px-4 py-2 text-left">Batch Type</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Duration</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Fee (INR)</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Features</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td className="border border-gray-300 px-4 py-2">2-Year Integrated</td>
-                      <td className="border border-gray-300 px-4 py-2">Class 11-12</td>
-                      <td className="border border-gray-300 px-4 py-2">₹1,25,000</td>
-                      <td className="border border-gray-300 px-4 py-2">Complete syllabus, DPPs, Tests</td>
-                    </tr>
-                    <tr className="bg-gray-50">
-                      <td className="border border-gray-300 px-4 py-2">1-Year Target</td>
-                      <td className="border border-gray-300 px-4 py-2">Class 12/Dropper</td>
-                      <td className="border border-gray-300 px-4 py-2">₹95,000</td>
-                      <td className="border border-gray-300 px-4 py-2">Revision, Tests, Rank Booster</td>
-                    </tr>
-                    <tr>
-                      <td className="border border-gray-300 px-4 py-2">Rank Booster</td>
-                      <td className="border border-gray-300 px-4 py-2">6 Months</td>
-                      <td className="border border-gray-300 px-4 py-2">₹65,000</td>
-                      <td className="border border-gray-300 px-4 py-2">Intensive, Mock Tests, Analysis</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              
-              <h2 className="text-3xl font-display font-bold mt-12 mb-6">NEET & AIIMS Program</h2>
-              <div className="overflow-x-auto mb-8">
-                <table className="min-w-full border-collapse border border-gray-300">
-                  <thead>
-                    <tr className="bg-gray-100">
-                      <th className="border border-gray-300 px-4 py-2 text-left">Batch Type</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Duration</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Fee (INR)</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Features</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td className="border border-gray-300 px-4 py-2">2-Year Integrated</td>
-                      <td className="border border-gray-300 px-4 py-2">Class 11-12</td>
-                      <td className="border border-gray-300 px-4 py-2">₹1,35,000</td>
-                      <td className="border border-gray-300 px-4 py-2">Complete syllabus, DPPs, Tests</td>
-                    </tr>
-                    <tr className="bg-gray-50">
-                      <td className="border border-gray-300 px-4 py-2">1-Year Target</td>
-                      <td className="border border-gray-300 px-4 py-2">Class 12/Dropper</td>
-                      <td className="border border-gray-300 px-4 py-2">₹1,05,000</td>
-                      <td className="border border-gray-300 px-4 py-2">Revision, Tests, Rank Booster</td>
-                    </tr>
-                    <tr>
-                      <td className="border border-gray-300 px-4 py-2">Crash Course</td>
-                      <td className="border border-gray-300 px-4 py-2">3 Months</td>
-                      <td className="border border-gray-300 px-4 py-2">₹55,000</td>
-                      <td className="border border-gray-300 px-4 py-2">Intensive, Mock Tests, Analysis</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              
-              <h2 className="text-3xl font-display font-bold mt-12 mb-6">Olympiad Training Program</h2>
-              <div className="overflow-x-auto mb-8">
-                <table className="min-w-full border-collapse border border-gray-300">
-                  <thead>
-                    <tr className="bg-gray-100">
-                      <th className="border border-gray-300 px-4 py-2 text-left">Program</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Duration</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Fee (INR)</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Features</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td className="border border-gray-300 px-4 py-2">Foundation Olympiad</td>
-                      <td className="border border-gray-300 px-4 py-2">1 Year</td>
-                      <td className="border border-gray-300 px-4 py-2">₹35,000</td>
-                      <td className="border border-gray-300 px-4 py-2">Classes 8-10, NTSE/NMTC</td>
-                    </tr>
-                    <tr className="bg-gray-50">
-                      <td className="border border-gray-300 px-4 py-2">Advanced Olympiad</td>
-                      <td className="border border-gray-300 px-4 py-2">1 Year</td>
-                      <td className="border border-gray-300 px-4 py-2">₹55,000</td>
-                      <td className="border border-gray-300 px-4 py-2">Classes 11-12, PRMO/RMO/INO</td>
-                    </tr>
-                    <tr>
-                      <td className="border border-gray-300 px-4 py-2">Specialized Training</td>
-                      <td className="border border-gray-300 px-4 py-2">6 Months</td>
-                      <td className="border border-gray-300 px-4 py-2">₹40,000</td>
-                      <td className="border border-gray-300 px-4 py-2">Subject-specific, Intensive</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              
-              <h2 className="text-3xl font-display font-bold mt-12 mb-6">Payment Options & Scholarships</h2>
-              <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li><strong>Installment Plans:</strong> Flexible payment options with zero interest</li>
-                <li><strong>Early Bird Discount:</strong> 10% discount for early admissions</li>
-                <li><strong>Scholarships:</strong> Merit-based scholarships for top performers</li>
-                <li><strong>Sibling Discount:</strong> 15% discount for siblings</li>
-                <li><strong>Referral Bonus:</strong> ₹5,000 credit for successful referrals</li>
-              </ul>
-              
-              <p className="mb-6">
-                For more information about our fee structure, payment options, or scholarship opportunities, please contact our admissions office at +91 22 2678 1234 or email us at info@iitpath.com.
-              </p>
+            </motion.div>
+            
+            {/* Program Cards */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20">
+              {programs.map((program, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -10 }}
+                  className="group relative overflow-hidden bg-card rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-border"
+                >
+                  <div className={`absolute top-0 left-0 w-full h-2 bg-gradient-to-r ${program.color}`}></div>
+                  
+                  <div className="p-8">
+                    <div className="flex items-center justify-between mb-6">
+                      <div>
+                        <h2 className="text-2xl font-display font-bold mb-2 group-hover:text-primary transition-colors duration-300">{program.title}</h2>
+                        <p className="text-muted-foreground">{program.subtitle}</p>
+                      </div>
+                      <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${program.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                        <span className="text-white font-bold text-xl">{index + 1}</span>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-4">
+                      {program.batches.map((batch, batchIndex) => (
+                        <motion.div
+                          key={batchIndex}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: batchIndex * 0.1 }}
+                          viewport={{ once: true }}
+                          whileHover={{ x: 10 }}
+                          className="p-4 rounded-xl bg-muted/50 border border-border/50 hover:border-primary/30 transition-all duration-300"
+                        >
+                          <div className="flex justify-between items-start mb-2">
+                            <h3 className="font-semibold text-foreground">{batch.type}</h3>
+                            <span className="text-lg font-bold text-gradient-primary">{batch.fee}</span>
+                          </div>
+                          <div className="flex justify-between text-sm text-muted-foreground">
+                            <span>{batch.duration}</span>
+                            <span>{batch.features}</span>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
+            
+            {/* Benefits Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <h2 className="text-4xl font-display font-bold text-center mb-12 text-gradient-accent">Payment Options & Scholarships</h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ y: -5 }}
+                    className="group bg-card rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-border hover:border-accent/30"
+                  >
+                    <div className="text-3xl mb-4">{benefit.icon}</div>
+                    <h3 className="text-xl font-display font-bold mb-2 group-hover:text-accent transition-colors duration-300">{benefit.title}</h3>
+                    <p className="text-muted-foreground">{benefit.desc}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+            
+            {/* Contact Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-12 border border-primary/20"
+            >
+              <h2 className="text-3xl font-display font-bold mb-4">Have Questions About Our Fee Structure?</h2>
+              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+                For more information about our fee structure, payment options, or scholarship opportunities, please contact our admissions office.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="bg-card rounded-xl p-6 shadow-md flex items-center gap-4 hover:shadow-lg transition-shadow duration-300">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                    <span className="text-xl">📞</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold">Call Us</p>
+                    <p className="text-muted-foreground">+91 22 2678 1234</p>
+                  </div>
+                </div>
+                <div className="bg-card rounded-xl p-6 shadow-md flex items-center gap-4 hover:shadow-lg transition-shadow duration-300">
+                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                    <span className="text-xl">✉️</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold">Email Us</p>
+                    <p className="text-muted-foreground">info@iitpath.com</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </main>

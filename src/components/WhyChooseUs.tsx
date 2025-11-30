@@ -60,7 +60,7 @@ const WhyChooseUs = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -68,7 +68,7 @@ const WhyChooseUs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group bg-card rounded-xl p-8 hover-lift shadow-md hover:shadow-xl transition-all duration-300 border border-border hover:border-primary/50"
+              className="group bg-card rounded-xl p-6 sm:p-8 hover-lift shadow-md hover:shadow-xl transition-all duration-300 border border-border hover:border-primary/50"
             >
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-light mb-6 group-hover:scale-110 transition-transform duration-300">
                 <feature.icon className="h-8 w-8 text-primary" />

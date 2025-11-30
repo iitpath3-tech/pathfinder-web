@@ -17,13 +17,13 @@ const CTASection = () => {
           viewport={{ once: true }}
           className="text-center max-w-4xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
             Transform Your Dreams Into Reality
             <br />
             With IIT PATH
           </h2>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-12 leading-relaxed">
             Join 1200+ successful students who transformed their dreams into reality with IIT PATH.
             Your success story begins today.
           </p>
@@ -36,17 +36,17 @@ const CTASection = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Button
-              size="xl"
-              className="bg-white text-primary hover:bg-white/90 hover:scale-105 shadow-2xl min-w-[200px]"
+              size="lg"
+              className="sm:size-xl bg-white text-primary hover:bg-white/90 hover:scale-105 shadow-2xl min-w-[180px] sm:min-w-[200px]"
             >
               <Calendar className="mr-2 h-5 w-5" />
               Book Free Demo
             </Button>
             
             <Button
-              size="xl"
+              size="lg"
               variant="outline"
-              className="bg-white/10 border-2 border-white text-white hover:bg-white hover:text-primary backdrop-blur-sm min-w-[200px]"
+              className="sm:size-xl bg-white/10 border-2 border-white text-white hover:bg-white hover:text-primary backdrop-blur-sm min-w-[180px] sm:min-w-[200px]"
             >
               <Download className="mr-2 h-5 w-5" />
               Download Brochure

@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-foreground text-background pt-16 pb-8">
       <div className="container-custom px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 mb-12">
           {/* About Column */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
