@@ -18,7 +18,7 @@ const About = () => {
               <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">
                 About <span className="text-gradient-primary">IIT PATH</span>
               </h1>
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
@@ -27,7 +27,7 @@ const About = () => {
                 Building excellence in education since 2009
               </motion.p>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -36,11 +36,24 @@ const About = () => {
             >
               <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 md:p-12 shadow-xl border border-primary/20 mb-16 hover:shadow-2xl transition-all duration-500">
                 <p className="text-lg md:text-xl leading-relaxed text-foreground mb-4">
-                  IIT PATH was established in 2010 by Dr. Azajul Haque Since inception, we believe in providing the highest quality of education while coaching our students for competitive exams. We are committed to make the process of learning fundamentally strong and enjoyable for the aspirants by using innovative teaching methods and having passionate and dedicated team of Doctorates & Doctors to give them thorough conceptual clarity. This strategy is the sole reason behind us being able to produce extraordinary results every year in our 4 definite integrals - Engineering, Medical, Foundation Builder and Education Abroad. We have consistently produced top results in competitive exams like JEE, NEET and Olympiads. We have a presence across India and have one of the largest pools of experienced faculties.
+                  IIT PATH was established in 2010 by Dr. Azajul Haque Since
+                  inception, we believe in providing the highest quality of
+                  education while coaching our students for competitive exams.
+                  We are committed to make the process of learning fundamentally
+                  strong and enjoyable for the aspirants by using innovative
+                  teaching methods and having passionate and dedicated team of
+                  Doctorates & Doctors to give them thorough conceptual clarity.
+                  This strategy is the sole reason behind us being able to
+                  produce extraordinary results every year in our 4 definite
+                  integrals - Engineering, Medical, Foundation Builder and
+                  Education Abroad. We have consistently produced top results in
+                  competitive exams like JEE, NEET and Olympiads. We have a
+                  presence across India and have one of the largest pools of
+                  experienced faculties.
                 </p>
               </div>
             </motion.div>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -54,14 +67,22 @@ const About = () => {
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center mr-4">
                       <span className="text-white font-bold text-xl">V</span>
                     </div>
-                    <h2 className="text-3xl font-display font-bold text-gradient-primary">Our Vision</h2>
+                    <h2 className="text-3xl font-display font-bold text-gradient-primary">
+                      Our Vision
+                    </h2>
                   </div>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    To nurture and develop the brightest minds of the nation by providing world-class education and creating an environment that fosters intellectual growth, critical thinking, and innovation.
+                    Our nation needs to harness the intellectual potential of
+                    our younger generation to turn India into a superpower. Our
+                    vision is to impart best quality education to students from
+                    seventh standard onwards for the top national and global
+                    examinations and help them to fulfil their dream of entering into
+                    top Engineering and Medical colleges, through tech enabled
+                    learning and testing solutions.
                   </p>
                 </div>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -74,15 +95,21 @@ const About = () => {
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-red-600 flex items-center justify-center mr-4">
                       <span className="text-white font-bold text-xl">M</span>
                     </div>
-                    <h2 className="text-3xl font-display font-bold text-gradient-accent">Our Mission</h2>
+                    <h2 className="text-3xl font-display font-bold text-gradient-accent">
+                      Our Mission
+                    </h2>
                   </div>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    To empower students with comprehensive knowledge, analytical skills, and confidence required to excel in competitive examinations and become future leaders in their respective fields.
+                    Redefining quality learning through innovation and
+                    farsightedness has been a hallmark of IIT PATH DNA. Our
+                    mission is to create an environment of academic excellence,
+                    utilizing modern technologies and pedagogical approaches to
+                    provide quality education.
                   </p>
                 </div>
               </motion.div>
             </div>
-            
+
             {/* Director's Message Section */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -91,26 +118,48 @@ const About = () => {
               viewport={{ once: true }}
               className="mb-20"
             >
-              <h2 className="text-4xl font-display font-bold text-center mb-12 text-gradient-primary">Director's Message</h2>
+              <h2 className="text-4xl font-display font-bold text-center mb-12 text-gradient-primary">
+                Director's Message
+              </h2>
               <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 md:p-12 shadow-xl border border-primary/20 mb-16 hover:shadow-2xl transition-all duration-500">
                 <p className="text-lg md:text-xl leading-relaxed text-foreground mb-4">
                   Dear Parents and Students,
                 </p>
                 <p className="text-lg md:text-xl leading-relaxed text-foreground mb-4">
-                  “IIT PATH” has worked with a mission to provide the best possible support and mentorship to students to help them crack the toughest Engineering/ Medical entrance exams in the world. We consider ourselves blessed to have guided thousands of students to IITs, AIIMS and other top Engineering & Medical Colleges year after year.
+                  “IIT PATH” has worked with a mission to provide the best
+                  possible support and mentorship to students to help them crack
+                  the toughest Engineering/ Medical entrance exams in the world.
+                  We consider ourselves blessed to have guided thousands of
+                  students to IITs, AIIMS and other top Engineering & Medical
+                  Colleges year after year.
                 </p>
                 <p className="text-lg md:text-xl leading-relaxed text-foreground mb-4">
-                  We have been able to convert so many students into national assets because of our child centric approach and feedback driven mechanism. Our faculty team consists mostly of Doctorates and Doctors who are passionate about teaching and dedicated to building the future of their students. The success of IIT PATH is based on the success of our students. We infuse in them the attitude that does not let them settle before mounting the heights of success and deriving the best not only academically but also socially.
+                  We have been able to convert so many students into national
+                  assets because of our child centric approach and feedback
+                  driven mechanism. Our faculty team consists mostly of
+                  Doctorates and Doctors who are passionate about teaching and
+                  dedicated to building the future of their students. The
+                  success of IIT PATH is based on the success of our students.
+                  We infuse in them the attitude that does not let them settle
+                  before mounting the heights of success and deriving the best
+                  not only academically but also socially.
                 </p>
                 <p className="text-lg md:text-xl leading-relaxed text-foreground mb-4">
-                  Our most important philosophy is “Money will never be a barrier between a meritorious student and quality education at IIT PATH we feel very passionate about providing an academic platform to deserving and meritorious students from the weaker and under privileged sections of our society and giving them a fair opportunity to study with the best.
+                  Our most important philosophy is “Money will never be a
+                  barrier between a meritorious student and quality education at
+                  IIT PATH we feel very passionate about providing an academic
+                  platform to deserving and meritorious students from the weaker
+                  and under privileged sections of our society and giving them a
+                  fair opportunity to study with the best.
                 </p>
                 <p className="text-lg md:text-xl leading-relaxed text-foreground">
-                  I thank you for showing interest in IIT PATH. I am sure your child will be able to achieve his/her dream of becoming a successful Engineer or a Doctor with IIT PATH.
+                  I thank you for showing interest in IIT PATH. I am sure your
+                  child will be able to achieve his/her dream of becoming a
+                  successful Engineer or a Doctor with IIT PATH.
                 </p>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -118,16 +167,42 @@ const About = () => {
               viewport={{ once: true }}
               className="mb-16"
             >
-              <h2 className="text-4xl font-display font-bold text-center mb-12 text-gradient-primary">Why Choose IIT PATH?</h2>
-              
+              <h2 className="text-4xl font-display font-bold text-center mb-12 text-gradient-primary">
+                Why Choose IIT PATH?
+              </h2>
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {[
-                  { title: "Expert Faculty", desc: "25+ IITians and PhDs on our faculty team", color: "from-blue-500 to-cyan-500" },
-                  { title: "Proven Results", desc: "1200+ selections in IITs and AIIMS", color: "from-primary to-blue-600" },
-                  { title: "Study Material", desc: "Comprehensive material by subject matter experts", color: "from-purple-500 to-indigo-500" },
-                  { title: "Assessments", desc: "Regular tests with detailed performance analysis", color: "from-green-500 to-emerald-500" },
-                  { title: "Personalized Attention", desc: "Mentoring for each student", color: "from-yellow-500 to-orange-500" },
-                  { title: "Test Series", desc: "All India Test Series to benchmark preparation", color: "from-red-500 to-pink-500" }
+                  {
+                    title: "Expert Faculty",
+                    desc: "25+ IITians and PhDs on our faculty team",
+                    color: "from-blue-500 to-cyan-500",
+                  },
+                  {
+                    title: "Proven Results",
+                    desc: "1200+ selections in IITs and AIIMS",
+                    color: "from-primary to-blue-600",
+                  },
+                  {
+                    title: "Study Material",
+                    desc: "Comprehensive material by subject matter experts",
+                    color: "from-purple-500 to-indigo-500",
+                  },
+                  {
+                    title: "Assessments",
+                    desc: "Regular tests with detailed performance analysis",
+                    color: "from-green-500 to-emerald-500",
+                  },
+                  {
+                    title: "Personalized Attention",
+                    desc: "Mentoring for each student",
+                    color: "from-yellow-500 to-orange-500",
+                  },
+                  {
+                    title: "Test Series",
+                    desc: "All India Test Series to benchmark preparation",
+                    color: "from-red-500 to-pink-500",
+                  },
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -138,30 +213,55 @@ const About = () => {
                     whileHover={{ y: -10 }}
                     className="group relative overflow-hidden bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border"
                   >
-                    <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${item.color}`}></div>
-                    <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                      <span className="text-white font-bold text-lg">{index + 1}</span>
+                    <div
+                      className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${item.color}`}
+                    ></div>
+                    <div
+                      className={`w-12 h-12 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                    >
+                      <span className="text-white font-bold text-lg">
+                        {index + 1}
+                      </span>
                     </div>
-                    <h3 className="text-xl font-display font-bold mb-3 group-hover:text-primary transition-colors duration-300">{item.title}</h3>
+                    <h3 className="text-xl font-display font-bold mb-3 group-hover:text-primary transition-colors duration-300">
+                      {item.title}
+                    </h3>
                     <p className="text-muted-foreground">{item.desc}</p>
                   </motion.div>
                 ))}
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-display font-bold text-center mb-12 text-gradient-accent">Our Achievements</h2>
-              
+              <h2 className="text-4xl font-display font-bold text-center mb-12 text-gradient-accent">
+                Our Achievements
+              </h2>
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {[
-                  { number: "15+", label: "International Gold Medals", desc: "In various Olympiads", color: "from-yellow-400 to-orange-500" },
-                  { number: "1200+", label: "Selections", desc: "In IITs and AIIMS", color: "from-blue-500 to-cyan-500" },
-                  { number: "85%", label: "Selection Rate", desc: "In JEE Main for eligible students", color: "from-green-500 to-emerald-500" }
+                  {
+                    number: "15+",
+                    label: "International Gold Medals",
+                    desc: "In various Olympiads",
+                    color: "from-yellow-400 to-orange-500",
+                  },
+                  {
+                    number: "1200+",
+                    label: "Selections",
+                    desc: "In IITs and AIIMS",
+                    color: "from-blue-500 to-cyan-500",
+                  },
+                  {
+                    number: "85%",
+                    label: "Selection Rate",
+                    desc: "In JEE Main for eligible students",
+                    color: "from-green-500 to-emerald-500",
+                  },
                 ].map((achievement, index) => (
                   <motion.div
                     key={index}
@@ -172,16 +272,22 @@ const About = () => {
                     whileHover={{ scale: 1.05 }}
                     className="group text-center bg-gradient-to-br from-card to-muted rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border hover:border-accent/30"
                   >
-                    <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br ${achievement.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                      <span className="text-white font-display font-bold text-2xl">{achievement.number}</span>
+                    <div
+                      className={`inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br ${achievement.color} mb-6 group-hover:scale-110 transition-transform duration-300`}
+                    >
+                      <span className="text-white font-display font-bold text-2xl">
+                        {achievement.number}
+                      </span>
                     </div>
-                    <h3 className="text-2xl font-display font-bold mb-2 group-hover:text-accent transition-colors duration-300">{achievement.label}</h3>
+                    <h3 className="text-2xl font-display font-bold mb-2 group-hover:text-accent transition-colors duration-300">
+                      {achievement.label}
+                    </h3>
                     <p className="text-muted-foreground">{achievement.desc}</p>
                   </motion.div>
                 ))}
               </div>
             </motion.div>
-            
+
             {/* Our Social Initiatives Section */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -190,17 +296,23 @@ const About = () => {
               viewport={{ once: true }}
               className="mb-20"
             >
-              <h2 className="text-4xl font-display font-bold text-center mt-16 mb-10 text-gradient-primary">Our Social Initiatives</h2>
-              
+              <h2 className="text-4xl font-display font-bold text-center mt-16 mb-10 text-gradient-primary">
+                Our Social Initiatives
+              </h2>
+
               <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 md:p-12 shadow-xl border border-primary/20 mb-16 hover:shadow-2xl transition-all duration-500">
                 <p className="text-lg md:text-xl leading-relaxed text-foreground mb-6">
-                  Mr. Praveen Tyagi, who hails from a small village in Ghaziabad(UP), understands the "Importance of Education" & believes in the philosophy "Money will not be a barrier between a meritorious student & quality education at IIT PATH".
+                  Mr. Praveen Tyagi, who hails from a small village in
+                  Ghaziabad(UP), understands the "Importance of Education" &
+                  believes in the philosophy "Money will not be a barrier
+                  between a meritorious student & quality education at IIT
+                  PATH".
                 </p>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* Super 50 Batch 2021 */}
-                <motion.div 
+                <motion.div
                   className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -212,16 +324,19 @@ const About = () => {
                     <div className="bg-gradient-to-r from-blue-500 to-blue-700 w-16 h-16 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-white font-bold text-xl">2021</span>
                     </div>
-                    <h3 className="text-2xl font-display font-bold text-gradient-primary">Super "50" Batch (Mumbai)</h3>
+                    <h3 className="text-2xl font-display font-bold text-gradient-primary">
+                      Super "50" Batch (Mumbai)
+                    </h3>
                   </div>
                   <p className="text-muted-foreground mb-4">
-                    24 out of 26 students have been admitted to prestigious Institutions like IITs/NITs & 21 out of 24 students have got admitted to Top Medical colleges.
+                    24 out of 26 students have been admitted to prestigious
+                    Institutions like IITs/NITs & 21 out of 24 students have got
+                    admitted to Top Medical colleges.
                   </p>
-
                 </motion.div>
-                
+
                 {/* Super 50 Batch 2019 */}
-                <motion.div 
+                <motion.div
                   className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -233,16 +348,24 @@ const About = () => {
                     <div className="bg-gradient-to-r from-orange-500 to-orange-700 w-16 h-16 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-white font-bold text-xl">2019</span>
                     </div>
-                    <h3 className="text-2xl font-display font-bold text-gradient-accent">Super "50" Batch (Mumbai)</h3>
+                    <h3 className="text-2xl font-display font-bold text-gradient-accent">
+                      Super "50" Batch (Mumbai)
+                    </h3>
                   </div>
                   <p className="text-muted-foreground mb-4">
-                    The initiative of empowering the tribal students is taken up by the Tribal Development Department, Govt. of Maharashtra and IIT PATH Educational Trust. This scheme of Super 50 is proposed for the benefit and upliftment of the tribal community, which enables the tribal students to fulfil their dream of becoming eminent engineers and doctors. 50 meritorious students were selected on the basis of an examination from the lot of 16000 students.
+                    The initiative of empowering the tribal students is taken up
+                    by the Tribal Development Department, Govt. of Maharashtra
+                    and IIT PATH Educational Trust. This scheme of Super 50 is
+                    proposed for the benefit and upliftment of the tribal
+                    community, which enables the tribal students to fulfil their
+                    dream of becoming eminent engineers and doctors. 50
+                    meritorious students were selected on the basis of an
+                    examination from the lot of 16000 students.
                   </p>
-
                 </motion.div>
-                
+
                 {/* Super 50 Girls Batch 2014 */}
-                <motion.div 
+                <motion.div
                   className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -254,16 +377,21 @@ const About = () => {
                     <div className="bg-gradient-to-r from-purple-500 to-purple-700 w-16 h-16 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-white font-bold text-xl">2014</span>
                     </div>
-                    <h3 className="text-2xl font-display font-bold text-purple-600">Training "Super 50 girls" batch</h3>
+                    <h3 className="text-2xl font-display font-bold text-purple-600">
+                      Training "Super 50 girls" batch
+                    </h3>
                   </div>
                   <p className="text-muted-foreground mb-4">
-                    IIT PATH had run a project under the women welfare policy in collaboration with Women and Child Welfare Department, Maharashtra Government for 2 years in which 50 deserving girls get free training for the preparation of JEE Main, JEE Advanced and HSC.
+                    IIT PATH had run a project under the women welfare policy in
+                    collaboration with Women and Child Welfare Department,
+                    Maharashtra Government for 2 years in which 50 deserving
+                    girls get free training for the preparation of JEE Main, JEE
+                    Advanced and HSC.
                   </p>
-
                 </motion.div>
-                
+
                 {/* Super 50 Batch 2013 */}
-                <motion.div 
+                <motion.div
                   className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -275,16 +403,21 @@ const About = () => {
                     <div className="bg-gradient-to-r from-green-500 to-green-700 w-16 h-16 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-white font-bold text-xl">2013</span>
                     </div>
-                    <h3 className="text-2xl font-display font-bold text-green-600">Super "50" Batch (Ghaziabad and Delhi/ NCR)</h3>
+                    <h3 className="text-2xl font-display font-bold text-green-600">
+                      Super "50" Batch (Ghaziabad and Delhi/ NCR)
+                    </h3>
                   </div>
                   <p className="text-muted-foreground mb-4">
-                    The goal of Super "50" batch is to ensure a level play field for the meritorious yet underprivileged students of Ghaziabad/NCR by providing quality education for school/board curriculum and the most prestigious national & international-level Engineering and Medical entrance exams.
+                    The goal of Super "50" batch is to ensure a level play field
+                    for the meritorious yet underprivileged students of
+                    Ghaziabad/NCR by providing quality education for
+                    school/board curriculum and the most prestigious national &
+                    international-level Engineering and Medical entrance exams.
                   </p>
-
                 </motion.div>
-                
+
                 {/* SC Children Training 2010 */}
-                <motion.div 
+                <motion.div
                   className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -296,16 +429,21 @@ const About = () => {
                     <div className="bg-gradient-to-r from-red-500 to-red-700 w-16 h-16 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-white font-bold text-xl">2010</span>
                     </div>
-                    <h3 className="text-2xl font-display font-bold text-red-600">Training the SC children</h3>
+                    <h3 className="text-2xl font-display font-bold text-red-600">
+                      Training the SC children
+                    </h3>
                   </div>
                   <p className="text-muted-foreground mb-4">
-                    IIT PATH collaborated with the Social Welfare Department of the Maharashtra Government for a new social scheme. Based on it, we had offered free training & accommodation to the meritorious and underprivileged Scheduled Caste children for Boards, Engineering & Medical entrance exams.
+                    IIT PATH collaborated with the Social Welfare Department of
+                    the Maharashtra Government for a new social scheme. Based on
+                    it, we had offered free training & accommodation to the
+                    meritorious and underprivileged Scheduled Caste children for
+                    Boards, Engineering & Medical entrance exams.
                   </p>
-
                 </motion.div>
-                
+
                 {/* Underprivileged Students 2009 */}
-                <motion.div 
+                <motion.div
                   className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -317,16 +455,21 @@ const About = () => {
                     <div className="bg-gradient-to-r from-yellow-500 to-yellow-700 w-16 h-16 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-white font-bold text-xl">2009</span>
                     </div>
-                    <h3 className="text-2xl font-display font-bold text-yellow-600">Training the underprivileged meritorious students</h3>
+                    <h3 className="text-2xl font-display font-bold text-yellow-600">
+                      Training the underprivileged meritorious students
+                    </h3>
                   </div>
                   <p className="text-muted-foreground mb-4">
-                    Starting in 2009, IIT PATH got a chance to administer the MCGM till 2013. During these four years, we gave our best to guide and polish the BPL (Below Poverty Line) students in every possible way to provide equal opportunity for deserving students and brighten their future.
+                    Starting in 2009, IIT PATH got a chance to administer the
+                    MCGM till 2013. During these four years, we gave our best to
+                    guide and polish the BPL (Below Poverty Line) students in
+                    every possible way to provide equal opportunity for
+                    deserving students and brighten their future.
                   </p>
-
                 </motion.div>
-                
+
                 {/* Mumbai Police Constables Children */}
-                <motion.div 
+                <motion.div
                   className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border md:col-span-2 lg:col-span-1"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -338,16 +481,22 @@ const About = () => {
                     <div className="bg-gradient-to-r from-indigo-500 to-indigo-700 w-16 h-16 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-white font-bold text-xl">2009</span>
                     </div>
-                    <h3 className="text-2xl font-display font-bold text-indigo-600">Free education for the children of Mumbai Police Constables</h3>
+                    <h3 className="text-2xl font-display font-bold text-indigo-600">
+                      Free education for the children of Mumbai Police
+                      Constables
+                    </h3>
                   </div>
                   <p className="text-muted-foreground mb-4">
-                    After Taj terror attack in 2008, Tyagi sir's heart went out for those Policemen & their family members who lost their lives & were badly injured. Tyagi sir then decided to provide free education to all the children of police constables in Maharashtra.
+                    After Taj terror attack in 2008, Tyagi sir's heart went out
+                    for those Policemen & their family members who lost their
+                    lives & were badly injured. Tyagi sir then decided to
+                    provide free education to all the children of police
+                    constables in Maharashtra.
                   </p>
-
                 </motion.div>
-                
+
                 {/* Single Parent Support */}
-                <motion.div 
+                <motion.div
                   className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border md:col-span-2 lg:col-span-1"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -357,14 +506,21 @@ const About = () => {
                 >
                   <div className="flex items-center mb-4">
                     <div className="bg-gradient-to-r from-pink-500 to-pink-700 w-16 h-16 rounded-lg flex items-center justify-center mr-4">
-                      <span className="text-white font-bold text-xl">Ongoing</span>
+                      <span className="text-white font-bold text-xl">
+                        Ongoing
+                      </span>
                     </div>
-                    <h3 className="text-2xl font-display font-bold text-pink-600">Helping the single parent in their child's education</h3>
+                    <h3 className="text-2xl font-display font-bold text-pink-600">
+                      Helping the single parent in their child's education
+                    </h3>
                   </div>
                   <p className="text-muted-foreground mb-4">
-                    IIT PATH actively supports the education of the meritorious children of single parent who are not able to afford their child's education. The institute provides scholarships and the best possible resources to the children of single parent.
+                    IIT PATH actively supports the education of the meritorious
+                    children of single parent who are not able to afford their
+                    child's education. The institute provides scholarships and
+                    the best possible resources to the children of single
+                    parent.
                   </p>
-
                 </motion.div>
               </div>
             </motion.div>
