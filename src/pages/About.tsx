@@ -190,7 +190,7 @@ const About = () => {
               viewport={{ once: true }}
               className="mb-20"
             >
-              <h2 className="text-4xl font-display font-bold text-center mb-12 text-gradient-primary">Our Social Initiatives</h2>
+              <h2 className="text-4xl font-display font-bold text-center mt-16 mb-10 text-gradient-primary">Our Social Initiatives</h2>
               
               <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 md:p-12 shadow-xl border border-primary/20 mb-16 hover:shadow-2xl transition-all duration-500">
                 <p className="text-lg md:text-xl leading-relaxed text-foreground mb-6">
@@ -198,7 +198,7 @@ const About = () => {
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* Super 50 Batch 2021 */}
                 <motion.div 
                   className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border"
@@ -217,9 +217,7 @@ const About = () => {
                   <p className="text-muted-foreground mb-4">
                     24 out of 26 students have been admitted to prestigious Institutions like IITs/NITs & 21 out of 24 students have got admitted to Top Medical colleges.
                   </p>
-                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 flex items-center justify-center text-gray-500">
-                    Image Placeholder: Super 50 Batch 2021
-                  </div>
+
                 </motion.div>
                 
                 {/* Super 50 Batch 2019 */}
@@ -240,12 +238,7 @@ const About = () => {
                   <p className="text-muted-foreground mb-4">
                     The initiative of empowering the tribal students is taken up by the Tribal Development Department, Govt. of Maharashtra and IIT PATH Educational Trust. This scheme of Super 50 is proposed for the benefit and upliftment of the tribal community, which enables the tribal students to fulfil their dream of becoming eminent engineers and doctors. 50 meritorious students were selected on the basis of an examination from the lot of 16000 students.
                   </p>
-                  <p className="text-muted-foreground mb-4">
-                    Super 50 batch of 2019 was launched in gracious presence of Hon. Dr. Ashok Uike, Minister of Tribal Development, Dr. Parinay Fuke, Minister of State for Public Works, Tribal Development and Forest, Govt. of Maharashtra, Mrs. Manisha Verma, Principal Secretary, Tribal Development Department, Shri Rajendra Gavit MP Palghar, Shri Paskal Dhanare MLA Dahanu. Harishchandr Bhoye, Tribal Aghadi BJP Maharahtra,SantoshJanatheSecretary BJP Palghar district, Mr. PraveenTyagi,Trustee,IIT PATH Educational Trust
-                  </p>
-                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 flex items-center justify-center text-gray-500">
-                    Image Placeholder: Super 50 Batch 2019 Launch Event
-                  </div>
+
                 </motion.div>
                 
                 {/* Super 50 Girls Batch 2014 */}
@@ -266,9 +259,7 @@ const About = () => {
                   <p className="text-muted-foreground mb-4">
                     IIT PATH had run a project under the women welfare policy in collaboration with Women and Child Welfare Department, Maharashtra Government for 2 years in which 50 deserving girls get free training for the preparation of JEE Main, JEE Advanced and HSC.
                   </p>
-                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 flex items-center justify-center text-gray-500">
-                    Image Placeholder: Super 50 Girls Batch
-                  </div>
+
                 </motion.div>
                 
                 {/* Super 50 Batch 2013 */}
@@ -289,9 +280,7 @@ const About = () => {
                   <p className="text-muted-foreground mb-4">
                     The goal of Super "50" batch is to ensure a level play field for the meritorious yet underprivileged students of Ghaziabad/NCR by providing quality education for school/board curriculum and the most prestigious national & international-level Engineering and Medical entrance exams.
                   </p>
-                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 flex items-center justify-center text-gray-500">
-                    Image Placeholder: Super 50 Batch Ghaziabad/Delhi NCR
-                  </div>
+
                 </motion.div>
                 
                 {/* SC Children Training 2010 */}
@@ -312,9 +301,7 @@ const About = () => {
                   <p className="text-muted-foreground mb-4">
                     IIT PATH collaborated with the Social Welfare Department of the Maharashtra Government for a new social scheme. Based on it, we had offered free training & accommodation to the meritorious and underprivileged Scheduled Caste children for Boards, Engineering & Medical entrance exams.
                   </p>
-                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 flex items-center justify-center text-gray-500">
-                    Image Placeholder: SC Children Training Program
-                  </div>
+
                 </motion.div>
                 
                 {/* Underprivileged Students 2009 */}
@@ -335,14 +322,12 @@ const About = () => {
                   <p className="text-muted-foreground mb-4">
                     Starting in 2009, IIT PATH got a chance to administer the MCGM till 2013. During these four years, we gave our best to guide and polish the BPL (Below Poverty Line) students in every possible way to provide equal opportunity for deserving students and brighten their future.
                   </p>
-                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 flex items-center justify-center text-gray-500">
-                    Image Placeholder: MCGM Collaboration
-                  </div>
+
                 </motion.div>
                 
                 {/* Mumbai Police Constables Children */}
                 <motion.div 
-                  className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border lg:col-span-2"
+                  className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border md:col-span-2 lg:col-span-1"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
@@ -358,14 +343,12 @@ const About = () => {
                   <p className="text-muted-foreground mb-4">
                     After Taj terror attack in 2008, Tyagi sir's heart went out for those Policemen & their family members who lost their lives & were badly injured. Tyagi sir then decided to provide free education to all the children of police constables in Maharashtra.
                   </p>
-                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 flex items-center justify-center text-gray-500">
-                    Image Placeholder: Mumbai Police Constables Children Program
-                  </div>
+
                 </motion.div>
                 
                 {/* Single Parent Support */}
                 <motion.div 
-                  className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border lg:col-span-2"
+                  className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border md:col-span-2 lg:col-span-1"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
@@ -381,9 +364,7 @@ const About = () => {
                   <p className="text-muted-foreground mb-4">
                     IIT PATH actively supports the education of the meritorious children of single parent who are not able to afford their child's education. The institute provides scholarships and the best possible resources to the children of single parent.
                   </p>
-                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 flex items-center justify-center text-gray-500">
-                    Image Placeholder: Single Parent Support Program
-                  </div>
+
                 </motion.div>
               </div>
             </motion.div>
