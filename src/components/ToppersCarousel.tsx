@@ -95,42 +95,45 @@ const ToppersCarousel = ({ category }: { category: "JEE" | "NEET" }) => {
       </motion.div>
 
       <div className="relative overflow-hidden">
-        <div className="flex transition-transform duration-500 ease-out">
+        {/* FIXED CAROUSEL SLIDER */}
+        <div
+          className="flex transition-transform duration-500 ease-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
           {toppers.map((topper, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{
-                opacity: index === currentIndex ? 1 : 0.3,
-                scale: index === currentIndex ? 1 : 0.9,
-                x: `${(index - currentIndex) * 100}%`,
+                opacity: 1,
+                scale: index === currentIndex ? 1 : 0.95,
               }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.4 }}
               className="min-w-full px-4"
             >
-              <div className="max-w-4xl mx-auto bg-card rounded-2xl shadow-xl p-6 sm:p-8 md:p-12">
+              <div className="max-w-4xl mx-auto bg-card rounded-2xl shadow-xl p-6 sm:p-8 md:p-12 border border-border hover:border-primary/30 transition-all duration-300">
                 <div className="flex flex-col md:flex-row items-center gap-8">
-                  <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white text-4xl font-bold flex-shrink-0">
+                  <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white text-4xl font-bold flex-shrink-0 shadow-lg">
                     {topper.name.charAt(0)}
                   </div>
-                  
+
                   <div className="flex-1 text-center md:text-left">
                     <div className="flex items-center justify-center md:justify-start gap-1 mb-2">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
-                    
-                    <h3 className="text-2xl md:text-3xl font-display font-bold mb-2">
+
+                    <h3 className="text-2xl md:text-3xl font-display font-bold mb-2 text-foreground">
                       {topper.name}
                     </h3>
-                    
+
                     <p className="text-xl font-semibold text-primary mb-1">
                       {topper.rank} • {topper.achievement}
                     </p>
-                    
+
                     <p className="text-muted-foreground mb-4">{topper.college}</p>
-                    
+
                     <blockquote className="text-lg italic text-foreground border-l-4 border-primary pl-4">
                       "{topper.quote}"
                     </blockquote>
@@ -141,7 +144,7 @@ const ToppersCarousel = ({ category }: { category: "JEE" | "NEET" }) => {
           ))}
         </div>
 
-        {/* Navigation */}
+        {/* Navigation Buttons */}
         <button
           onClick={prevTopper}
           className="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/20 backdrop-blur-sm hover:bg-primary/30 transition-all duration-300 flex items-center justify-center text-primary"
