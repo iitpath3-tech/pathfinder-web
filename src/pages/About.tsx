@@ -1,10 +1,22 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
+import { 
+  Heart, 
+  GraduationCap, 
+  BookOpen, 
+  Target, 
+  MessageCircle, 
+  Users, 
+  BarChart3, 
+  Gamepad2 
+} from "lucide-react";
+import FlyingIcons from "@/components/FlyingIcons";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <FlyingIcons />
       <Navbar />
       <main className="pt-20">
         <div className="section-padding">
@@ -159,7 +171,8 @@ const About = () => {
                 </p>
               </div>
             </motion.div>
-
+                        
+            {/* Our Pedagogy Section */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -168,10 +181,105 @@ const About = () => {
               className="mb-16"
             >
               <h2 className="text-4xl font-display font-bold text-center mb-12 text-gradient-primary">
-                Why Choose IIT PATH?
+                Our Pedagogy
               </h2>
-
+                          
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {[
+                  {
+                    icon: Heart,
+                    title: "Child-Centric Approach",
+                    desc: "Child-Centric approach and Feedback Driven Mechanism",
+                    color: "from-blue-500 to-blue-700",
+                  },
+                  {
+                    icon: GraduationCap,
+                    title: "Expert Faculty",
+                    desc: "Team of highly qualified teachers comprising of IITians, Doctors and Doctorates",
+                    color: "from-purple-500 to-purple-700",
+                  },
+                  {
+                    icon: BookOpen,
+                    title: "Study Material",
+                    desc: "Extensive study material prepared by experienced faculty members",
+                    color: "from-green-500 to-green-700",
+                  },
+                  {
+                    icon: Target,
+                    title: "Precise Training",
+                    desc: "Precise training for competitive exams as well as school exams",
+                    color: "from-orange-500 to-orange-700",
+                  },
+                  {
+                    icon: MessageCircle,
+                    title: "Feedback System",
+                    desc: "Regular feedback system, parent-teacher meeting & detailed analysis report after every major test",
+                    color: "from-red-500 to-red-700",
+                  },
+                  {
+                    icon: Users,
+                    title: "Effective Batch Size",
+                    desc: "Effective batch size in class and regular availability of teachers in library for doubt solving",
+                    color: "from-indigo-500 to-indigo-700",
+                  },
+                  {
+                    icon: BarChart3,
+                    title: "Assessment System",
+                    desc: "Topic-wise tests, major tests, All India Test Series (AITS) to assess & evaluate students' performance",
+                    color: "from-yellow-500 to-yellow-700",
+                  },
+                  {
+                    icon: Gamepad2,
+                    title: "Gamified Learning",
+                    desc: "A gamified learning app which makes learning Math and Science fun",
+                    color: "from-pink-500 to-pink-700",
+                  },
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ y: -10 }}
+                    className="group relative overflow-hidden bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border"
+                  >
+                    <div
+                      className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${item.color}`}
+                    ></div>
+                    <div
+                      className={`w-12 h-12 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                    >
+                      <item.icon className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="text-xl font-display font-bold mb-3 group-hover:text-primary transition-colors duration-300">
+                      {item.title}
+                    </h3>
+                    <p className="text-muted-foreground">{item.desc}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+                        
+            <div className="bg-gradient-to-br from-blue-50 to-sky-100 w-full py-16">
+              <div className="max-w-7xl mx-auto px-4">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                  className="mb-16"
+                >
+                  <div className="text-center mb-16">
+                    <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
+                      Why Choose <span className="text-gradient-primary">IIT PATH</span>?
+                    </h2>
+                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                      Our unique approach and proven methodologies set us apart from other coaching institutes.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 {[
                   {
                     title: "Expert Faculty",
@@ -206,31 +314,29 @@ const About = () => {
                 ].map((item, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    whileHover={{ y: -10 }}
-                    className="group relative overflow-hidden bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border"
+                    className="group bg-card rounded-xl p-6 sm:p-8 hover-lift shadow-md hover:shadow-xl transition-all duration-300 border border-border hover:border-primary/50"
                   >
-                    <div
-                      className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${item.color}`}
-                    ></div>
-                    <div
-                      className={`w-12 h-12 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
-                    >
-                      <span className="text-white font-bold text-lg">
+                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-light mb-6 group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-primary font-display font-bold text-2xl">
                         {index + 1}
                       </span>
                     </div>
-                    <h3 className="text-xl font-display font-bold mb-3 group-hover:text-primary transition-colors duration-300">
+                    <h3 className="text-xl font-display font-semibold mb-3 group-hover:text-primary transition-colors duration-300">
                       {item.title}
                     </h3>
-                    <p className="text-muted-foreground">{item.desc}</p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {item.desc}
+                    </p>
                   </motion.div>
                 ))}
               </div>
             </motion.div>
+              </div>
+            </div>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}

@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
+import { BookOpen, GraduationCap, Award, ClipboardCheck, Calendar, DollarSign, Trophy, Star, Medal } from "lucide-react";
+import FlyingIcons from "@/components/FlyingIcons";
 
 const FeeStructure = () => {
   // Program data
@@ -57,27 +59,31 @@ const FeeStructure = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <FlyingIcons />
       <Navbar />
       <main className="pt-20">
         <div className="section-padding">
           <div className="container-custom">
             <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, y: -30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">
+              <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">
                 Fee <span className="text-gradient-primary">Structure</span>
               </h1>
-              <motion.p 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3, duration: 0.6 }}
-                className="text-xl text-muted-foreground max-w-3xl mx-auto"
-              >
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
                 Transparent and affordable pricing for quality education
-              </motion.p>
+              </p>
+              <motion.div 
+                className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+                viewport={{ once: true }}
+              ></motion.div>
             </motion.div>
             
             <motion.div
@@ -110,7 +116,13 @@ const FeeStructure = () => {
                   <div className="p-8">
                     <div className="flex items-center justify-between mb-6">
                       <div>
-                        <h2 className="text-2xl font-display font-bold mb-2 group-hover:text-primary transition-colors duration-300">{program.title}</h2>
+                        <h2 className="text-2xl font-display font-bold mb-2 group-hover:text-primary transition-colors duration-300 flex items-center">
+                          {index === 0 && <BookOpen className="mr-2 text-primary" size={24} />}
+                          {index === 1 && <GraduationCap className="mr-2 text-primary" size={24} />}
+                          {index === 2 && <Award className="mr-2 text-primary" size={24} />}
+                          {index === 3 && <Trophy className="mr-2 text-primary" size={24} />}
+                          {program.title}
+                        </h2>
                         <p className="text-muted-foreground">{program.subtitle}</p>
                       </div>
                       <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${program.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
@@ -130,11 +142,17 @@ const FeeStructure = () => {
                           className="p-4 rounded-xl bg-muted/50 border border-border/50 hover:border-primary/30 transition-all duration-300"
                         >
                           <div className="flex justify-between items-start mb-2">
-                            <h3 className="font-semibold text-foreground">{batch.type}</h3>
+                            <h3 className="font-semibold text-foreground flex items-center">
+                              <ClipboardCheck className="mr-2 text-primary" size={16} />
+                              {batch.type}
+                            </h3>
                             <span className="text-lg font-bold text-gradient-primary">{batch.fee}</span>
                           </div>
                           <div className="flex justify-between text-sm text-muted-foreground">
-                            <span>{batch.duration}</span>
+                            <span className="flex items-center">
+                              <Calendar className="mr-1" size={14} />
+                              {batch.duration}
+                            </span>
                             <span>{batch.features}</span>
                           </div>
                         </motion.div>
@@ -153,7 +171,10 @@ const FeeStructure = () => {
               viewport={{ once: true }}
               className="mb-16"
             >
-              <h2 className="text-4xl font-display font-bold text-center mb-12 text-gradient-accent">Payment Options & Scholarships</h2>
+              <h2 className="text-4xl font-display font-bold text-center mb-12 text-gradient-accent flex items-center justify-center">
+                <Star className="mr-3" size={32} />
+                Payment Options & Scholarships
+              </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {benefits.map((benefit, index) => (
@@ -167,7 +188,10 @@ const FeeStructure = () => {
                     className="group bg-card rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-border hover:border-accent/30"
                   >
                     <div className="text-3xl mb-4">{benefit.icon}</div>
-                    <h3 className="text-xl font-display font-bold mb-2 group-hover:text-accent transition-colors duration-300">{benefit.title}</h3>
+                    <h3 className="text-xl font-display font-bold mb-2 group-hover:text-accent transition-colors duration-300 flex items-center">
+                      <Medal className="mr-2 text-primary" size={20} />
+                      {benefit.title}
+                    </h3>
                     <p className="text-muted-foreground">{benefit.desc}</p>
                   </motion.div>
                 ))}

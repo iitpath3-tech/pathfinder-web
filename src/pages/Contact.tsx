@@ -1,7 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Facebook, Instagram, Youtube, Linkedin, MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Facebook, Instagram, Youtube, Linkedin, MapPin, Phone, Mail, Clock, BookOpen, GraduationCap, Users, MessageCircle, Award, ClipboardCheck } from "lucide-react";
 import { motion } from "framer-motion";
+import FlyingIcons from "@/components/FlyingIcons";
 
 const Contact = () => {
   // Contact info data
@@ -46,14 +47,16 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <FlyingIcons />
       <Navbar />
       <main className="pt-20">
         <div className="section-padding">
           <div className="container-custom">
             <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, y: -30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
               className="text-center mb-16"
             >
               <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">
@@ -61,12 +64,20 @@ const Contact = () => {
               </h1>
               <motion.p 
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
-                className="text-xl text-muted-foreground max-w-3xl mx-auto"
+                viewport={{ once: true }}
+                className="text-xl text-muted-foreground max-w-3xl mx-auto mb-6"
               >
                 We're here to help you start your journey to success
               </motion.p>
+              <motion.div 
+                className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+                viewport={{ once: true }}
+              ></motion.div>
             </motion.div>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-16">
@@ -78,7 +89,10 @@ const Contact = () => {
                 viewport={{ once: true }}
                 className="space-y-6"
               >
-                <h2 className="text-3xl font-display font-bold mb-6 text-gradient-primary">Contact Information</h2>
+                <h2 className="text-3xl font-display font-bold mb-6 text-gradient-primary flex items-center">
+                  <MessageCircle className="mr-3" size={32} />
+                  Contact Information
+                </h2>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {contactInfo.map((info, index) => (
@@ -124,7 +138,10 @@ const Contact = () => {
                   viewport={{ once: true }}
                   className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-6 border border-primary/20"
                 >
-                  <h2 className="text-2xl font-display font-bold mb-4 text-gradient-accent">Follow Us</h2>
+                  <h2 className="text-2xl font-display font-bold mb-4 text-gradient-accent flex items-center">
+                    <Users className="mr-3" size={24} />
+                    Follow Us
+                  </h2>
                   <div className="flex space-x-4">
                     {[
                       { icon: Facebook, color: "bg-blue-600" },
@@ -154,10 +171,16 @@ const Contact = () => {
                 viewport={{ once: true }}
               >
                 <div className="bg-gradient-to-br from-card to-muted rounded-2xl shadow-xl p-8 border border-border hover:border-primary/30 transition-all duration-500">
-                  <h2 className="text-3xl font-display font-bold mb-6 text-gradient-primary">Send us a Message</h2>
+                  <h2 className="text-3xl font-display font-bold mb-6 text-gradient-primary flex items-center">
+                    <GraduationCap className="mr-3" size={32} />
+                    Send us a Message
+                  </h2>
                   <form className="space-y-6">
                     <div>
-                      <label htmlFor="name" className="block text-lg font-medium mb-2">Full Name</label>
+                      <label htmlFor="name" className="block text-lg font-medium mb-2 flex items-center">
+                        <BookOpen className="mr-2" size={18} />
+                        Full Name
+                      </label>
                       <input
                         type="text"
                         id="name"
@@ -167,7 +190,10 @@ const Contact = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="email" className="block text-lg font-medium mb-2">Email Address</label>
+                      <label htmlFor="email" className="block text-lg font-medium mb-2 flex items-center">
+                        <Mail className="mr-2" size={18} />
+                        Email Address
+                      </label>
                       <input
                         type="email"
                         id="email"
@@ -177,7 +203,10 @@ const Contact = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="phone" className="block text-lg font-medium mb-2">Phone Number</label>
+                      <label htmlFor="phone" className="block text-lg font-medium mb-2 flex items-center">
+                        <Phone className="mr-2" size={18} />
+                        Phone Number
+                      </label>
                       <input
                         type="tel"
                         id="phone"
@@ -187,7 +216,10 @@ const Contact = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="course" className="block text-lg font-medium mb-2">Course Interested In</label>
+                      <label htmlFor="course" className="block text-lg font-medium mb-2 flex items-center">
+                        <Award className="mr-2" size={18} />
+                        Course Interested In
+                      </label>
                       <select
                         id="course"
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background"
@@ -202,7 +234,10 @@ const Contact = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="message" className="block text-lg font-medium mb-2">Message</label>
+                      <label htmlFor="message" className="block text-lg font-medium mb-2 flex items-center">
+                        <MessageCircle className="mr-2" size={18} />
+                        Message
+                      </label>
                       <textarea
                         id="message"
                         rows={5}
@@ -215,8 +250,9 @@ const Contact = () => {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       type="submit"
-                      className="w-full bg-gradient-primary text-white py-3 px-6 rounded-lg font-display font-semibold text-lg hover:shadow-lg transition-all duration-300"
+                      className="w-full bg-gradient-primary text-white py-3 px-6 rounded-lg font-display font-semibold text-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center"
                     >
+                      <ClipboardCheck className="mr-2" size={20} />
                       Send Message
                     </motion.button>
                   </form>
@@ -232,7 +268,17 @@ const Contact = () => {
               viewport={{ once: true }}
               className="mt-16"
             >
-              <h2 className="text-3xl font-display font-bold mb-6 text-center text-gradient-primary">Our Location</h2>
+              <h2 className="text-3xl font-display font-bold mb-6 text-center text-gradient-primary flex items-center justify-center">
+                <MapPin className="mr-3" size={28} />
+                Our Location
+              </h2>
+              <motion.div 
+                className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+                viewport={{ once: true }}
+              ></motion.div>
               <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl overflow-hidden shadow-xl border border-primary/20">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.574540083173!2d72.8291043148579!3d19.12660038705742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9b3d9b4d3d9%3A0x1e0c1c1e1e1e1e1e!2sIIT%20PATH%20Coaching%20Institute!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
