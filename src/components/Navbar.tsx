@@ -42,15 +42,12 @@ const Navbar = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20 px-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 hover-scale">
-            <div className="flex items-center">
-              <span className="text-2xl md:text-3xl font-display font-bold text-primary">
-                IIT
-              </span>
-              <span className="text-2xl md:text-3xl font-display font-bold text-accent ml-1">
-                PATH
-              </span>
-            </div>
+          <Link to="/" className="flex items-center hover-scale">
+            <img 
+              src="/logo.png" 
+              alt="IIT PATH Logo" 
+              className="h-10 md:h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Menu */}
