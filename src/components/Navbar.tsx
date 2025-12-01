@@ -75,10 +75,10 @@ const Navbar = () => {
               onMouseEnter={() => setIsCoursesOpen(true)}
               onMouseLeave={() => setIsCoursesOpen(false)}
             >
-              <button className="flex items-center text-foreground hover:text-primary transition-colors duration-300 font-medium">
+              <a href="/courses"> <button className="flex items-center text-foreground hover:text-primary transition-colors duration-300 font-medium">
                 Courses
                 <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
+              </button></a>
               <AnimatePresence>
                 {isCoursesOpen && (
                   <motion.div
