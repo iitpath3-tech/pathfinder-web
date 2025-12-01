@@ -8,6 +8,7 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import MethodologySection from "@/components/MethodologySection";
 import ProgramDesignSection from "@/components/ProgramDesignSection";
+import PedagogySection from "@/components/PedagogySection";
 import {
   Accordion,
   AccordionContent,
@@ -186,6 +187,8 @@ const Index = () => {
             </motion.div>
           </div>
         </section>
+        {/* New Pedagogy Section */}
+        
         <CTASection />
       </main>
       <Footer />

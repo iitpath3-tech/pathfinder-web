@@ -1,15 +1,15 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { 
-  Heart, 
-  GraduationCap, 
-  BookOpen, 
-  Target, 
-  MessageCircle, 
-  Users, 
-  BarChart3, 
-  Gamepad2 
+import {
+  Heart,
+  GraduationCap,
+  BookOpen,
+  Target,
+  MessageCircle,
+  Users,
+  BarChart3,
+  Gamepad2,
 } from "lucide-react";
 import FlyingIcons from "@/components/FlyingIcons";
 
@@ -88,9 +88,9 @@ const About = () => {
                     our younger generation to turn India into a superpower. Our
                     vision is to impart best quality education to students from
                     seventh standard onwards for the top national and global
-                    examinations and help them to fulfil their dream of entering into
-                    top Engineering and Medical colleges, through tech enabled
-                    learning and testing solutions.
+                    examinations and help them to fulfil their dream of entering
+                    into top Engineering and Medical colleges, through tech
+                    enabled learning and testing solutions.
                   </p>
                 </div>
               </motion.div>
@@ -171,172 +171,194 @@ const About = () => {
                 </p>
               </div>
             </motion.div>
-                        
-            {/* Our Pedagogy Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="mb-16"
-            >
-              <h2 className="text-4xl font-display font-bold text-center mb-12 text-gradient-primary">
-                Our Pedagogy
-              </h2>
-                          
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {[
-                  {
-                    icon: Heart,
-                    title: "Child-Centric Approach",
-                    desc: "Child-Centric approach and Feedback Driven Mechanism",
-                    color: "from-blue-500 to-blue-700",
-                  },
-                  {
-                    icon: GraduationCap,
-                    title: "Expert Faculty",
-                    desc: "Team of highly qualified teachers comprising of IITians, Doctors and Doctorates",
-                    color: "from-purple-500 to-purple-700",
-                  },
-                  {
-                    icon: BookOpen,
-                    title: "Study Material",
-                    desc: "Extensive study material prepared by experienced faculty members",
-                    color: "from-green-500 to-green-700",
-                  },
-                  {
-                    icon: Target,
-                    title: "Precise Training",
-                    desc: "Precise training for competitive exams as well as school exams",
-                    color: "from-orange-500 to-orange-700",
-                  },
-                  {
-                    icon: MessageCircle,
-                    title: "Feedback System",
-                    desc: "Regular feedback system, parent-teacher meeting & detailed analysis report after every major test",
-                    color: "from-red-500 to-red-700",
-                  },
-                  {
-                    icon: Users,
-                    title: "Effective Batch Size",
-                    desc: "Effective batch size in class and regular availability of teachers in library for doubt solving",
-                    color: "from-indigo-500 to-indigo-700",
-                  },
-                  {
-                    icon: BarChart3,
-                    title: "Assessment System",
-                    desc: "Topic-wise tests, major tests, All India Test Series (AITS) to assess & evaluate students' performance",
-                    color: "from-yellow-500 to-yellow-700",
-                  },
-                  {
-                    icon: Gamepad2,
-                    title: "Gamified Learning",
-                    desc: "A gamified learning app which makes learning Math and Science fun",
-                    color: "from-pink-500 to-pink-700",
-                  },
-                ].map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ y: -10 }}
-                    className="group relative overflow-hidden bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border"
-                  >
-                    <div
-                      className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${item.color}`}
-                    ></div>
-                    <div
-                      className={`w-12 h-12 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
-                    >
-                      <item.icon className="h-6 w-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-display font-bold mb-3 group-hover:text-primary transition-colors duration-300">
-                      {item.title}
-                    </h3>
-                    <p className="text-muted-foreground">{item.desc}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-                        
-            <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-gradient-to-br from-blue-50 to-sky-100 py-16">
-  <div className="max-w-7xl mx-auto px-4">
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
-      className="mb-16"
-    >
-      <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
-          Why Choose <span className="text-gradient-primary">IIT PATH</span>?
-        </h2>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Our unique approach and proven methodologies set us apart from other coaching institutes.
-        </p>
-      </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-        {[
-          {
-            title: "Expert Faculty",
-            desc: "25+ IITians and PhDs on our faculty team",
-            color: "from-blue-500 to-cyan-500",
-          },
-          {
-            title: "Proven Results",
-            desc: "1200+ selections in IITs and AIIMS",
-            color: "from-primary to-blue-600",
-          },
-          {
-            title: "Study Material",
-            desc: "Comprehensive material by subject matter experts",
-            color: "from-purple-500 to-indigo-500",
-          },
-          {
-            title: "Assessments",
-            desc: "Regular tests with detailed performance analysis",
-            color: "from-green-500 to-emerald-500",
-          },
-          {
-            title: "Personalized Attention",
-            desc: "Mentoring for each student",
-            color: "from-yellow-500 to-orange-500",
-          },
-          {
-            title: "Test Series",
-            desc: "All India Test Series to benchmark preparation",
-            color: "from-red-500 to-pink-500",
-          },
-        ].map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            viewport={{ once: true }}
-            className="group bg-card rounded-xl p-6 sm:p-8 hover-lift shadow-md hover:shadow-xl transition-all duration-300 border border-border hover:border-primary/50"
-          >
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-light mb-6 group-hover:scale-110 transition-transform duration-300">
-              <span className="text-primary font-display font-bold text-2xl">
-                {index + 1}
-              </span>
-            </div>
-            <h3 className="text-xl font-display font-semibold mb-3 group-hover:text-primary transition-colors duration-300">
-              {item.title}
-            </h3>
-            <p className="text-muted-foreground leading-relaxed">
-              {item.desc}
-            </p>
-          </motion.div>
-        ))}
-      </div>
-    </motion.div>
+            {/* Our Pedagogy Section */}
+            {/* Our Pedagogy Section */}
+<motion.div
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+  className="mb-24"
+>
+  <h2 className="text-4xl font-display font-bold text-center mb-12 text-gradient-primary">
+    Our Pedagogy
+  </h2>
+
+  <div className="relative w-full max-w-6xl mx-auto px-4">
+
+  
+
+    {/* BUBBLES */}
+    <div className="
+      grid 
+      grid-cols-1 
+      sm:grid-cols-2 
+      md:grid-cols-4 
+      gap-y-16 
+      gap-x-4 
+      mt-10
+    ">
+      {[
+        {
+          icon: Heart,
+          title: "Child-Centric Approach",
+          desc: "Child-Centric approach and Feedback Driven Mechanism",
+        },
+        {
+          icon: GraduationCap,
+          title: "Expert Faculty",
+          desc: "Highly qualified teachers: IITians, Doctors & PhDs",
+        },
+        {
+          icon: BookOpen,
+          title: "Study Material",
+          desc: "Extensive material crafted by experienced faculty",
+        },
+        {
+          icon: Target,
+          title: "Precise Training",
+          desc: "Training for competitive + school exams",
+        },
+        {
+          icon: MessageCircle,
+          title: "Feedback System",
+          desc: "Regular feedback, PTMs & detailed performance reports",
+        },
+        {
+          icon: Users,
+          title: "Effective Batch Size",
+          desc: "Small batch sizes & library doubt-solving support",
+        },
+        {
+          icon: BarChart3,
+          title: "Assessment System",
+          desc: "Topic tests, major tests, AITS evaluation system",
+        },
+        {
+          icon: Gamepad2,
+          title: "Gamified Learning",
+          desc: "Gamified learning app for engaging Math & Science",
+        },
+      ].map((item, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          viewport={{ once: true }}
+          className="relative flex flex-col items-center text-center px-4"
+        >
+          {/* Bubble */}
+          <div className="
+            w-28 h-28 
+            sm:w-32 sm:h-32 
+            md:w-36 md:h-36 
+            rounded-full 
+            bg-white 
+            shadow-xl 
+            border 
+            border-gray-200 
+            flex items-center justify-center 
+            transition-transform 
+            duration-300 
+            hover:scale-105
+          ">
+            <item.icon className="w-10 h-10 sm:w-12 sm:h-12 text-primary" />
+          </div>
+
+          <h3 className="text-lg sm:text-xl font-display font-semibold mt-4">
+            {item.title}
+          </h3>
+
+          <p className="text-sm sm:text-base text-muted-foreground max-w-xs mt-2">
+            {item.desc}
+          </p>
+        </motion.div>
+      ))}
+    </div>
   </div>
-</div>
+</motion.div>
+
+
+            <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-gradient-to-br from-blue-50 to-sky-100 py-16">
+              <div className="max-w-7xl mx-auto px-4">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                  className="mb-16"
+                >
+                  <div className="text-center mb-16">
+                    <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
+                      Why Choose{" "}
+                      <span className="text-gradient-primary">IIT PATH</span>?
+                    </h2>
+                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                      Our unique approach and proven methodologies set us apart
+                      from other coaching institutes.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    {[
+                      {
+                        title: "Expert Faculty",
+                        desc: "25+ IITians and PhDs on our faculty team",
+                        color: "from-blue-500 to-cyan-500",
+                      },
+                      {
+                        title: "Proven Results",
+                        desc: "1200+ selections in IITs and AIIMS",
+                        color: "from-primary to-blue-600",
+                      },
+                      {
+                        title: "Study Material",
+                        desc: "Comprehensive material by subject matter experts",
+                        color: "from-purple-500 to-indigo-500",
+                      },
+                      {
+                        title: "Assessments",
+                        desc: "Regular tests with detailed performance analysis",
+                        color: "from-green-500 to-emerald-500",
+                      },
+                      {
+                        title: "Personalized Attention",
+                        desc: "Mentoring for each student",
+                        color: "from-yellow-500 to-orange-500",
+                      },
+                      {
+                        title: "Test Series",
+                        desc: "All India Test Series to benchmark preparation",
+                        color: "from-red-500 to-pink-500",
+                      },
+                    ].map((item, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                        className="group bg-card rounded-xl p-6 sm:p-8 hover-lift shadow-md hover:shadow-xl transition-all duration-300 border border-border hover:border-primary/50"
+                      >
+                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-light mb-6 group-hover:scale-110 transition-transform duration-300">
+                          <span className="text-primary font-display font-bold text-2xl">
+                            {index + 1}
+                          </span>
+                        </div>
+                        <h3 className="text-xl font-display font-semibold mb-3 group-hover:text-primary transition-colors duration-300">
+                          {item.title}
+                        </h3>
+                        <p className="text-muted-foreground leading-relaxed">
+                          {item.desc}
+                        </p>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              </div>
+            </div>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
