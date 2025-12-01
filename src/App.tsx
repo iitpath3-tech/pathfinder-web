@@ -31,7 +31,7 @@ const App = () => {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center w-screen h-screen">
-        <RingLoader color="#f97316" size={60} />
+        <RingLoader color="#d72525" size={90} />
       </div>
     );
   }

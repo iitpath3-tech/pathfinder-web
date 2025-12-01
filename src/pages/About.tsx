@@ -261,82 +261,82 @@ const About = () => {
               </div>
             </motion.div>
                         
-            <div className="bg-gradient-to-br from-blue-50 to-sky-100 w-full py-16">
-              <div className="max-w-7xl mx-auto px-4">
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                  className="mb-16"
-                >
-                  <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
-                      Why Choose <span className="text-gradient-primary">IIT PATH</span>?
-                    </h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                      Our unique approach and proven methodologies set us apart from other coaching institutes.
-                    </p>
-                  </div>
+            <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-gradient-to-br from-blue-50 to-sky-100 py-16">
+  <div className="max-w-7xl mx-auto px-4">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="mb-16"
+    >
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
+          Why Choose <span className="text-gradient-primary">IIT PATH</span>?
+        </h2>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          Our unique approach and proven methodologies set us apart from other coaching institutes.
+        </p>
+      </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                {[
-                  {
-                    title: "Expert Faculty",
-                    desc: "25+ IITians and PhDs on our faculty team",
-                    color: "from-blue-500 to-cyan-500",
-                  },
-                  {
-                    title: "Proven Results",
-                    desc: "1200+ selections in IITs and AIIMS",
-                    color: "from-primary to-blue-600",
-                  },
-                  {
-                    title: "Study Material",
-                    desc: "Comprehensive material by subject matter experts",
-                    color: "from-purple-500 to-indigo-500",
-                  },
-                  {
-                    title: "Assessments",
-                    desc: "Regular tests with detailed performance analysis",
-                    color: "from-green-500 to-emerald-500",
-                  },
-                  {
-                    title: "Personalized Attention",
-                    desc: "Mentoring for each student",
-                    color: "from-yellow-500 to-orange-500",
-                  },
-                  {
-                    title: "Test Series",
-                    desc: "All India Test Series to benchmark preparation",
-                    color: "from-red-500 to-pink-500",
-                  },
-                ].map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="group bg-card rounded-xl p-6 sm:p-8 hover-lift shadow-md hover:shadow-xl transition-all duration-300 border border-border hover:border-primary/50"
-                  >
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-light mb-6 group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-primary font-display font-bold text-2xl">
-                        {index + 1}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-display font-semibold mb-3 group-hover:text-primary transition-colors duration-300">
-                      {item.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-              </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {[
+          {
+            title: "Expert Faculty",
+            desc: "25+ IITians and PhDs on our faculty team",
+            color: "from-blue-500 to-cyan-500",
+          },
+          {
+            title: "Proven Results",
+            desc: "1200+ selections in IITs and AIIMS",
+            color: "from-primary to-blue-600",
+          },
+          {
+            title: "Study Material",
+            desc: "Comprehensive material by subject matter experts",
+            color: "from-purple-500 to-indigo-500",
+          },
+          {
+            title: "Assessments",
+            desc: "Regular tests with detailed performance analysis",
+            color: "from-green-500 to-emerald-500",
+          },
+          {
+            title: "Personalized Attention",
+            desc: "Mentoring for each student",
+            color: "from-yellow-500 to-orange-500",
+          },
+          {
+            title: "Test Series",
+            desc: "All India Test Series to benchmark preparation",
+            color: "from-red-500 to-pink-500",
+          },
+        ].map((item, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className="group bg-card rounded-xl p-6 sm:p-8 hover-lift shadow-md hover:shadow-xl transition-all duration-300 border border-border hover:border-primary/50"
+          >
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-light mb-6 group-hover:scale-110 transition-transform duration-300">
+              <span className="text-primary font-display font-bold text-2xl">
+                {index + 1}
+              </span>
             </div>
+            <h3 className="text-xl font-display font-semibold mb-3 group-hover:text-primary transition-colors duration-300">
+              {item.title}
+            </h3>
+            <p className="text-muted-foreground leading-relaxed">
+              {item.desc}
+            </p>
+          </motion.div>
+        ))}
+      </div>
+    </motion.div>
+  </div>
+</div>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
