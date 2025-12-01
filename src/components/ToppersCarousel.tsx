@@ -12,9 +12,9 @@ interface Topper {
 
 const jeeToppers: Topper[] = [
   {
-    name: "Arjun Mehta",
-    rank: "AIR 32",
-    achievement: "JEE Advanced 2024",
+    name: "Atharva Chaudhry",
+    rank: "Gold Medalist",
+    achievement: "HBBVS",
     college: "IIT Bombay (Computer Science)",
     quote: "The structured approach and personalized attention at IIT PATH were instrumental in my success.",
   },
@@ -36,31 +36,54 @@ const jeeToppers: Topper[] = [
 
 const neetToppers: Topper[] = [
   {
-    name: "Aditi Sharma",
-    rank: "AIR 45",
-    achievement: "NEET 2024",
+    name: "Anushka Kulkarni ",
+    rank: "AIR 24",
+    achievement: "NEET",
     college: "AIIMS Delhi",
     quote: "The integrated approach to Biology, Physics, and Chemistry made my preparation seamless.",
   },
   {
-    name: "Karan Verma",
-    rank: "AIR 98",
-    achievement: "NEET 2024",
-    college: "AIIMS Bhopal",
+    name: "Rasika Mal",
+    rank: "AIR 55",
+    achievement: "NEET",
+    college: "Maulana Azad Medical College, Delhi",
+    quote: "The subject-wise expert faculty and comprehensive study material were key to my success.",
+  },
+  {
+    name: "Atharva Chaudhry",
+    rank: "Gold Medalist",
+    achievement: "HBBVS",
+    college: "",
+    quote: "The integrated approach to Biology, Physics, and Chemistry made my preparation seamless.",
+  },
+  {
+    name: "Stuti Maurya",
+    rank: "IOQM Qualifier ",
+    achievement: "IOQM 2024",
+    college: "",
     quote: "Regular assessments and performance analytics helped me identify and improve weak areas.",
   },
   {
-    name: "Meera Iyer",
-    rank: "AIR 176",
-    achievement: "NEET 2024",
-    college: "Christian Medical College, Vellore",
+    name: "Ekansh Ravishankar",
+    rank: "AIR 49",
+    achievement: "JEE ADVANCED",
+    college: "IIT, Bombay",
     quote: "The subject-wise expert faculty and comprehensive study material were key to my success.",
   },
+  ,
+  {
+    name: "Aaryan Dangi",
+    rank: "AIR 24",
+    achievement: "JEE ADVANCED",
+    college: "IIT, Bombay",
+    quote: "The integrated approach to Mathematics, Physics, and Chemistry made my preparation seamless.",
+  }
 ];
 
-const ToppersCarousel = ({ category }: { category: "JEE" | "NEET" }) => {
+const ToppersCarousel = ({ category, title }: { category: "JEE" | "NEET", title?: string }) => {
   const toppers = category === "JEE" ? jeeToppers : neetToppers;
   const [currentIndex, setCurrentIndex] = useState(0);
+  const displayTitle = title || `${category} Toppers`;
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -87,7 +110,7 @@ const ToppersCarousel = ({ category }: { category: "JEE" | "NEET" }) => {
         className="text-center mb-12"
       >
         <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
-          {category} <span className="text-gradient-primary">Toppers</span>
+          {displayTitle.split(' ')[0]} <span className="text-gradient-primary">{displayTitle.split(' ').slice(1).join(' ')}</span>
         </h2>
         <p className="text-lg text-muted-foreground">
           Celebrating the outstanding achievements of our students

@@ -31,14 +31,9 @@ const Index = () => {
         <MethodologySection />
         <CoursesOverview />
         <ProgramDesignSection />
-        <section className="section-padding bg-background">
-          <div className="container-custom">
-            <ToppersCarousel category="JEE" />
-          </div>
-        </section>
         <section className="section-padding bg-muted/30">
           <div className="container-custom">
-            <ToppersCarousel category="NEET" />
+            <ToppersCarousel category="Our" />
           </div>
         </section>
         <section className="section-padding bg-background">
