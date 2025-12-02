@@ -141,19 +141,19 @@ const FeeStructure = () => {
                           whileHover={{ x: 10 }}
                           className="p-4 rounded-xl bg-muted/50 border border-border/50 hover:border-primary/30 transition-all duration-300"
                         >
-                          <div className="flex justify-between items-start mb-2">
+                          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
                             <h3 className="font-semibold text-foreground flex items-center">
-                              <ClipboardCheck className="mr-2 text-primary" size={16} />
+                              <ClipboardCheck className="mr-2 text-primary flex-shrink-0" size={16} />
                               {batch.type}
                             </h3>
-                            <span className="text-lg font-bold text-gradient-primary">{batch.fee}</span>
+                            <span className="text-lg font-bold text-gradient-primary sm:text-right">{batch.fee}</span>
                           </div>
-                          <div className="flex justify-between text-sm text-muted-foreground">
+                          <div className="flex flex-col sm:flex-row sm:justify-between gap-2 text-sm text-muted-foreground">
                             <span className="flex items-center">
-                              <Calendar className="mr-1" size={14} />
+                              <Calendar className="mr-1 flex-shrink-0" size={14} />
                               {batch.duration}
                             </span>
-                            <span>{batch.features}</span>
+                            <span className="sm:text-right">{batch.features}</span>
                           </div>
                         </motion.div>
                       ))}
