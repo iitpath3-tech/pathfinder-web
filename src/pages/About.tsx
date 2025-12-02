@@ -635,7 +635,7 @@ const About = () => {
                   <div className="flex items-center mb-4">
                     <div className="bg-gradient-to-r from-pink-500 to-pink-700 w-16 h-16 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-white font-bold text-xl">
-                        Ongoing
+                        Active
                       </span>
                     </div>
                     <h3 className="text-2xl font-display font-bold text-pink-600">

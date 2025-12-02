@@ -181,7 +181,7 @@ const JEE = () => {
                   <img 
                     src="/jee.jpg" 
                     alt="JEE Main Exam" 
-                    className="w-full h-64 object-cover rounded-lg"
+                    className="w-full h-84 object-cover rounded-lg"
                   />
                 </div>
                 <h3 className="text-2xl font-display font-bold mb-4">

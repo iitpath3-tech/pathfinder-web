@@ -185,14 +185,14 @@ const FeeStructure = () => {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     whileHover={{ y: -5 }}
-                    className="group bg-card rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-border hover:border-accent/30"
+                    className="group bg-card rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-border hover:border-accent/30 flex flex-col items-center text-center"
                   >
                     <div className="text-3xl mb-4">{benefit.icon}</div>
-                    <h3 className="text-xl font-display font-bold mb-2 group-hover:text-accent transition-colors duration-300 flex items-center">
+                    <h3 className="text-xl font-display font-bold mb-2 group-hover:text-accent transition-colors duration-300 flex items-center justify-center">
                       <Medal className="mr-2 text-primary" size={20} />
                       {benefit.title}
                     </h3>
-                    <p className="text-muted-foreground">{benefit.desc}</p>
+                    <p className="text-muted-foreground text-center">{benefit.desc}</p>
                   </motion.div>
                 ))}
               </div>
