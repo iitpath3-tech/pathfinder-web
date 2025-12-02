@@ -366,7 +366,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-display font-bold text-center mb-12 text-gradient-accent">
+              <h2 className="text-4xl font-display font-bold text-center mt-16 mb-12 text-gradient-accent">
                 Our Achievements
               </h2>
 

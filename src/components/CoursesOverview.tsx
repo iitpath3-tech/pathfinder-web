@@ -9,28 +9,28 @@ const courses = [
     title: "Foundation Program (Classes 8-10)",
     description: "Build strong fundamentals in Physics, Chemistry, and Mathematics for competitive exams. Early bird batches for NTSE, Olympiads, and JSTSE preparation.",
     gradient: "from-blue-500 to-cyan-500",
-    link: "/courses#foundation",
+    link: "/foundation-builder",
   },
   {
     icon: Rocket,
     title: "JEE Main & Advanced",
     description: "Comprehensive 2-year program covering complete syllabus with daily practice problems, weekly tests, and intensive rank booster modules.",
     gradient: "from-primary to-blue-600",
-    link: "/courses#engineering",
+    link: "/jee",
   },
   {
     icon: Stethoscope,
     title: "NEET & AIIMS",
     description: "Specialized 2-year medical preparation program with integrated Biology, Physics, and Chemistry modules and regular NEET pattern tests.",
     gradient: "from-accent to-red-600",
-    link: "/courses#medical",
+    link: "/medical-neet",
   },
   {
     icon: Trophy,
     title: "Olympiad Training",
     description: "Advanced training for NSEP, NSEC, NSEA, NMTC, PRMO, and other national/international Olympiads with specialized faculty.",
     gradient: "from-yellow-500 to-orange-500",
-    link: "/courses#olympiad",
+    link: "/olympiad",
   },
 ];
 

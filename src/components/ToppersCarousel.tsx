@@ -80,10 +80,10 @@ const neetToppers: Topper[] = [
   }
 ];
 
-const ToppersCarousel = ({ category, title }: { category: "JEE" | "NEET", title?: string }) => {
-  const toppers = category === "JEE" ? jeeToppers : neetToppers;
+const ToppersCarousel = ({ category, title }: { category: "JEE" | "NEET" | "Our", title?: string }) => {
+  const toppers = category === "JEE" ? jeeToppers : (category === "Our" ? neetToppers : neetToppers);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const displayTitle = title || `${category} Toppers`;
+  const displayTitle = title || (category === "Our" ? "Our Toppers" : `${category} Toppers`);
 
   useEffect(() => {
     const timer = setInterval(() => {

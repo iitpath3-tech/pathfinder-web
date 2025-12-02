@@ -24,10 +24,10 @@ const Navbar = () => {
   }, []);
 
   const courses = [
-    { name: "Foundation Builder", path: "/courses#foundation" },
-    { name: "Engineering (JEE)", path: "/courses#engineering" },
-    { name: "Medical (NEET)", path: "/courses#medical" },
-    { name: "Olympiad", path: "/courses#olympiad" },
+    { name: "Foundation Builder", path: "/foundation-builder" },
+    { name: "Engineering (JEE)", path: "/jee" },
+    { name: "Medical (NEET)", path: "/medical-neet" },
+    { name: "Olympiad", path: "/olympiad" },
   ];
 
   return (

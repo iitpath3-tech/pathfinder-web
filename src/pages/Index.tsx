@@ -46,7 +46,7 @@ const Index = () => {
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 flex items-center justify-center">
-                Frequently Asked <span className="text-gradient-primary ml-2">Questions</span>
+                Frequently Asked Questions <span className="text-gradient-primary ml-2"></span>
                 <PenTool className="ml-3 text-primary" size={32} />
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -77,7 +77,7 @@ const Index = () => {
                   transition={{ duration: 0.5 }}
                 >
                   <AccordionItem value="item-1">
-                    <AccordionTrigger className="flex items-center">
+                    <AccordionTrigger className="flex items-center justify-start text-left">
                       <BookOpen className="mr-3 text-primary" size={20} />
                       How do I enroll at IIT PATH?
                     </AccordionTrigger>
@@ -97,7 +97,7 @@ const Index = () => {
                   transition={{ duration: 0.5 }}
                 >
                   <AccordionItem value="item-2">
-                    <AccordionTrigger className="flex items-center">
+                    <AccordionTrigger className="flex items-center justify-start text-left">
                       <GraduationCap className="mr-3 text-primary" size={20} />
                       What are the eligibility criteria for different courses?
                     </AccordionTrigger>
@@ -122,7 +122,7 @@ const Index = () => {
                   transition={{ duration: 0.5 }}
                 >
                   <AccordionItem value="item-3">
-                    <AccordionTrigger className="flex items-center">
+                    <AccordionTrigger className="flex items-center justify-start text-left">
                       <Calendar className="mr-3 text-primary" size={20} />
                       When do admissions open?
                     </AccordionTrigger>
@@ -142,7 +142,7 @@ const Index = () => {
                   transition={{ duration: 0.5 }}
                 >
                   <AccordionItem value="item-4">
-                    <AccordionTrigger className="flex items-center">
+                    <AccordionTrigger className="flex items-center justify-start text-left">
                       <Users className="mr-3 text-primary" size={20} />
                       What is the faculty qualification at IIT PATH?
                     </AccordionTrigger>
@@ -162,7 +162,7 @@ const Index = () => {
                   transition={{ duration: 0.5 }}
                 >
                   <AccordionItem value="item-5">
-                    <AccordionTrigger className="flex items-center">
+                    <AccordionTrigger className="flex items-center justify-start text-left">
                       <Award className="mr-3 text-primary" size={20} />
                       How large are the batches?
                     </AccordionTrigger>

@@ -13,6 +13,10 @@ import FAQs from "./pages/FAQs";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
+import FoundationBuilder from "./pages/FoundationBuilder";
+import JEE from "./pages/JEE";
+import MedicalNEET from "./pages/MedicalNEET";
+import Olympiad from "./pages/Olympiad";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -48,6 +52,10 @@ const App = () => {
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/courses" element={<Courses />} />
+            <Route path="/foundation-builder" element={<FoundationBuilder />} />
+            <Route path="/jee" element={<JEE />} />
+            <Route path="/medical-neet" element={<MedicalNEET />} />
+            <Route path="/olympiad" element={<Olympiad />} />
             <Route path="/fee-structure" element={<FeeStructure />} />
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/contact" element={<Contact />} />

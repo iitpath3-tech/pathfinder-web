@@ -7,7 +7,19 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
-import { BookOpen, GraduationCap, Users, Award, ClipboardCheck, MessageCircle, Trophy, Star, Medal, BarChart3, Calendar } from "lucide-react";
+import {
+  BookOpen,
+  GraduationCap,
+  Users,
+  Award,
+  ClipboardCheck,
+  MessageCircle,
+  Trophy,
+  Star,
+  Medal,
+  BarChart3,
+  Calendar,
+} from "lucide-react";
 import FlyingIcons from "@/components/FlyingIcons";
 
 const FAQs = () => {
@@ -15,31 +27,40 @@ const FAQs = () => {
     <div className="min-h-screen bg-background">
       <FlyingIcons />
       <Navbar />
+
       <main className="pt-20">
         <div className="section-padding">
           <div className="container-custom">
+
+            {/* Heading */}
             <motion.div
               initial={{ opacity: 0, y: -30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
-              <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">
-                Frequently Asked <span className="text-gradient-primary">Questions</span>
-              </h1>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
+              <h1 className="font-display font-bold leading-tight mb-4 text-center">
+  <span className="block sm:inline text-3xl sm:text-4xl md:text-5xl">
+    Frequently Asked Questions
+  </span>
+</h1>
+
+
+              <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
                 Find answers to common questions about IIT PATH
               </p>
-              <motion.div 
-                className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto"
+
+              <motion.div
+                className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-4"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
                 viewport={{ once: true }}
-              ></motion.div>
+              />
             </motion.div>
-            
+
+            {/* FAQ Accordion */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -47,288 +68,121 @@ const FAQs = () => {
               variants={{
                 hidden: {},
                 visible: {
-                  transition: {
-                    staggerChildren: 0.1
-                  }
-                }
+                  transition: { staggerChildren: 0.1 },
+                },
               }}
-              className="w-full max-w-4xl mx-auto"
+              className="w-full max-w-3xl mx-auto px-2 sm:px-4"
             >
               <Accordion type="single" collapsible className="w-full">
-                <motion.div
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 }
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <AccordionItem value="item-1">
-                    <AccordionTrigger className="flex items-center">
-                      <BookOpen className="mr-3 text-primary" size={20} />
-                      How do I enroll at IIT PATH?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <p className="mb-4">
-                        You can enroll at IIT PATH by visiting our center in person, calling our admissions office at +91 22 2678 1234, or filling out the online enrollment form on our website. We recommend scheduling a counseling session to discuss the best program for your goals.
-                      </p>
-                    </AccordionContent>
-                  </AccordionItem>
-                </motion.div>
-                
-                <motion.div
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 }
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <AccordionItem value="item-2">
-                    <AccordionTrigger className="flex items-center">
-                      <GraduationCap className="mr-3 text-primary" size={20} />
-                      What are the eligibility criteria for different courses?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <p className="mb-4">
-                        Eligibility criteria vary by course:
-                      </p>
-                      <ul className="list-disc pl-6 mb-4 space-y-2">
-                        <li><strong>Foundation Program:</strong> Students studying in Classes 8-10</li>
-                        <li><strong>JEE/NEET Programs:</strong> Students studying in Classes 11-12 or droppers</li>
-                        <li><strong>Olympiad Program:</strong> Students from Classes 8-12 with strong academic performance</li>
-                      </ul>
-                    </AccordionContent>
-                  </AccordionItem>
-                </motion.div>
-                
-                <motion.div
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 }
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <AccordionItem value="item-3">
-                    <AccordionTrigger className="flex items-center">
-                      <Calendar className="mr-3 text-primary" size={20} />
-                      When do admissions open?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <p className="mb-4">
-                        Admissions for our academic year programs open in April, with early bird discounts available until May. For dropper batches, admissions open in February. We recommend applying early as popular batches fill up quickly.
-                      </p>
-                    </AccordionContent>
-                  </AccordionItem>
-                </motion.div>
-                
-                <motion.div
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 }
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <AccordionItem value="item-4">
-                    <AccordionTrigger className="flex items-center">
-                      <Users className="mr-3 text-primary" size={20} />
-                      What is the faculty qualification at IIT PATH?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <p className="mb-4">
-                        Our faculty comprises 25+ IITians, PhDs, and subject matter experts with extensive teaching experience. All faculty members undergo rigorous training and regular performance evaluations to ensure the highest quality of instruction.
-                      </p>
-                    </AccordionContent>
-                  </AccordionItem>
-                </motion.div>
-                
-                <motion.div
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 }
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <AccordionItem value="item-5">
-                    <AccordionTrigger className="flex items-center">
-                      <Award className="mr-3 text-primary" size={20} />
-                      How large are the batches?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <p className="mb-4">
-                        We maintain small batch sizes to ensure personalized attention:
-                      </p>
-                      <ul className="list-disc pl-6 mb-4 space-y-2">
-                        <li><strong>Foundation Program:</strong> Maximum 25 students per batch</li>
-                        <li><strong>JEE/NEET Programs:</strong> Maximum 30 students per batch</li>
-                        <li><strong>Olympiad Program:</strong> Maximum 15 students per batch</li>
-                      </ul>
-                    </AccordionContent>
-                  </AccordionItem>
-                </motion.div>
-                
-                <motion.div
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 }
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <AccordionItem value="item-6">
-                    <AccordionTrigger className="flex items-center">
-                      <ClipboardCheck className="mr-3 text-primary" size={20} />
-                      What study material is provided?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <p className="mb-4">
-                        We provide comprehensive study material developed by our expert faculty, including textbooks, practice problems, revision notes, and online resources. The material is regularly updated to align with the latest exam patterns and syllabus changes.
-                      </p>
-                    </AccordionContent>
-                  </AccordionItem>
-                </motion.div>
-                
-                <motion.div
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 }
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <AccordionItem value="item-7">
-                    <AccordionTrigger className="flex items-center">
-                      <BarChart3 className="mr-3 text-primary" size={20} />
-                      How does IIT PATH track student performance?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <p className="mb-4">
-                        We conduct regular assessments including weekly tests, monthly evaluations, and All India Test Series. Each student receives detailed performance analytics, rank predictions, and personalized improvement strategies. Parents receive regular progress reports.
-                      </p>
-                    </AccordionContent>
-                  </AccordionItem>
-                </motion.div>
-                
-                <motion.div
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 }
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <AccordionItem value="item-8">
-                    <AccordionTrigger className="flex items-center">
-                      <Trophy className="mr-3 text-primary" size={20} />
-                      What is the success rate of IIT PATH students?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <p className="mb-4">
-                        We maintain an 85%+ selection rate in JEE Main for eligible students, with over 1200 selections in IITs and AIIMS combined. Our students consistently secure top ranks in competitive exams, with multiple AIR 1 rankers over the years.
-                      </p>
-                    </AccordionContent>
-                  </AccordionItem>
-                </motion.div>
-                
-                <motion.div
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 }
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <AccordionItem value="item-9">
-                    <AccordionTrigger className="flex items-center">
-                      <MessageCircle className="mr-3 text-primary" size={20} />
-                      What facilities are available at IIT PATH?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <p className="mb-4">
-                        Our center features state-of-the-art classrooms, well-equipped laboratories, a digital library, computer lab, and comfortable study areas. We also provide hostel facilities for outstation students and transportation services for local students.
-                      </p>
-                    </AccordionContent>
-                  </AccordionItem>
-                </motion.div>
-                
-                <motion.div
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 }
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <AccordionItem value="item-10">
-                    <AccordionTrigger className="flex items-center">
-                      <Users className="mr-3 text-primary" size={20} />
-                      Do you provide accommodation for students?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <p className="mb-4">
-                        Yes, we have tie-ups with reputable hostels near our center that provide safe, comfortable accommodation for outstation students. The hostels offer single and shared rooms with mess facilities, study areas, and 24/7 security.
-                      </p>
-                    </AccordionContent>
-                  </AccordionItem>
-                </motion.div>
-                
-                <motion.div
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 }
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <AccordionItem value="item-11">
-                    <AccordionTrigger className="flex items-center">
-                      <Star className="mr-3 text-primary" size={20} />
-                      What support is available for weak students?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <p className="mb-4">
-                        We provide additional support through personalized mentoring, special doubt-clearing sessions, remedial classes, and customized study plans. Our faculty maintains regular contact with parents to monitor progress and address concerns.
-                      </p>
-                    </AccordionContent>
-                  </AccordionItem>
-                </motion.div>
-                
-                <motion.div
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 }
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <AccordionItem value="item-12">
-                    <AccordionTrigger className="flex items-center">
-                      <Medal className="mr-3 text-primary" size={20} />
-                      What payment options are available?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <p className="mb-4">
-                        We offer flexible payment options including lump-sum payments, installment plans with zero interest, and digital payment methods. Early bird discounts and sibling discounts are also available.
-                      </p>
-                    </AccordionContent>
-                  </AccordionItem>
-                </motion.div>
-                
-                <motion.div
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 }
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <AccordionItem value="item-13">
-                    <AccordionTrigger className="flex items-center">
-                      <Award className="mr-3 text-primary" size={20} />
-                      Are scholarships available?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <p className="mb-4">
-                        Yes, we offer merit-based scholarships for students who demonstrate exceptional academic performance in our admission tests. Scholarships range from 25% to 100% fee waivers based on performance and financial need.
-                      </p>
-                    </AccordionContent>
-                  </AccordionItem>
-                </motion.div>
+
+                {/* FAQ ITEM TEMPLATE FUNCTION */}
+                {[
+                  {
+                    icon: BookOpen,
+                    question: "How do I enroll at IIT PATH?",
+                    answer:
+                      "You can enroll at IIT PATH by visiting our center in person, calling our admissions office at +91 22 2678 1234, or filling out the online enrollment form on our website.",
+                  },
+                  {
+                    icon: GraduationCap,
+                    question: "What are the eligibility criteria for different courses?",
+                    answer:
+                      "Eligibility varies: Foundation (Classes 8-10), JEE/NEET (11-12 & droppers), Olympiads (8-12 with strong academics).",
+                  },
+                  {
+                    icon: Calendar,
+                    question: "When do admissions open?",
+                    answer:
+                      "Admissions begin in April for the academic year and February for dropper batches. Early applications recommended.",
+                  },
+                  {
+                    icon: Users,
+                    question: "What is the faculty qualification at IIT PATH?",
+                    answer:
+                      "Our faculty includes IITians, PhDs, and expert subject mentors with years of teaching experience.",
+                  },
+                  {
+                    icon: Award,
+                    question: "How large are the batches?",
+                    answer:
+                      "Foundation: Max 25 | JEE/NEET: Max 30 | Olympiad: Max 15.",
+                  },
+                  {
+                    icon: ClipboardCheck,
+                    question: "What study material is provided?",
+                    answer:
+                      "We provide comprehensive modules, practice sheets, online resources, and updated revision notes.",
+                  },
+                  {
+                    icon: BarChart3,
+                    question: "How does IIT PATH track student performance?",
+                    answer:
+                      "Weekly tests, monthly evaluations, AI-based analytics, and All India Test Series.",
+                  },
+                  {
+                    icon: Trophy,
+                    question: "What is the success rate of IIT PATH students?",
+                    answer:
+                      "85%+ eligible students clear JEE Main. 1200+ selections in IITs & AIIMS with multiple top AIR ranks.",
+                  },
+                  {
+                    icon: MessageCircle,
+                    question: "What facilities are available at IIT PATH?",
+                    answer:
+                      "Digital library, modern classrooms, labs, study rooms, hostels, and transport services.",
+                  },
+                  {
+                    icon: Users,
+                    question: "Do you provide accommodation for students?",
+                    answer:
+                      "Yes, we offer safe hostel tie-ups with mess, study rooms, and security.",
+                  },
+                  {
+                    icon: Star,
+                    question: "What support is available for weak students?",
+                    answer:
+                      "Personal mentoring, extra classes, doubt sessions, and customized study plans.",
+                  },
+                  {
+                    icon: Medal,
+                    question: "What payment options are available?",
+                    answer:
+                      "Lump sum, installments, digital payments, sibling discounts, and early bird offers.",
+                  },
+                  {
+                    icon: Award,
+                    question: "Are scholarships available?",
+                    answer:
+                      "Yes. Merit-based scholarships from 25% to 100% based on performance.",
+                  },
+                ].map((faq, i) => (
+                  <motion.div
+                    key={i}
+                    variants={{
+                      hidden: { opacity: 0, y: 20 },
+                      visible: { opacity: 1, y: 0 },
+                    }}
+                    transition={{ duration: 0.45 }}
+                  >
+                    <AccordionItem value={`item-${i + 1}`}>
+                      <AccordionTrigger className="flex items-center gap-3 text-left py-3">
+                        <faq.icon className="text-primary flex-shrink-0" size={20} />
+                        <span>{faq.question}</span>
+                      </AccordionTrigger>
+
+                      <AccordionContent className="text-muted-foreground">
+                        <p className="mt-2 leading-relaxed">{faq.answer}</p>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </motion.div>
+                ))}
+
               </Accordion>
             </motion.div>
           </div>
         </div>
       </main>
+
       <Footer />
     </div>
   );
