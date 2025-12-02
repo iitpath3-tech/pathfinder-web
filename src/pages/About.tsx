@@ -25,8 +25,15 @@ const About = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-16"
+              className="text-center mb-16 relative"
             >
+              <div className="absolute inset-0 -z-10">
+                {/* <img 
+                  src="/bg.jpg" 
+                  alt="IIT PATH Background" 
+                  className="w-full h-full object-cover rounded-2xl opacity-20"
+                /> */}
+              </div>
               <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">
                 About <span className="text-gradient-primary">IIT PATH</span>
               </h1>
@@ -46,7 +53,7 @@ const About = () => {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="mb-20"
             >
-              <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 md:p-12 shadow-xl border border-primary/20 mb-16 hover:shadow-2xl transition-all duration-500">
+              <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 md:p-12 shadow-xl border border-primary/20 mb-16 hover:shadow-2xl transition-all duration-500 ">
                 <p className="text-lg md:text-xl leading-relaxed text-foreground mb-4">
                   IIT PATH was established in 2010 by Dr. Azajul Haque Since
                   inception, we believe in providing the highest quality of
