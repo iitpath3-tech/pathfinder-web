@@ -18,7 +18,8 @@ import JEE from "./pages/JEE";
 import MedicalNEET from "./pages/MedicalNEET";
 import Olympiad from "./pages/Olympiad";
 import NotFound from "./pages/NotFound";
-import FreeCounselling from "./pages/FreeCounselling"; // Added Free Counselling page
+import FreeCounselling from "./pages/FreeCounselling";
+import AchieverSection from "./pages/AchieverSection"; // Added Achiever Section page
 
 const queryClient = new QueryClient();
 
@@ -60,7 +61,8 @@ const App = () => {
             <Route path="/fee-structure" element={<FeeStructure />} />
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/free-counselling" element={<FreeCounselling />} /> {/* Added Free Counselling route */}
+            <Route path="/free-counselling" element={<FreeCounselling />} />
+            <Route path="/our-achievers" element={<AchieverSection />} /> {/* Added Achiever Section route */}
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<TermsConditions />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

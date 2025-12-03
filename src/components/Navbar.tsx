@@ -127,6 +127,15 @@ const Navbar = () => {
               Contact
             </Link>
             
+            <Link
+              to="/our-achievers"
+              className={`text-foreground hover:text-primary transition-colors duration-300 font-medium ${
+                location.pathname === "/our-achievers" ? "text-primary" : ""
+              }`}
+            >
+              Our Achievers
+            </Link>
+            
             <Button 
               size="lg"
               onClick={() => navigate('/free-counselling')}
@@ -207,6 +216,14 @@ const Navbar = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Contact
+                </Link>
+                
+                <Link
+                  to="/our-achievers"
+                  className="block text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Our Achievers
                 </Link>
                 
                 <Button 
