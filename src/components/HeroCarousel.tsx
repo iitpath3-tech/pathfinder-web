@@ -11,7 +11,7 @@ import heroOlympiad from "@/assets/hero-olympiad.jpg";
 const slides = [
   {
     image: heroClassroom,
-    title: "India's Premier IIT-JEE Coaching",
+    title: "India's Premier IIT-JEE & NEET Coaching",
     subtitle: "Expert Faculty, Proven Results, Guaranteed Success",
   },
   {

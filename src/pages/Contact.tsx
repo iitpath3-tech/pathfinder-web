@@ -12,8 +12,7 @@ const Contact = () => {
       title: "Address",
       details: [
         "IIT PATH Coaching Institute",
-        "4th Floor, Times Square Building",
-        "Near Andheri Station (West)",
+        "101,102 Shree Shanti Nagar CHS (OPP - Bharat Gas Agency), Sector-5, Mira Road (East)",
         "Mumbai, Maharashtra 400058"
       ]
     },
@@ -21,18 +20,18 @@ const Contact = () => {
       icon: Phone,
       title: "Phone Numbers",
       details: [
-        { text: "Admissions: +91 22 2678 1234", link: "tel:+912226781234" },
-        { text: "General Enquiries: +91 22 2678 1235", link: "tel:+912226781235" },
-        { text: "WhatsApp: +91 22 2678 1234", link: "https://wa.me/912226781234" }
+        { text: "Admissions: 9130054398", link: "tel:+919130054398" },
+        { text: "General Enquiries: +91 9136917113", link: "tel:+919136917113" },
+        { text: "WhatsApp: +91 9136917113", link: "https://wa.me/919136917113" }
       ]
     },
     {
       icon: Mail,
       title: "Email",
       details: [
-        { text: "General: info@iitpath.com", link: "mailto:info@iitpath.com" },
-        { text: "Admissions: admissions@iitpath.com", link: "mailto:admissions@iitpath.com" },
-        { text: "Support: support@iitpath.com", link: "mailto:support@iitpath.com" }
+        { text: "General: iitpath0@gmail.com", link: "mailto:iitpath0@gmail.com" },
+        { text: "Admissions: iitpath0@gmail.com", link: "mailto:iitpath0@gmail.com" },
+        { text: "Support: iitpath0@gmail.com", link: "mailto:iitpath0@gmail.com" }
       ]
     },
     {

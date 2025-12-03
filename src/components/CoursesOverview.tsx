@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 const courses = [
   {
     icon: BookOpen,
-    title: "Foundation Program (Classes 8-10)",
+    title: "Foundation Program (Classes 7-10)",
     description: "Build strong fundamentals in Physics, Chemistry, and Mathematics for competitive exams. Early bird batches for NTSE, Olympiads, and JSTSE preparation.",
     gradient: "from-blue-500 to-cyan-500",
     link: "/foundation-builder",

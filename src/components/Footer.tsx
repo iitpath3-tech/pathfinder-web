@@ -130,19 +130,20 @@ const Footer = () => {
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
                 <span className="text-background/70">
                   IIT PATH Coaching Center<br />
-                  Andheri West, Mumbai, Maharashtra 400058
+                  101,102 Shree Shanti Nagar CHS (OPP - Bharat Gas Agency), Sector-5, Mira Road (East)<br />
+                  Mumbai, Maharashtra 400058
                 </span>
               </li>
               <li className="flex gap-3">
                 <Phone className="h-5 w-5 text-primary flex-shrink-0" />
                 <a href="tel:+912226781234" className="text-background/70 hover:text-primary transition-colors">
-                  +91 22 2678 1234
+                  9130054398
                 </a>
               </li>
               <li className="flex gap-3">
                 <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                <a href="mailto:info@iitpath.com" className="text-background/70 hover:text-primary transition-colors">
-                  info@iitpath.com
+                <a href="mailto:iitpath0@gmail.com" className="text-background/70 hover:text-primary transition-colors">
+                  iitpath0@gmail.com
                 </a>
               </li>
             </ul>

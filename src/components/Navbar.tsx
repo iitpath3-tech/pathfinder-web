@@ -44,7 +44,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center hover-scale">
             <img 
-              src="/logo.png" 
+              src="/logonew.png"
               alt="IIT PATH Logo" 
               className="h-10 md:h-12 w-auto"
             />
@@ -126,6 +126,14 @@ const Navbar = () => {
             >
               Contact
             </Link>
+            
+            <Button 
+              size="lg"
+              onClick={() => navigate('/free-counselling')}
+              className="font-medium bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-lg hover:shadow-xl hover:scale-105 rounded-lg px-8 text-base transition-all duration-300"
+            >
+              Free Counselling
+            </Button>
 
             <Button variant="hero" size="lg" onClick={handleEnrollClick}>
               Enroll Now
@@ -200,6 +208,18 @@ const Navbar = () => {
                 >
                   Contact
                 </Link>
+                
+                <Button 
+                  size="lg"
+                  className="w-full font-medium bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-lg hover:shadow-xl hover:scale-105 rounded-lg px-8 text-base transition-all duration-300"
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    navigate('/free-counselling');
+                  }}
+                >
+                  Free Counselling
+                </Button>
+                
                 <Button variant="hero" size="lg" className="w-full" onClick={() => {
                   setIsMobileMenuOpen(false);
                   handleEnrollClick();

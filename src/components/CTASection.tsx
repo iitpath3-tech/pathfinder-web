@@ -9,6 +9,10 @@ const CTASection = () => {
   const handleContactClick = () => {
     navigate('/contact');
   };
+
+  const handleFreeCounsellingClick = () => {
+    navigate('/free-counselling');
+  };
   
   return (
     <section className="section-padding bg-gradient-to-br from-primary via-primary to-accent relative overflow-hidden">
@@ -49,6 +53,16 @@ const CTASection = () => {
             >
               <Calendar className="mr-2 h-5 w-5" />
               Contact Us
+            </Button>
+            
+            <Button
+              size="lg"
+              variant="outline"
+              className="sm:size-xl bg-white/10 border-2 border-white text-white hover:bg-white hover:text-primary backdrop-blur-sm min-w-[180px] sm:min-w-[200px]"
+              onClick={handleFreeCounsellingClick}
+            >
+              <Calendar className="mr-2 h-5 w-5" />
+              Free Counselling
             </Button>
             
             <Button
