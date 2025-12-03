@@ -11,8 +11,7 @@ const Contact = () => {
       icon: MapPin,
       title: "Address",
       details: [
-        "IIT PATH Coaching Institute",
-        "101,102 Shree Shanti Nagar CHS (OPP - Bharat Gas Agency), Sector-5, Mira Road (East)",
+        "IIT PATH Coaching Institute, 101/102 Shree Shanti Nagar CHS (OPP - Bharat Gas Agency), Sector-5, Mira Road (East)",
         "Mumbai, Maharashtra 400058"
       ]
     },

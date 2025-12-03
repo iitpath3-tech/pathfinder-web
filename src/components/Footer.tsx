@@ -129,8 +129,7 @@ const Footer = () => {
               <li className="flex gap-3">
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
                 <span className="text-background/70">
-                  IIT PATH Coaching Center<br />
-                  101,102 Shree Shanti Nagar CHS (OPP - Bharat Gas Agency), Sector-5, Mira Road (East)<br />
+                  IIT PATH Coaching Center, 101/102 Shree Shanti Nagar CHS (OPP - Bharat Gas Agency), Sector-5, Mira Road (East)<br />
                   Mumbai, Maharashtra 400058
                 </span>
               </li>

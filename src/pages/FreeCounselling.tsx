@@ -218,23 +218,28 @@ const FreeCounselling = () => {
                         <Award className="mr-2" size={18} />
                         Current Grade/Class
                       </label>
-                      <select
-                        id="grade"
-                        name="grade"
-                        value={formData.grade}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background"
-                        required
-                      >
-                        <option value="">Select your current class</option>
-                        <option value="8">Class 8</option>
-                        <option value="9">Class 9</option>
-                        <option value="10">Class 10</option>
-                        <option value="11">Class 11</option>
-                        <option value="12">Class 12</option>
-                        <option value="dropper">Dropper</option>
-                        <option value="other">Other</option>
-                      </select>
+                      <div className="relative">
+                        <select
+                          id="grade"
+                          name="grade"
+                          value={formData.grade}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background appearance-none"
+                          required
+                        >
+                          <option value="">Select your current class</option>
+                          <option value="8">Class 8</option>
+                          <option value="9">Class 9</option>
+                          <option value="10">Class 10</option>
+                          <option value="11">Class 11</option>
+                          <option value="12">Class 12</option>
+                          <option value="dropper">Dropper</option>
+                          <option value="other">Other</option>
+                        </select>
+                        <svg className="w-5 h-5 text-gray-400 absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                      </div>
                     </div>
                     
                     <div>
@@ -242,21 +247,26 @@ const FreeCounselling = () => {
                         <GraduationCap className="mr-2" size={18} />
                         Course Interested In
                       </label>
-                      <select
-                        id="course"
-                        name="course"
-                        value={formData.course}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background"
-                        required
-                      >
-                        <option value="">Select a course</option>
-                        <option value="foundation">Foundation Program (Classes 8-10)</option>
-                        <option value="jee">JEE Main & Advanced</option>
-                        <option value="neet">NEET & AIIMS</option>
-                        <option value="olympiad">Olympiad Training</option>
-                        <option value="other">Other</option>
-                      </select>
+                      <div className="relative">
+                        <select
+                          id="course"
+                          name="course"
+                          value={formData.course}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background appearance-none"
+                          required
+                        >
+                          <option value="">Select a course</option>
+                          <option value="foundation">Foundation Program (Classes 8-10)</option>
+                          <option value="jee">JEE Main & Advanced</option>
+                          <option value="neet">NEET & AIIMS</option>
+                          <option value="olympiad">Olympiad Training</option>
+                          <option value="other">Other</option>
+                        </select>
+                        <svg className="w-5 h-5 text-gray-400 absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                      </div>
                     </div>
                     
                     <div>
@@ -282,7 +292,7 @@ const FreeCounselling = () => {
                       className="w-full bg-gradient-primary text-white py-3 px-6 rounded-lg font-display font-semibold text-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center"
                     >
                       <Calendar className="mr-2" size={20} />
-                      Book Free Counselling Session
+                      Book Your Session
                     </motion.button>
                   </form>
                 </div>
