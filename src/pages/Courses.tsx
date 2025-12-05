@@ -66,12 +66,12 @@ const Courses = () => {
                       <BookOpen className="text-white mr-3" size={24} />
                       <h2 id="foundation" className="text-2xl font-display font-bold text-white">Foundation Program</h2>
                     </div>
-                    <p className="text-blue-100">Classes 8-10</p>
+                    <p className="text-blue-100">Classes 7-10</p>
                   </div>
                 </div>
                 <div className="p-6">
                   <p className="text-gray-700 mb-4">
-                    Our Foundation Program is designed for students in Classes 8-10 who aspire to pursue careers in engineering or medicine. This program focuses on building a strong conceptual foundation in Physics, Chemistry, and Mathematics/Biology.
+                    Our Foundation Program is designed for students in Classes 7-10 who aspire to pursue careers in engineering or medicine. This program focuses on building a strong conceptual foundation in Physics, Chemistry, and Mathematics/Biology.
                   </p>
                   <h3 className="text-xl font-display font-semibold text-blue-800 mt-4 mb-3 flex items-center">
                     <Star className="text-yellow-500 mr-2" size={20} />

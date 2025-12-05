@@ -223,7 +223,7 @@ const Contact = () => {
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background"
                       >
                         <option value="">Select a course</option>
-                        <option value="foundation">Foundation Program (Classes 8-10)</option>
+                        <option value="foundation">Foundation Program (Classes 7-10)</option>
                         <option value="jee">JEE Main & Advanced</option>
                         <option value="neet">NEET & AIIMS</option>
                         <option value="olympiad">Olympiad Training</option>
