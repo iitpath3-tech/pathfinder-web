@@ -54,12 +54,12 @@ const WelcomeFormPopup = ({ isOpen, onClose }: WelcomeFormPopupProps) => {
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.95, opacity: 0, y: 20 }}
             transition={{ duration: 0.3 }}
-            className="bg-gradient-to-br from-card to-muted rounded-2xl shadow-2xl p-8 border border-border max-w-md w-full max-h-[90vh] overflow-y-auto"
+            className="relative bg-gradient-to-br from-card to-muted rounded-2xl shadow-2xl p-6 sm:p-8 border border-border max-w-sm sm:max-w-md w-full max-h-[90vh] overflow-y-auto"
           >
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-red-500/10 hover:bg-red-500/20 flex items-center justify-center text-red-500 transition-all duration-300 hover:scale-110"
+              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-red-500/10 hover:bg-red-500/20 flex items-center justify-center text-red-500 transition-all duration-300 hover:scale-110 z-10"
               aria-label="Close form"
             >
               <X size={24} />
