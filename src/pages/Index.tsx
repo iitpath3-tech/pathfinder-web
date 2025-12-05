@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import HeroCarousel from "@/components/HeroCarousel";
 import StatsSection from "@/components/StatsSection";
@@ -9,6 +10,7 @@ import Footer from "@/components/Footer";
 import MethodologySection from "@/components/MethodologySection";
 import ProgramDesignSection from "@/components/ProgramDesignSection";
 import PedagogySection from "@/components/PedagogySection";
+import WelcomeFormPopup from "@/components/WelcomeFormPopup";
 import {
   Accordion,
   AccordionContent,
@@ -20,10 +22,25 @@ import { BookOpen, PenTool, Award, Users, Calendar, Star, GraduationCap } from "
 import FlyingIcons from "@/components/FlyingIcons";
 
 const Index = () => {
+  const [showFormPopup, setShowFormPopup] = useState(false);
+  const [hasShownPopup, setHasShownPopup] = useState(false);
+
+  useEffect(() => {
+    // Show the form popup after a short delay (after loader)
+    const timer = setTimeout(() => {
+      if (!hasShownPopup) {
+        setShowFormPopup(true);
+        setHasShownPopup(true);
+      }
+    }, 1500); // Adjust this delay based on your loader duration
+
+    return () => clearTimeout(timer);
+  }, [hasShownPopup]);
   return (
     <div className="min-h-screen bg-background">
       <FlyingIcons />
       <Navbar />
+      <WelcomeFormPopup isOpen={showFormPopup} onClose={() => setShowFormPopup(false)} />
       <main>
         <HeroCarousel />
         <StatsSection />
