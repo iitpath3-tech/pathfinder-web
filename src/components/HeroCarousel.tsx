@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import banner1 from "@/assets/banner1.webp";
+import banner1 from "@/assets/banner1.png";
 import heroClassroom from "@/assets/hero-classroom.jpg";
 import heroCampus from "@/assets/hero-campus.jpg";
 import heroSuccess from "@/assets/hero-success.jpg";
@@ -11,7 +11,7 @@ import heroOlympiad from "@/assets/hero-olympiad.jpg";
 
 const slides = [
   {
-    image: <banner1 className="png"></banner1>,
+    image: banner1,
     title: "",
     subtitle: "",
     hasOverlay: false,
