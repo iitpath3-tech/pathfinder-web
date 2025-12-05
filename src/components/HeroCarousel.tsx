@@ -11,7 +11,7 @@ import heroOlympiad from "@/assets/hero-olympiad.jpg";
 
 const slides = [
   {
-    image: banner,
+    image: banner1,
     title: "",
     subtitle: "",
     hasOverlay: false,
