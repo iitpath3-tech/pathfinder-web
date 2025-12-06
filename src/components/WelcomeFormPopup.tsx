@@ -67,8 +67,7 @@ const WelcomeFormPopup = ({ isOpen, onClose }: WelcomeFormPopupProps) => {
 
             {/* Form Header */}
             <div className="mb-6">
-              <h2 className="text-2xl font-display font-bold mb-2 text-gradient-primary flex items-center">
-                <GraduationCap className="mr-3" size={28} />
+              <h2 className="text-2xl font-display font-bold mb-2 text-gradient-primary text-left sm:text-center">
                 Welcome to IIT PATH
               </h2>
               <p className="text-sm text-muted-foreground">
