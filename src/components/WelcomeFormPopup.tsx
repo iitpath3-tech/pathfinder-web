@@ -59,7 +59,7 @@ const WelcomeFormPopup = ({ isOpen, onClose }: WelcomeFormPopupProps) => {
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-red-500/10 hover:bg-red-500/20 flex items-center justify-center text-red-500 transition-all duration-300 hover:scale-110 z-10"
+              className="absolute top-4 right-4 text-red-500 transition-all duration-300 hover:scale-110 z-10 sm:w-10 sm:h-10 sm:rounded-full sm:bg-red-500/10 sm:hover:bg-red-500/20 sm:flex sm:items-center sm:justify-center"
               aria-label="Close form"
             >
               <X size={24} />
