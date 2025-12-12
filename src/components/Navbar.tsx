@@ -210,6 +210,13 @@ const Navbar = () => {
                   Home
                 </Link>
                 <Link
+                  to="/about"
+                  className="block text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  About Us
+                </Link>
+                <Link
                   to="/directors-message"
                   className="block pl-4 text-muted-foreground hover:text-primary transition-colors duration-200"
                   onClick={() => setIsMobileMenuOpen(false)}
