@@ -10,9 +10,10 @@ const Navbar = () => {
   const [isCoursesOpen, setIsCoursesOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
 
   const handleEnrollClick = () => {
-    navigate('/contact');
+    navigate("/contact");
   };
 
   useEffect(() => {
@@ -36,16 +37,18 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass-morphism shadow-lg" : "bg-background/50 backdrop-blur-sm"
+        isScrolled
+          ? "glass-morphism shadow-lg"
+          : "bg-background/50 backdrop-blur-sm"
       }`}
     >
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20 px-4">
           {/* Logo */}
           <Link to="/" className="flex items-center hover-scale">
-            <img 
+            <img
               src="/logonew.png"
-              alt="IIT PATH Logo" 
+              alt="IIT PATH Logo"
               className="h-10 md:h-12 w-auto"
             />
           </Link>
@@ -60,14 +63,38 @@ const Navbar = () => {
             >
               Home
             </Link>
-            <Link
-              to="/about"
-              className={`text-foreground hover:text-primary transition-colors duration-300 font-medium ${
-                location.pathname === "/about" ? "text-primary" : ""
-              }`}
+            <div
+              className="relative"
+              onMouseEnter={() => setIsAboutOpen(true)}
+              onMouseLeave={() => setIsAboutOpen(false)}
             >
-              About Us
-            </Link>
+              <Link to="/about">
+                <button className="flex items-center text-foreground hover:text-primary transition-colors duration-300 font-medium">
+                  About Us
+                  
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+              </Link>
+
+              <AnimatePresence>
+                {isAboutOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-56 glass-morphism rounded-lg shadow-xl py-2"
+                  >
+                    <Link
+                      to="/directors-message"
+                      className="block px-4 py-2 text-foreground hover:bg-primary-light hover:text-primary transition-colors duration-200"
+                    >
+                      Director's Message
+                    </Link>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
 
             {/* Courses Dropdown */}
             <div
@@ -75,10 +102,12 @@ const Navbar = () => {
               onMouseEnter={() => setIsCoursesOpen(true)}
               onMouseLeave={() => setIsCoursesOpen(false)}
             >
-              <a href="/courses"> <button className="flex items-center text-foreground hover:text-primary transition-colors duration-300 font-medium">
-                Courses
-                <ChevronDown className="ml-1 h-4 w-4" />
-              </button></a>
+              <Link to="/courses">
+                <button className="flex items-center text-foreground hover:text-primary transition-colors duration-300 font-medium">
+                  Courses
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+              </Link>
               <AnimatePresence>
                 {isCoursesOpen && (
                   <motion.div
@@ -126,7 +155,7 @@ const Navbar = () => {
             >
               Contact
             </Link>
-            
+
             <Link
               to="/our-achievers"
               className={`text-foreground hover:text-primary transition-colors duration-300 font-medium ${
@@ -135,10 +164,10 @@ const Navbar = () => {
             >
               Our Achievers
             </Link>
-            
-            <Button 
+
+            <Button
               size="lg"
-              onClick={() => navigate('/free-counselling')}
+              onClick={() => navigate("/free-counselling")}
               className="font-medium bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-lg hover:shadow-xl hover:scale-105 rounded-lg px-8 text-base transition-all duration-300"
             >
               Free Counselling
@@ -154,7 +183,11 @@ const Navbar = () => {
             className="lg:hidden text-foreground hover:text-primary transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </button>
         </div>
 
@@ -177,12 +210,13 @@ const Navbar = () => {
                   Home
                 </Link>
                 <Link
-                  to="/about"
-                  className="block text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                  to="/directors-message"
+                  className="block pl-4 text-muted-foreground hover:text-primary transition-colors duration-200"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  About Us
+                  Director's Message
                 </Link>
+
                 <div className="space-y-2">
                   <div className="text-foreground font-medium">Courses</div>
                   {courses.map((course) => (
@@ -217,7 +251,7 @@ const Navbar = () => {
                 >
                   Contact
                 </Link>
-                
+
                 <Link
                   to="/our-achievers"
                   className="block text-foreground hover:text-primary transition-colors duration-200 font-medium"
@@ -225,22 +259,27 @@ const Navbar = () => {
                 >
                   Our Achievers
                 </Link>
-                
-                <Button 
+
+                <Button
                   size="lg"
                   className="w-full font-medium bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-lg hover:shadow-xl hover:scale-105 rounded-lg px-8 text-base transition-all duration-300"
                   onClick={() => {
                     setIsMobileMenuOpen(false);
-                    navigate('/free-counselling');
+                    navigate("/free-counselling");
                   }}
                 >
                   Free Counselling
                 </Button>
-                
-                <Button variant="hero" size="lg" className="w-full" onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  handleEnrollClick();
-                }}>
+
+                <Button
+                  variant="hero"
+                  size="lg"
+                  className="w-full"
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    handleEnrollClick();
+                  }}
+                >
                   Enroll Now
                 </Button>
               </div>

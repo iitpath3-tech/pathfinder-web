@@ -20,6 +20,7 @@ import Olympiad from "./pages/Olympiad";
 import NotFound from "./pages/NotFound";
 import FreeCounselling from "./pages/FreeCounselling";
 import AchieverSection from "./pages/AchieverSection"; // Added Achiever Section page
+import DirectorsMessage from "@/pages/DirectorsMessage";
 
 const queryClient = new QueryClient();
 
@@ -58,6 +59,8 @@ const App = () => {
             <Route path="/jee" element={<JEE />} />
             <Route path="/medical-neet" element={<MedicalNEET />} />
             <Route path="/olympiad" element={<Olympiad />} />
+            <Route path="/directors-message" element={<DirectorsMessage />} />
+
             <Route path="/fee-structure" element={<FeeStructure />} />
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/contact" element={<Contact />} />

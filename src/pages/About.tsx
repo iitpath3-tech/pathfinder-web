@@ -129,55 +129,7 @@ const About = () => {
               </motion.div>
             </div>
 
-            {/* Director's Message Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="mb-20"
-            >
-              <h2 className="text-4xl font-display font-bold text-center mb-12 text-gradient-primary">
-                Director's Message
-              </h2>
-              <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 md:p-12 shadow-xl border border-primary/20 mb-16 hover:shadow-2xl transition-all duration-500">
-                <p className="text-lg md:text-xl leading-relaxed text-foreground mb-4">
-                  Dear Parents and Students,
-                </p>
-                <p className="text-lg md:text-xl leading-relaxed text-foreground mb-4">
-                  “IIT PATH” has worked with a mission to provide the best
-                  possible support and mentorship to students to help them crack
-                  the toughest Engineering/ Medical entrance exams in the world.
-                  We consider ourselves blessed to have guided thousands of
-                  students to IITs, AIIMS and other top Engineering & Medical
-                  Colleges year after year.
-                </p>
-                <p className="text-lg md:text-xl leading-relaxed text-foreground mb-4">
-                  We have been able to convert so many students into national
-                  assets because of our child centric approach and feedback
-                  driven mechanism. Our faculty team consists mostly of
-                  Doctorates and Doctors who are passionate about teaching and
-                  dedicated to building the future of their students. The
-                  success of IIT PATH is based on the success of our students.
-                  We infuse in them the attitude that does not let them settle
-                  before mounting the heights of success and deriving the best
-                  not only academically but also socially.
-                </p>
-                <p className="text-lg md:text-xl leading-relaxed text-foreground mb-4">
-                  Our most important philosophy is “Money will never be a
-                  barrier between a meritorious student and quality education at
-                  IIT PATH we feel very passionate about providing an academic
-                  platform to deserving and meritorious students from the weaker
-                  and under privileged sections of our society and giving them a
-                  fair opportunity to study with the best.
-                </p>
-                <p className="text-lg md:text-xl leading-relaxed text-foreground">
-                  I thank you for showing interest in IIT PATH. I am sure your
-                  child will be able to achieve his/her dream of becoming a
-                  successful Engineer or a Doctor with IIT PATH.
-                </p>
-              </div>
-            </motion.div>
+
 
             {/* Our Pedagogy Section */}
             {/* Our Pedagogy Section */}
