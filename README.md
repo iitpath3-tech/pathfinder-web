@@ -46,7 +46,6 @@ This project is built with:
 - Tailwind CSS
 
 ## Deployment
-
 To build the project for production:
 
 ```sh
