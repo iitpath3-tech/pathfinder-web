@@ -145,7 +145,7 @@ const HeroCarousel = () => {
       {/* Left Arrow */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all flex items-center justify-center text-white"
+        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20  hover:bg-white/30 transition-all flex items-center justify-center text-white"
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
@@ -153,7 +153,7 @@ const HeroCarousel = () => {
       {/* Right Arrow */}
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all flex items-center justify-center text-white"
+        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20  hover:bg-white/30 transition-all flex items-center justify-center text-white"
       >
         <ChevronRight className="h-6 w-6" />
       </button>

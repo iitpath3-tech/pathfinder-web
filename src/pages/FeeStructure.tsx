@@ -171,8 +171,8 @@ const FeeStructure = () => {
               viewport={{ once: true }}
               className="mb-16"
             >
-              <h2 className="text-4xl font-display font-bold text-center mb-12 text-gradient-accent flex items-center justify-center">
-                <Star className="mr-3" size={32} />
+              <h2 className="text-4xl font-display font-bold text-center mb-12 text-gradient-accent flex items-center justify-center w-full flex-wrap">
+                <Star className="mr-3 flex-shrink-0" size={32} />
                 Payment Options & Scholarships
               </h2>
               
@@ -217,7 +217,7 @@ const FeeStructure = () => {
                   </div>
                   <div>
                     <p className="font-semibold">Call Us</p>
-                    <p className="text-muted-foreground">+91 22 2678 1234</p>
+                    <p className="text-muted-foreground">+912226781234</p>
                   </div>
                 </div>
                 <div className="bg-card rounded-xl p-6 shadow-md flex items-center gap-4 hover:shadow-lg transition-shadow duration-300">

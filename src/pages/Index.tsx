@@ -62,9 +62,9 @@ const Index = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 flex items-center justify-center">
-                Frequently Asked Questions <span className="text-gradient-primary ml-2"></span>
-                <PenTool className="ml-3 text-primary" size={32} />
+              <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
+            Frequently <span className="text-gradient-primary">asked Questions</span>
+                {/* <PenTool className="ml-3 text-primary" size={32} /> */}
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 Find answers to common questions about IIT PATH
