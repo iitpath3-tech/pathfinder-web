@@ -4,39 +4,56 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
-import banner1 from "@/assets/banner1.webp";
-import heroClassroom from "@/assets/hero-classroom.webp";
-import heroCampus from "@/assets/hero-campus.webp";
-import heroSuccess from "@/assets/hero-success.webp";
-import heroOlympiad from "@/assets/hero-olympiad.webp";
+// Preload images
+const images = [
+  "@/assets/banner1.webp",
+  "@/assets/hero-classroom.webp",
+  "@/assets/hero-campus.webp",
+  "@/assets/hero-success.webp",
+  "@/assets/hero-olympiad.webp"
+];
+
+const preloadImages = () => {
+  images.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+};
+
+// Import images dynamically
+const banner1 = "@/assets/banner1.webp";
+const heroClassroom = "@/assets/hero-classroom.webp";
+const heroCampus = "@/assets/hero-campus.webp";
+const heroSuccess = "@/assets/hero-success.webp";
+const heroOlympiad = "@/assets/hero-olympiad.webp";
 
 const slides = [
   {
-    image: banner1,
+    image: "/src/assets/banner1.webp",
     title: "",
     subtitle: "",
     crop: true,
   },
   {
-    image: heroClassroom,
+    image: "/src/assets/hero-classroom.webp",
     title: "India's Premier IIT-JEE & NEET Coaching",
     subtitle: "Expert Faculty, Proven Results, Guaranteed Success",
     crop: true,
   },
   {
-    image: heroCampus,
+    image: "/src/assets/hero-campus.webp",
     title: "15+ Years of Academic Excellence",
     subtitle: "Building Future Engineers & Doctors",
     crop: true,
   },
   {
-    image: heroSuccess,
+    image: "/src/assets/hero-success.webp",
     title: "1200+ IIT & AIIMS Selections",
     subtitle: "Join Our League of Top Rankers",
     crop: true,
   },
   {
-    image: heroOlympiad,
+    image: "/src/assets/hero-olympiad.webp",
     title: "15 International Gold Medals",
     subtitle: "Dominating National & International Olympiads",
     crop: true,
@@ -48,6 +65,9 @@ const HeroCarousel = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    // Preload images
+    preloadImages();
+    
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
@@ -61,12 +81,8 @@ const HeroCarousel = () => {
   const handleEnrollClick = () => navigate("/contact");
   
   const handleDownloadBrochure = () => {
-    const link = document.createElement('a');
-    link.href = '/prospectus.pdf';
-    link.download = 'IIT-PATH-Prospectus.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Open in new tab instead of direct download for better UX
+    window.open('/prospectus.pdf', '_blank');
   };
 
   return (
@@ -91,6 +107,7 @@ const HeroCarousel = () => {
       ? "absolute inset-0 w-full h-full object-cover object-center"   // For hero images
       : "absolute inset-0 w-full h-full object-contain object-center bg-white" // For poster banner
   }
+  loading="lazy"
 />
 
 

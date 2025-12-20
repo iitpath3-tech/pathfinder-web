@@ -25,8 +25,8 @@ const FlyingIcons = () => {
   }>>([]);
 
   useEffect(() => {
-    // Generate 15-20 icons with random properties
-    const positions = Array.from({ length: 15 + Math.floor(Math.random() * 6) }, (_, i) => {
+    // Generate 5-8 icons with random properties (reduced from 15-20)
+    const positions = Array.from({ length: 5 + Math.floor(Math.random() * 4) }, (_, i) => {
       const icon = icons[Math.floor(Math.random() * icons.length)];
       return {
         id: i,
