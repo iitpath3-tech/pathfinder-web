@@ -59,6 +59,15 @@ const HeroCarousel = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   const handleEnrollClick = () => navigate("/contact");
+  
+  const handleDownloadBrochure = () => {
+    const link = document.createElement('a');
+    link.href = '/prospectus.pdf';
+    link.download = 'IIT-PATH-Prospectus.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <div className="relative overflow-hidden mt-16 md:mt-20 min-h-[400px] h-[500px] sm:h-[600px] md:h-[700px]">
@@ -132,6 +141,7 @@ const HeroCarousel = () => {
                     variant="outline"
                     size="lg"
                     className="sm:size-xl bg-white/10 border-white text-white hover:bg-white hover:text-primary"
+                    onClick={handleDownloadBrochure}
                   >
                     Download Brochure
                   </Button>

@@ -14,6 +14,15 @@ const CTASection = () => {
     navigate('/free-counselling');
   };
   
+  const handleDownloadBrochure = () => {
+    const link = document.createElement('a');
+    link.href = '/prospectus.pdf';
+    link.download = 'IIT-PATH-Prospectus.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+  
   return (
     <section className="section-padding bg-gradient-to-br from-primary via-primary to-accent relative overflow-hidden">
       {/* Decorative Elements */}
@@ -69,6 +78,7 @@ const CTASection = () => {
               size="lg"
               variant="outline"
               className="sm:size-xl bg-white/10 border-2 border-white text-white hover:bg-white hover:text-primary backdrop-blur-sm min-w-[180px] sm:min-w-[200px]"
+              onClick={handleDownloadBrochure}
             >
               <Download className="mr-2 h-5 w-5" />
               Download Brochure
