@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
-import banner1 from "@/assets/banner1.jpg";
+import banner1 from "@/assets/banner1.webp";
 import heroClassroom from "@/assets/hero-classroom.jpg";
 import heroCampus from "@/assets/hero-campus.jpg";
 import heroSuccess from "@/assets/hero-success.jpg";
