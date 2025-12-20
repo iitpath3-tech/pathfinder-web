@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Facebook, Instagram, Youtube, Linkedin, MapPin, Phone, Mail, Clock, BookOpen, GraduationCap, Users, MessageCircle, Award, ClipboardCheck } from "lucide-react";
@@ -42,6 +43,59 @@ const Contact = () => {
       ]
     }
   ];
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    course: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [id]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch("https://submit-form.com/rbmwoVOVf", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setShowSuccessModal(true);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          course: "",
+          message: "",
+        });
+      } else {
+        console.error("Form submission failed");
+        // You might want to show an error message to the user
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      // You might want to show an error message to the user
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -173,87 +227,159 @@ const Contact = () => {
                     <GraduationCap className="mr-3" size={32} />
                     Send us a Message
                   </h2>
-                  <form className="space-y-6">
-                    <div>
-                      <label htmlFor="name" className="block text-lg font-medium mb-2 flex items-center">
-                        <BookOpen className="mr-2" size={18} />
-                        Full Name
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background"
-                        placeholder="Enter your full name"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="email" className="block text-lg font-medium mb-2 flex items-center">
-                        <Mail className="mr-2" size={18} />
-                        Email Address
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background"
-                        placeholder="Enter your email address"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="phone" className="block text-lg font-medium mb-2 flex items-center">
-                        <Phone className="mr-2" size={18} />
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background"
-                        placeholder="Enter your phone number"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="course" className="block text-lg font-medium mb-2 flex items-center">
-                        <Award className="mr-2" size={18} />
-                        Course Interested In
-                      </label>
-                      <select
-                        id="course"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background"
-                      >
-                        <option value="">Select a course</option>
-                        <option value="foundation">Foundation Program (Classes 7-10)</option>
-                        <option value="jee">JEE Main & Advanced</option>
-                        <option value="neet">NEET & AIIMS</option>
-                        <option value="olympiad">Olympiad Training</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="message" className="block text-lg font-medium mb-2 flex items-center">
-                        <MessageCircle className="mr-2" size={18} />
-                        Message
-                      </label>
-                      <textarea
-                        id="message"
-                        rows={5}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background"
-                        placeholder="Enter your message or questions"
-                      ></textarea>
-                    </div>
-                    
-                    <motion.button
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      type="submit"
-                      className="w-full bg-gradient-primary text-white py-3 px-6 rounded-lg font-display font-semibold text-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center"
+                  {/* Success Modal */}
+                  {showSuccessModal && (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+                      onClick={() => setShowSuccessModal(false)}
                     >
-                      <ClipboardCheck className="mr-2" size={20} />
-                      Send Message
-                    </motion.button>
-                  </form>
+                      <motion.div
+                        initial={{ scale: 0.9, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        className="bg-card rounded-2xl shadow-xl p-8 max-w-md w-full text-center border border-border"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-8 w-8 text-green-500"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </div>
+                        <h3 className="text-2xl font-display font-bold mb-2">Message Sent Successfully!</h3>
+                        <p className="text-muted-foreground mb-6">
+                          Thank you for contacting us. We've received your message and will get back to you shortly.
+                        </p>
+                        <button
+                          onClick={() => setShowSuccessModal(false)}
+                          className="bg-gradient-primary text-white py-3 px-6 rounded-lg font-display font-semibold hover:shadow-lg transition-all duration-300"
+                        >
+                          Continue
+                        </button>
+                      </motion.div>
+                    </motion.div>
+                  )}
+
+                  {/* Form */}
+                  {!showSuccessModal && (
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      <div>
+                        <label htmlFor="name" className="block text-lg font-medium mb-2 flex items-center">
+                          <BookOpen className="mr-2" size={18} />
+                          Full Name
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background"
+                          placeholder="Enter your full name"
+                          required
+                        />
+                      </div>
+                      
+                      <div>
+                        <label htmlFor="email" className="block text-lg font-medium mb-2 flex items-center">
+                          <Mail className="mr-2" size={18} />
+                          Email Address
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background"
+                          placeholder="Enter your email address"
+                          required
+                        />
+                      </div>
+                      
+                      <div>
+                        <label htmlFor="phone" className="block text-lg font-medium mb-2 flex items-center">
+                          <Phone className="mr-2" size={18} />
+                          Phone Number
+                        </label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background"
+                          placeholder="Enter your phone number"
+                          required
+                        />
+                      </div>
+                      
+                      <div>
+                        <label htmlFor="course" className="block text-lg font-medium mb-2 flex items-center">
+                          <Award className="mr-2" size={18} />
+                          Course Interested In
+                        </label>
+                        <select
+                          id="course"
+                          value={formData.course}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background"
+                          required
+                        >
+                          <option value="">Select a course</option>
+                          <option value="foundation">Foundation Program (Classes 7-10)</option>
+                          <option value="jee">JEE Main & Advanced</option>
+                          <option value="neet">NEET & AIIMS</option>
+                          <option value="olympiad">Olympiad Training</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                      
+                      <div>
+                        <label htmlFor="message" className="block text-lg font-medium mb-2 flex items-center">
+                          <MessageCircle className="mr-2" size={18} />
+                          Message
+                        </label>
+                        <textarea
+                          id="message"
+                          rows={5}
+                          value={formData.message}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background"
+                          placeholder="Enter your message or questions"
+                        ></textarea>
+                      </div>
+                      
+                      <motion.button
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="w-full bg-gradient-primary text-white py-3 px-6 rounded-lg font-display font-semibold text-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
+                      >
+                        {isSubmitting ? (
+                          <>
+                            <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                            Sending...
+                          </>
+                        ) : (
+                          <>
+                            <ClipboardCheck className="mr-2" size={20} />
+                            Send Message
+                          </>
+                        )}
+                      </motion.button>
+                    </form>
+                  )}
                 </div>
               </motion.div>
             </div>
