@@ -3,8 +3,6 @@
 ## Project Overview
 
 This is the official website for IIT PATH, India's leading coaching institute for IIT-JEE, NEET, and Olympiad preparation.
-
-
 ## How to Work with This Code
 
 There are several ways to work with this project.
