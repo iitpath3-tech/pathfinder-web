@@ -15,8 +15,12 @@ const CTASection = () => {
   };
   
   const handleDownloadBrochure = () => {
-    // Open in new tab instead of direct download for better UX
-    window.open('/prospectus.pdf', '_blank');
+    const link = document.createElement('a');
+    link.href = '/prospectus.pdf';
+    link.download = 'IIT-PATH-Prospectus.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
   
   return (

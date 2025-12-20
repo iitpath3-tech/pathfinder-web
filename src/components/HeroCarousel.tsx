@@ -4,13 +4,20 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
+// Image paths for production
+const banner1 = "/banner1.webp";
+const heroClassroom = "/hero-classroom.webp";
+const heroCampus = "/hero-campus.webp";
+const heroSuccess = "/hero-success.webp";
+const heroOlympiad = "/hero-olympiad.webp";
+
 // Preload images
 const images = [
-  "@/assets/banner1.webp",
-  "@/assets/hero-classroom.webp",
-  "@/assets/hero-campus.webp",
-  "@/assets/hero-success.webp",
-  "@/assets/hero-olympiad.webp"
+  banner1,
+  heroClassroom,
+  heroCampus,
+  heroSuccess,
+  heroOlympiad
 ];
 
 const preloadImages = () => {
@@ -20,40 +27,33 @@ const preloadImages = () => {
   });
 };
 
-// Import images dynamically
-const banner1 = "@/assets/banner1.webp";
-const heroClassroom = "@/assets/hero-classroom.webp";
-const heroCampus = "@/assets/hero-campus.webp";
-const heroSuccess = "@/assets/hero-success.webp";
-const heroOlympiad = "@/assets/hero-olympiad.webp";
-
 const slides = [
   {
-    image: "/src/assets/banner1.webp",
+    image: banner1,
     title: "",
     subtitle: "",
     crop: true,
   },
   {
-    image: "/src/assets/hero-classroom.webp",
+    image: heroClassroom,
     title: "India's Premier IIT-JEE & NEET Coaching",
     subtitle: "Expert Faculty, Proven Results, Guaranteed Success",
     crop: true,
   },
   {
-    image: "/src/assets/hero-campus.webp",
+    image: heroCampus,
     title: "15+ Years of Academic Excellence",
     subtitle: "Building Future Engineers & Doctors",
     crop: true,
   },
   {
-    image: "/src/assets/hero-success.webp",
+    image: heroSuccess,
     title: "1200+ IIT & AIIMS Selections",
     subtitle: "Join Our League of Top Rankers",
     crop: true,
   },
   {
-    image: "/src/assets/hero-olympiad.webp",
+    image: heroOlympiad,
     title: "15 International Gold Medals",
     subtitle: "Dominating National & International Olympiads",
     crop: true,
@@ -81,8 +81,12 @@ const HeroCarousel = () => {
   const handleEnrollClick = () => navigate("/contact");
   
   const handleDownloadBrochure = () => {
-    // Open in new tab instead of direct download for better UX
-    window.open('/prospectus.pdf', '_blank');
+    const link = document.createElement('a');
+    link.href = '/prospectus.pdf';
+    link.download = 'IIT-PATH-Prospectus.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
