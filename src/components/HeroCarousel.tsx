@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
 import banner1 from "@/assets/banner1.webp";
-import heroClassroom from "@/assets/hero-classroom.jpg";
-import heroCampus from "@/assets/hero-campus.jpg";
-import heroSuccess from "@/assets/hero-success.jpg";
-import heroOlympiad from "@/assets/hero-olympiad.jpg";
+import heroClassroom from "@/assets/hero-classroom.webp";
+import heroCampus from "@/assets/hero-campus.webp";
+import heroSuccess from "@/assets/hero-success.webp";
+import heroOlympiad from "@/assets/hero-olympiad.webp";
 
 const slides = [
   {
