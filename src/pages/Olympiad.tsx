@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import FlyingIcons from "@/components/FlyingIcons";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { useNavigate } from "react-router-dom";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { Trophy, Star, Award, Target, Brain, BookOpen } from "lucide-react";
 
@@ -11,6 +12,7 @@ import { Trophy, Star, Award, Target, Brain, BookOpen } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 const Olympiad = () => {
+  const navigate = useNavigate();
   const heroRef = useRef<HTMLDivElement>(null);
   const introductionRef = useRef<HTMLDivElement>(null);
   const selectionRef = useRef<HTMLDivElement>(null);
@@ -426,7 +428,7 @@ const Olympiad = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white hover:from-yellow-500 hover:to-orange-600 font-bold py-4 px-8 rounded-full text-lg shadow-2xl min-w-[200px] transition-all duration-300"
-                  onClick={() => window.location.href = '/contact'}
+                   onClick={() => navigate('/contact')}
                 >
                   Enroll Now
                 </motion.button>

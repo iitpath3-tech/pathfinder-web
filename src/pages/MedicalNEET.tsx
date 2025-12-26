@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import FlyingIcons from "@/components/FlyingIcons";
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { BookOpen, Users, GraduationCap, ClipboardCheck, Award, Stethoscope } from "lucide-react";
@@ -11,6 +12,7 @@ import { BookOpen, Users, GraduationCap, ClipboardCheck, Award, Stethoscope } fr
 gsap.registerPlugin(ScrollTrigger);
 
 const MedicalNEET = () => {
+  const navigate = useNavigate();
   const heroRef = useRef<HTMLDivElement>(null);
   const preparationRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -389,7 +391,7 @@ const MedicalNEET = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="bg-gradient-to-r from-green-400 to-teal-500 text-white hover:from-green-500 hover:to-teal-600 font-bold py-4 px-8 rounded-full text-lg shadow-2xl min-w-[200px] transition-all duration-300"
-                  onClick={() => window.location.href = '/contact'}
+                   onClick={() => navigate('/contact')}
                 >
                   Enroll Now
                 </motion.button>

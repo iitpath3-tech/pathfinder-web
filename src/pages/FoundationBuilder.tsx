@@ -4,12 +4,14 @@ import { motion } from "framer-motion";
 import { BookOpen, GraduationCap, Users, Brain, Target, Star } from "lucide-react";
 import FlyingIcons from "@/components/FlyingIcons";
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const FoundationBuilder = () => {
+  const navigate = useNavigate();
   const benefitsRef = useRef<HTMLDivElement>(null);
   const importanceRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
@@ -361,7 +363,7 @@ const FoundationBuilder = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="bg-gradient-to-r from-primary to-accent text-white hover:from-primary/90 hover:to-accent/90 font-bold py-4 px-8 rounded-full text-lg shadow-2xl min-w-[200px] transition-all duration-300"
-                  onClick={() => window.location.href = '/contact'}
+                   onClick={() => navigate('/contact')}
                 >
                   Enroll Now
                 </motion.button>
