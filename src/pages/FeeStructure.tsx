@@ -226,7 +226,7 @@ const FeeStructure = () => {
                   </div>
                   <div>
                     <p className="font-semibold">Email Us</p>
-                    <p className="text-muted-foreground">info@iitpath.com</p>
+                    <p className="text-muted-foreground">iitpath0@gmail.com</p>
                   </div>
                 </div>
               </div>
