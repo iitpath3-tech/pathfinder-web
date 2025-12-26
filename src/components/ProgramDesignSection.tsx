@@ -49,7 +49,7 @@ const ProgramDesignSection: FC = () => {
         >
           {/* Box 1 */}
           <motion.div 
-            className="bg-gradient-to-br from-orange-600 to-amber-500 p-8 rounded-[60px] shadow-xl text-white"
+            className="bg-gradient-to-br from-orange-700 to-amber-700 p-8 rounded-[60px] shadow-xl text-white"
             variants={{
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0 }
@@ -112,7 +112,7 @@ const ProgramDesignSection: FC = () => {
 
           {/* Box 2 */}
           <motion.div 
-            className="bg-gradient-to-br from-amber-700 to-orange-800 p-8 rounded-[60px] shadow-xl text-white"
+            className="bg-gradient-to-br from-orange-700 to-amber-700 p-8 rounded-[60px] shadow-xl text-white"
             variants={{
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0 }
@@ -175,7 +175,7 @@ const ProgramDesignSection: FC = () => {
 
           {/* Box 3 */}
           <motion.div 
-            className="bg-gradient-to-br from-orange-800 to-amber-900 p-8 rounded-[60px] shadow-xl text-white"
+            className="bg-gradient-to-br from-orange-700 to-amber-700 p-8 rounded-[60px] shadow-xl text-white"
             variants={{
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0 }
