@@ -91,13 +91,14 @@ const About = () => {
                     </h2>
                   </div>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    Our nation needs to harness the intellectual potential of
-                    our younger generation to turn India into a superpower. Our
-                    vision is to impart best quality education to students from
-                    seventh standard onwards for the top national and global
-                    examinations and help them to fulfil their dream of entering
-                    into top Engineering and Medical colleges, through tech
-                    enabled learning and testing solutions.
+                    At IITPATH, we redefine quality learning through innovation
+                    and visionary approaches. Our vision is to create an
+                    ecosystem of academic excellence that not only imparts
+                    knowledge but also nurtures creativity, critical thinking,
+                    and leadership. By harnessing modern technologies and
+                    holistic pedagogies, we deliver result-driven education that
+                    transforms lives, empowers communities, and inspires future
+                    generations to achieve greatness.
                   </p>
                 </div>
               </motion.div>
@@ -119,37 +120,37 @@ const About = () => {
                     </h2>
                   </div>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    Redefining quality learning through innovation and
-                    farsightedness has been a hallmark of IIT PATH DNA. Our
-                    mission is to create an environment of academic excellence,
-                    utilizing modern technologies and pedagogical approaches to
-                    provide quality education.
+                    Our mission is to unlock the potential of India’s youth and
+                    empower them to lead the nation towards excellence. We are
+                    dedicated to providing world-class education, guided by
+                    innovative methodologies inspired by Bloom’s Taxonomy,
+                    starting from class VII onwards. By building a strong
+                    foundation, we prepare students to excel in national and
+                    international examinations, enabling them to achieve their
+                    aspirations of joining distinguished engineering and medical
+                    institutions
                   </p>
                 </div>
               </motion.div>
             </div>
 
-
-
             {/* Our Pedagogy Section */}
             {/* Our Pedagogy Section */}
-<motion.div
-  initial={{ opacity: 0, y: 30 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  viewport={{ once: true }}
-  className="mb-24"
->
-  <h2 className="text-4xl font-display font-bold text-center mb-12 text-gradient-primary">
-    Our Pedagogy
-  </h2>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="mb-24"
+            >
+              <h2 className="text-4xl font-display font-bold text-center mb-12 text-gradient-primary">
+                Our Pedagogy
+              </h2>
 
-  <div className="relative w-full max-w-6xl mx-auto px-4">
-
-  
-
-    {/* BUBBLES */}
-    <div className="
+              <div className="relative w-full max-w-6xl mx-auto px-4">
+                {/* BUBBLES */}
+                <div
+                  className="
       grid 
       grid-cols-1 
       sm:grid-cols-2 
@@ -157,59 +158,61 @@ const About = () => {
       gap-y-16 
       gap-x-4 
       mt-10
-    ">
-      {[
-        {
-          icon: Heart,
-          title: "Child-Centric Approach",
-          desc: "Child-Centric approach and Feedback Driven Mechanism",
-        },
-        {
-          icon: GraduationCap,
-          title: "Expert Faculty",
-          desc: "Highly qualified teachers: IITians, Doctors & PhDs",
-        },
-        {
-          icon: BookOpen,
-          title: "Study Material",
-          desc: "Extensive material crafted by experienced faculty",
-        },
-        {
-          icon: Target,
-          title: "Precise Training",
-          desc: "Training for competitive + school exams",
-        },
-        {
-          icon: MessageCircle,
-          title: "Feedback System",
-          desc: "Regular feedback, PTMs & detailed performance reports",
-        },
-        {
-          icon: Users,
-          title: "Effective Batch Size",
-          desc: "Small batch sizes & library doubt-solving support",
-        },
-        {
-          icon: BarChart3,
-          title: "Assessment System",
-          desc: "Topic tests, major tests, AITS evaluation system",
-        },
-        {
-          icon: Gamepad2,
-          title: "Gamified Learning",
-          desc: "Gamified learning app for engaging Math & Science",
-        },
-      ].map((item, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
-          viewport={{ once: true }}
-          className="relative flex flex-col items-center text-center px-4"
-        >
-          {/* Bubble */}
-          <div className="
+    "
+                >
+                  {[
+                    {
+                      icon: Heart,
+                      title: "Child-Centric Approach",
+                      desc: "Child-Centric approach and Feedback Driven Mechanism",
+                    },
+                    {
+                      icon: GraduationCap,
+                      title: "Expert Faculty",
+                      desc: "Highly qualified teachers: IITians, Doctors & PhDs",
+                    },
+                    {
+                      icon: BookOpen,
+                      title: "Study Material",
+                      desc: "Extensive material crafted by experienced faculty",
+                    },
+                    {
+                      icon: Target,
+                      title: "Precise Training",
+                      desc: "Training for competitive + school exams",
+                    },
+                    {
+                      icon: MessageCircle,
+                      title: "Feedback System",
+                      desc: "Regular feedback, PTMs & detailed performance reports",
+                    },
+                    {
+                      icon: Users,
+                      title: "Effective Batch Size",
+                      desc: "Small batch sizes & library doubt-solving support",
+                    },
+                    {
+                      icon: BarChart3,
+                      title: "Assessment System",
+                      desc: "Topic tests, major tests, AITS evaluation system",
+                    },
+                    {
+                      icon: Gamepad2,
+                      title: "Gamified Learning",
+                      desc: "Gamified learning app for engaging Math & Science",
+                    },
+                  ].map((item, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative flex flex-col items-center text-center px-4"
+                    >
+                      {/* Bubble */}
+                      <div
+                        className="
             w-28 h-28 
             sm:w-32 sm:h-32 
             md:w-36 md:h-36 
@@ -222,23 +225,23 @@ const About = () => {
             transition-transform 
             duration-300 
             hover:scale-105
-          ">
-            <item.icon className="w-10 h-10 sm:w-12 sm:h-12 text-primary" />
-          </div>
+          "
+                      >
+                        <item.icon className="w-10 h-10 sm:w-12 sm:h-12 text-primary" />
+                      </div>
 
-          <h3 className="text-lg sm:text-xl font-display font-semibold mt-4">
-            {item.title}
-          </h3>
+                      <h3 className="text-lg sm:text-xl font-display font-semibold mt-4">
+                        {item.title}
+                      </h3>
 
-          <p className="text-sm sm:text-base text-muted-foreground max-w-xs mt-2">
-            {item.desc}
-          </p>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</motion.div>
-
+                      <p className="text-sm sm:text-base text-muted-foreground max-w-xs mt-2">
+                        {item.desc}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
 
             <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-gradient-to-br from-blue-50 to-sky-100 py-16">
               <div className="max-w-7xl mx-auto px-4">
