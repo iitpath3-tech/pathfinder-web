@@ -46,14 +46,14 @@ const Index = () => {
         <StatsSection />
         <WhyChooseUs />
         <MethodologySection />
-        <CoursesOverview />
+        {/* <CoursesOverview /> */}
         <ProgramDesignSection />
-        <section className="section-padding bg-muted/30">
+        {/* <section className="section-padding bg-muted/30">
           <div className="container-custom">
             <ToppersCarousel category="Our" />
           </div>
-        </section>
-        <section className="section-padding bg-background">
+        </section> */}
+        {/* <section className="section-padding bg-background">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -64,7 +64,7 @@ const Index = () => {
             >
               <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
             Frequently <span className="text-gradient-primary">asked Questions</span>
-                {/* <PenTool className="ml-3 text-primary" size={32} /> */}
+                <PenTool className="ml-3 text-primary" size={32} />
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 Find answers to common questions about IIT PATH
@@ -198,7 +198,10 @@ const Index = () => {
               </Accordion>
             </motion.div>
           </div>
-        </section>
+        </section> */}
+
+
+        
         {/* New Pedagogy Section */}
         
         <CTASection />
