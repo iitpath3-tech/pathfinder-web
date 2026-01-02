@@ -64,7 +64,7 @@ const CTASection = () => {
               Contact Us
             </Button>
             
-            <Button
+            {/* <Button
               size="lg"
               variant="outline"
               className="sm:size-xl bg-white/10 border-2 border-white text-white hover:bg-white hover:text-primary backdrop-blur-sm min-w-[180px] sm:min-w-[200px]"
@@ -72,7 +72,7 @@ const CTASection = () => {
             >
               <Calendar className="mr-2 h-5 w-5" />
               Free Counselling
-            </Button>
+            </Button> */}
             
             <Button
               size="lg"
