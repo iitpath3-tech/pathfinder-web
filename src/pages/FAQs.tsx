@@ -81,7 +81,7 @@ const FAQs = () => {
                     icon: BookOpen,
                     question: "How do I enroll at IIT PATH?",
                     answer:
-                      "You can enroll at IIT PATH by visiting our center in person, calling our admissions office at +91 22 2678 1234, or filling out the online enrollment form on our website.",
+                      "You can enroll at IIT PATH by visiting our center in person, calling our admissions office at 9130054398, or filling out the online enrollment form on our website.",
                   },
                   {
                     icon: GraduationCap,

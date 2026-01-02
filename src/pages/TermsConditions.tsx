@@ -65,7 +65,7 @@ const TermsConditions = () => {
                 <ul className="list-disc pl-6 text-muted-foreground mb-4 space-y-2">
                   <li>Students must maintain regular attendance in classes.</li>
                   <li>Students are expected to complete assigned homework and practice materials.</li>
-                  <li>Students must遵守 all institute rules and regulations.</li>
+                  <li>Students must all institute rules and regulations.</li>
                   <li>Students must treat faculty and staff with respect and courtesy.</li>
                   <li>Students must not engage in any form of academic dishonesty or misconduct.</li>
                 </ul>
@@ -140,11 +140,11 @@ const TermsConditions = () => {
                 <div className="bg-muted/50 rounded-lg p-4">
                   <p className="text-foreground font-medium">IIT PATH Coaching Institute</p>
                   <p className="text-muted-foreground">Andheri West, Mumbai, Maharashtra 400058</p>
-                  <p className="text-muted-foreground">Email: terms@iitpath.com</p>
-                  <p className="text-muted-foreground">Phone: +91 22 2678 1234</p>
+                  <p className="text-muted-foreground">Email: iitpath0@gmail.com</p>
+                  <p className="text-muted-foreground">Phone: 9130054398</p>
                 </div>
                 <p className="text-muted-foreground mt-4">
-                  <strong>Effective Date:</strong> January 1, 2024
+                  <strong>Effective Date:</strong> January 1, 2026
                 </p>
               </section>
             </div>

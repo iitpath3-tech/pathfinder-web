@@ -127,11 +127,11 @@ const PrivacyPolicy = () => {
                 <div className="bg-muted/50 rounded-lg p-4">
                   <p className="text-foreground font-medium">IIT PATH Coaching Institute</p>
                   <p className="text-muted-foreground">Andheri West, Mumbai, Maharashtra 400058</p>
-                  <p className="text-muted-foreground">Email: privacy@iitpath.com</p>
-                  <p className="text-muted-foreground">Phone: +91 22 2678 1234</p>
+                  <p className="text-muted-foreground">Email: iitpath0@gmail.com</p>
+                  <p className="text-muted-foreground">Phone: 9130054398</p>
                 </div>
                 <p className="text-muted-foreground mt-4">
-                  <strong>Effective Date:</strong> January 1, 2024
+                  <strong>Effective Date:</strong> January 1, 2026
                 </p>
               </section>
             </div>
