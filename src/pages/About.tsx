@@ -135,8 +135,7 @@ const About = () => {
             </div>
 
             {/* Our Pedagogy Section */}
-            {/* Our Pedagogy Section */}
-            <motion.div
+            { false && <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -241,10 +240,10 @@ const About = () => {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </motion.div>}
 
-            <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-gradient-to-br from-blue-50 to-sky-100 py-16">
-              <div className="max-w-7xl mx-auto px-4">
+            {/* <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-gradient-to-br from-blue-50 to-sky-100 py-16"> */}
+              {/* <div className="max-w-7xl mx-auto px-4">
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -319,8 +318,8 @@ const About = () => {
                     ))}
                   </div>
                 </motion.div>
-              </div>
-            </div>
+              </div> 
+            </div>*/}
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -379,7 +378,7 @@ const About = () => {
             </motion.div>
 
             {/* Our Social Initiatives Section */}
-            <motion.div
+            { false && <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -613,7 +612,7 @@ const About = () => {
                   </p>
                 </motion.div>
               </div>
-            </motion.div>
+            </motion.div>}
           </div>
         </div>
       </main>
