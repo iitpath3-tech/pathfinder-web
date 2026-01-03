@@ -158,7 +158,7 @@ const Footer = () => {
           className="border-t border-background/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p className="text-background/60 text-sm">
-            © 2009-{currentYear} IIT PATH Coaching Institute. All rights reserved.
+            © 2009-{currentYear} IIT PATH Coaching Institute. All rights reserved.  Powered by Enn engineers Pvt. Ltd.
           </p>
           <div className="flex gap-6 text-sm">
             <Link to="/privacy" className="text-background/60 hover:text-primary transition-colors">
