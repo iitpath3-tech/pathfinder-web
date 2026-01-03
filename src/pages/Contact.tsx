@@ -405,7 +405,7 @@ const Contact = () => {
               ></motion.div>
               <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl overflow-hidden shadow-xl border border-primary/20">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.574540083173!2d72.8291043148579!3d19.12660038705742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9b3d9b4d3d9%3A0x1e0c1c1e1e1e1e1e!2sIIT%20PATH%20Coaching%20Institute!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30149.199972407616!2d72.82538928829403!3d19.166792131040918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b71de785d257%3A0x3df73dfbc35ab2cf!2sShanti%20Nagar%20CHS.!5e0!3m2!1sen!2sin!4v1767464342024!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
