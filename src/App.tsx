@@ -42,7 +42,7 @@ const App = () => {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center w-screen h-screen">
-        <RingLoader color="#d72525" size={90} />
+        <RingLoader color="#0052CC" size={90} />
       </div>
     );
   }
@@ -55,7 +55,7 @@ const App = () => {
         <BrowserRouter>
           <Suspense fallback={
             <div className="flex items-center justify-center w-screen h-screen">
-              <RingLoader color="#d72525" size={90} />
+              <RingLoader color="#0052CC" size={90} />
             </div>
           }>
             <Routes>
