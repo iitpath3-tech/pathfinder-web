@@ -47,7 +47,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center hover-scale">
             <img
-              src="/logonew.png"
+              src="/logo.png"
               alt="IIT PATH Logo"
               className="h-10 md:h-12 w-auto"
             />
