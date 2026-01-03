@@ -168,14 +168,14 @@ const Navbar = () => {
             <Button
               size="lg"
               onClick={() => navigate("/free-counselling")}
-              className="font-medium bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-lg hover:shadow-xl hover:scale-105 rounded-lg px-8 text-base transition-all duration-300"
+              className="font-medium bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl hover:scale-105 rounded-lg px-8 text-base transition-all duration-300"
             >
               Free Counselling
             </Button>
 
-            <Button variant="hero" size="lg" onClick={handleEnrollClick}>
+            {/* <Button variant="hero" size="lg" onClick={handleEnrollClick}>
               Enroll Now
-            </Button>
+            </Button> */}
           </div>
 
           {/* Mobile Menu Button */}
