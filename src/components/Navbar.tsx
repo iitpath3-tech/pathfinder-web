@@ -131,13 +131,21 @@ const Navbar = () => {
               </AnimatePresence>
             </div>
 
-            <Link
+            {/* <Link
               to="/fee-structure"
               className={`text-foreground hover:text-primary transition-colors duration-300 font-medium ${
                 location.pathname === "/fee-structure" ? "text-primary" : ""
               }`}
             >
               Fee Structure
+            </Link> */}
+            <Link
+              to="/study-material"
+              className={`text-foreground hover:text-primary transition-colors duration-300 font-medium ${
+                location.pathname === "/study-material" ? "text-primary" : ""
+              }`}
+            >
+              Study Material
             </Link>
             <Link
               to="/faqs"
@@ -237,12 +245,19 @@ const Navbar = () => {
                     </Link>
                   ))}
                 </div>
-                <Link
+                {/* <Link
                   to="/fee-structure"
                   className="block text-foreground hover:text-primary transition-colors duration-200 font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Fee Structure
+                </Link> */}
+                <Link
+                  to="/study-material"
+                  className="block text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Study Material
                 </Link>
                 <Link
                   to="/faqs"

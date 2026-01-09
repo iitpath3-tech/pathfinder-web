@@ -22,7 +22,9 @@ const Olympiad = lazy(() => import("./pages/Olympiad"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const FreeCounselling = lazy(() => import("./pages/FreeCounselling"));
 const AchieverSection = lazy(() => import("./pages/AchieverSection"));
+
 const DirectorsMessage = lazy(() => import("@/pages/DirectorsMessage"));
+const StudyMaterial = lazy(() => import("./pages/StudyMaterial"));
 
 const queryClient = new QueryClient();
 
@@ -73,6 +75,7 @@ const App = () => {
               <Route path="/contact" element={<Contact />} />
               <Route path="/free-counselling" element={<FreeCounselling />} />
               <Route path="/our-achievers" element={<AchieverSection />} /> {/* Added Achiever Section route */}
+              <Route path="/study-material" element={<StudyMaterial />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/terms" element={<TermsConditions />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
