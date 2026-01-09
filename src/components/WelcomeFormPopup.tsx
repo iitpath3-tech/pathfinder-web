@@ -175,7 +175,7 @@ const WelcomeFormPopup = ({ isOpen, onClose }: WelcomeFormPopupProps) => {
                   />
                 </div>
 
-                <div>
+                {/* <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-1 flex items-center">
                     <Mail className="mr-2" size={16} />
                     Email Address
@@ -189,7 +189,7 @@ const WelcomeFormPopup = ({ isOpen, onClose }: WelcomeFormPopupProps) => {
                     placeholder="your@email.com"
                     required
                   />
-                </div>
+                </div> */}
 
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium mb-1 flex items-center">
@@ -207,7 +207,7 @@ const WelcomeFormPopup = ({ isOpen, onClose }: WelcomeFormPopupProps) => {
                   />
                 </div>
 
-                <div>
+                {/* <div>
                   <label htmlFor="course" className="block text-sm font-medium mb-1 flex items-center">
                     <Award className="mr-2" size={16} />
                     Course Interested In
@@ -226,7 +226,7 @@ const WelcomeFormPopup = ({ isOpen, onClose }: WelcomeFormPopupProps) => {
                     <option value="olympiad">Olympiad Training</option>
                     <option value="other">Other</option>
                   </select>
-                </div>
+                </div> */}
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-1 flex items-center">
