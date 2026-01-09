@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import FlyingIcons from "@/components/FlyingIcons";
 import { useEffect, useRef } from "react";
+import { ClipboardCheck, Calendar } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -16,6 +17,7 @@ const JEE = () => {
   const examPatternRef = useRef<HTMLDivElement>(null);
   const jeeAdvancedRef = useRef<HTMLDivElement>(null);
   const admissionRef = useRef<HTMLDivElement>(null);
+  const feeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Animate Hero Section
@@ -73,6 +75,21 @@ const JEE = () => {
         ease: "back.out(1.7)",
         scrollTrigger: {
           trigger: admissionRef.current,
+          start: "top 80%",
+        },
+      });
+    }
+
+    // Animate Fee Cards
+    if (feeRef.current) {
+      gsap.from(feeRef.current.querySelectorAll(".fee-card"), {
+        duration: 0.8,
+        y: 50,
+        opacity: 0,
+        stagger: 0.15,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+          trigger: feeRef.current,
           start: "top 80%",
         },
       });
@@ -447,6 +464,89 @@ const JEE = () => {
                   For more details kindly visit <a href="http://josaa.nic.in" className="text-primary hover:underline">josaa.nic.in</a>
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FEE STRUCTURE SECTION */}
+        <section className="section-padding bg-background">
+          <div className="container-custom">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-foreground">
+                Fee Structure
+              </h2>
+              <motion.div
+                className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+                viewport={{ once: true }}
+              />
+              <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
+                Comprehensive coaching packages for JEE Main & Advanced.
+              </p>
+            </motion.div>
+
+            <div ref={feeRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                { type: "2-Year Integrated", duration: "Class 11-12", fee: "₹1,25,000", features: "Complete syllabus, DPPs, Tests", highlight: true },
+                { type: "1-Year Target", duration: "Class 12/Dropper", fee: "₹95,000", features: "Revision, Tests, Rank Booster", highlight: false },
+                { type: "Rank Booster", duration: "6 Months", fee: "₹65,000", features: "Intensive, Mock Tests, Analysis", highlight: false }
+              ].map((batch, index) => (
+                <motion.div
+                  key={index}
+                  className={`fee-card relative overflow-hidden bg-white rounded-2xl shadow-xl border ${batch.highlight ? 'border-primary shadow-primary/20 scale-105 z-10' : 'border-border'} flex flex-col`}
+                  whileHover={{ y: -10 }}
+                >
+                  {batch.highlight && (
+                    <div className="bg-primary text-white text-xs font-bold uppercase py-1 px-4 absolute top-0 right-0 rounded-bl-xl">
+                      Best Value
+                    </div>
+                  )}
+                  <div className={`p-6 ${batch.highlight ? 'bg-primary/5' : ''}`}>
+                    <h3 className="text-xl font-display font-bold text-foreground mb-2">{batch.type}</h3>
+                    <div className="flex items-center text-muted-foreground text-sm mb-4">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      {batch.duration}
+                    </div>
+                    <div className="text-3xl font-bold text-gradient-primary mb-2">{batch.fee}</div>
+                  </div>
+                  <div className="p-6 border-t border-border flex-grow">
+                     <div className="flex items-start">
+                        <ClipboardCheck className="w-5 h-5 text-primary mr-3 mt-1 flex-shrink-0" />
+                        <span className="text-gray-700">{batch.features}</span>
+                     </div>
+                  </div>
+                  <div className="p-6 pt-0 mt-auto">
+                    <button 
+                      onClick={() => navigate('/contact')}
+                      className={`w-full py-3 rounded-xl font-semibold transition-all duration-300 ${batch.highlight ? 'bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/25' : 'bg-muted text-foreground hover:bg-muted/80'}`}
+                    >
+                      Enquire Now
+                    </button>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Summary */}
+        <section className="py-10 bg-white border-b border-border">
+          <div className="container-custom text-center">
+            <p className="text-muted-foreground mb-6 font-medium">Financial Benefits Available</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              {["0% Interest Installments", "Merit Scholarships", "Early Bird Discount", "Sibling Concession"].map((item, i) => (
+                <span key={i} className="px-5 py-2.5 bg-secondary/50 rounded-full text-sm font-medium text-foreground flex items-center border border-border/50">
+                  <span className="mr-2 text-green-500">✓</span> {item}
+                </span>
+              ))}
             </div>
           </div>
         </section>

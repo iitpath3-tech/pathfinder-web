@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useNavigate } from "react-router-dom";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { Trophy, Star, Award, Target, Brain, BookOpen } from "lucide-react";
+import { Trophy, Star, Award, Target, Brain, BookOpen, ClipboardCheck, Calendar } from "lucide-react";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -17,6 +17,7 @@ const Olympiad = () => {
   const introductionRef = useRef<HTMLDivElement>(null);
   const selectionRef = useRef<HTMLDivElement>(null);
   const processRef = useRef<HTMLDivElement>(null);
+  const feeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Animate Hero Section
@@ -74,6 +75,21 @@ const Olympiad = () => {
         ease: "back.out(1.7)",
         scrollTrigger: {
           trigger: processRef.current,
+          start: "top 80%",
+        },
+      });
+    }
+
+    // Animate Fee Cards
+    if (feeRef.current) {
+      gsap.from(feeRef.current.querySelectorAll(".fee-card"), {
+        duration: 0.8,
+        y: 50,
+        opacity: 0,
+        stagger: 0.15,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+          trigger: feeRef.current,
           start: "top 80%",
         },
       });
@@ -396,6 +412,89 @@ const Olympiad = () => {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* FEE STRUCTURE SECTION */}
+        <section className="section-padding bg-gradient-to-br from-purple-50 to-indigo-50">
+          <div className="container-custom">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-foreground">
+                Fee Structure
+              </h2>
+              <motion.div
+                className="w-24 h-1 bg-gradient-to-r from-purple-500 to-indigo-500 mx-auto"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+                viewport={{ once: true }}
+              />
+              <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
+                Specialized coaching packages for Olympiad excellence.
+              </p>
+            </motion.div>
+
+            <div ref={feeRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                { type: "Foundation Olympiad", duration: "1 Year", fee: "₹35,000", features: "Classes 8-10, NTSE/NMTC", highlight: false },
+                { type: "Advanced Olympiad", duration: "1 Year", fee: "₹55,000", features: "Classes 11-12, PRMO/RMO/INO", highlight: true },
+                { type: "Specialized Training", duration: "6 Months", fee: "₹40,000", features: "Subject-specific, Intensive", highlight: false }
+              ].map((batch, index) => (
+                <motion.div
+                  key={index}
+                  className={`fee-card relative overflow-hidden bg-white rounded-2xl shadow-xl border ${batch.highlight ? 'border-purple-500 shadow-purple-500/20 scale-105 z-10' : 'border-border'} flex flex-col`}
+                  whileHover={{ y: -10 }}
+                >
+                  {batch.highlight && (
+                    <div className="bg-purple-600 text-white text-xs font-bold uppercase py-1 px-4 absolute top-0 right-0 rounded-bl-xl">
+                      Recommended
+                    </div>
+                  )}
+                  <div className={`p-6 ${batch.highlight ? 'bg-purple-50' : ''}`}>
+                    <h3 className="text-xl font-display font-bold text-foreground mb-2">{batch.type}</h3>
+                    <div className="flex items-center text-muted-foreground text-sm mb-4">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      {batch.duration}
+                    </div>
+                    <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-2">{batch.fee}</div>
+                  </div>
+                  <div className="p-6 border-t border-border flex-grow">
+                     <div className="flex items-start">
+                        <ClipboardCheck className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                        <span className="text-gray-700">{batch.features}</span>
+                     </div>
+                  </div>
+                  <div className="p-6 pt-0 mt-auto">
+                    <button 
+                      onClick={() => navigate('/contact')}
+                      className={`w-full py-3 rounded-xl font-semibold transition-all duration-300 ${batch.highlight ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white hover:shadow-lg hover:shadow-purple-500/25' : 'bg-muted text-foreground hover:bg-muted/80'}`}
+                    >
+                      Enquire Now
+                    </button>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Summary */}
+        <section className="py-10 bg-white border-b border-border">
+          <div className="container-custom text-center">
+            <p className="text-muted-foreground mb-6 font-medium">Financial Benefits Available</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              {["0% Interest Installments", "Merit Scholarships", "Early Bird Discount", "Sibling Concession"].map((item, i) => (
+                <span key={i} className="px-5 py-2.5 bg-secondary/50 rounded-full text-sm font-medium text-foreground flex items-center border border-border/50">
+                  <span className="mr-2 text-green-500">✓</span> {item}
+                </span>
+              ))}
+            </div>
           </div>
         </section>
 
