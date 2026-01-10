@@ -165,9 +165,11 @@ const FAQs = () => {
                     transition={{ duration: 0.45 }}
                   >
                     <AccordionItem value={`item-${i + 1}`}>
-                      <AccordionTrigger className="flex items-center gap-3 text-left py-3">
-                        <faq.icon className="text-primary flex-shrink-0" size={20} />
-                        <span>{faq.question}</span>
+                      <AccordionTrigger className="py-3 text-left">
+                        <div className="flex items-center gap-3">
+                          <faq.icon className="text-primary flex-shrink-0" size={20} />
+                          <span>{faq.question}</span>
+                        </div>
                       </AccordionTrigger>
 
                       <AccordionContent className="text-muted-foreground">
