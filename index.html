@@ -1,9 +1,19 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Analytics scripts will be loaded dynamically after user consent -->
+    <!-- Google Consent Mode v2 - Set defaults BEFORE any gtag config commands -->
     <script>
       window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      // Set default consent state to 'denied' for all parameters (Consent Mode v2)
+      // This must be set BEFORE any gtag config commands
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+      });
     </script>
 
     <meta charset="UTF-8" />
@@ -25,6 +35,9 @@
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Google tag (gtag.js) - Load script but config will be called after consent -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LTYP7Q1DVK"></script>
   </head>
 
   <body>

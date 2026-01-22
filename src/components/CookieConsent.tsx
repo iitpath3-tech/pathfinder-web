@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Cookie } from "lucide-react";
 import { getConsent, setConsent } from "@/lib/cookieConsent";
 import { loadAllAnalytics } from "@/lib/loadAnalytics";
+import { grantConsent, denyConsent } from "@/lib/consentMode";
 import { Link } from "react-router-dom";
 
 const CookieConsent = () => {
@@ -25,13 +26,22 @@ const CookieConsent = () => {
   }, []);
 
   const handleAccept = () => {
+    // Update consent mode to granted (must be called before loading analytics)
+    grantConsent();
+    // Store consent preference
     setConsent('accepted');
-    setShowBanner(false);
+    // Load analytics scripts
     loadAllAnalytics();
+    // Hide banner
+    setShowBanner(false);
   };
 
   const handleReject = () => {
+    // Update consent mode to denied
+    denyConsent();
+    // Store consent preference
     setConsent('rejected');
+    // Hide banner (analytics won't be loaded)
     setShowBanner(false);
   };
 

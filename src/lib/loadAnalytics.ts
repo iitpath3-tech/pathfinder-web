@@ -1,4 +1,5 @@
 // Dynamically load Google Analytics and GTM scripts after consent
+// Using Google Consent Mode v2
 
 declare global {
   interface Window {
@@ -10,19 +11,16 @@ declare global {
 export const loadGoogleAnalytics = () => {
   if (typeof window === 'undefined') return;
   
-  // Initialize dataLayer
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function(...args: any[]) {
-    window.dataLayer.push(args);
-  };
+  // Ensure gtag function exists (should already be set in index.html)
+  if (!window.gtag) {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(...args: any[]) {
+      window.dataLayer.push(args);
+    };
+  }
   
-  // Load Google Analytics
-  const gaScript = document.createElement('script');
-  gaScript.async = true;
-  gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-LTYP7Q1DVK';
-  document.head.appendChild(gaScript);
-  
-  // Initialize GA
+  // Initialize GA (script should already be loaded in index.html)
+  // Consent defaults are already set in index.html, and consent update is called before this
   window.gtag('js', new Date());
   window.gtag('config', 'G-LTYP7Q1DVK');
 };

@@ -9,6 +9,7 @@ import { lazy, Suspense } from "react";
 import CookieConsent from "@/components/CookieConsent";
 import { getConsent } from "@/lib/cookieConsent";
 import { loadAllAnalytics } from "@/lib/loadAnalytics";
+import { grantConsent, denyConsent } from "@/lib/consentMode";
 
 const Index = lazy(() => import("./pages/Index"));
 const About = lazy(() => import("./pages/About"));
@@ -35,10 +36,16 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Check if user has previously consented and load analytics if so
+    // Check if user has previously consented
     const consent = getConsent();
     if (consent === 'accepted') {
+      // Update consent mode to granted (in case page was refreshed)
+      grantConsent();
+      // Load analytics scripts
       loadAllAnalytics();
+    } else if (consent === 'rejected') {
+      // Ensure consent mode is set to denied
+      denyConsent();
     }
 
     // Simulate a loading delay for demonstration
