@@ -6,6 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { RingLoader } from "react-spinners";
 import { lazy, Suspense } from "react";
+import CookieConsent from "@/components/CookieConsent";
+import { getConsent } from "@/lib/cookieConsent";
+import { loadAllAnalytics } from "@/lib/loadAnalytics";
 
 const Index = lazy(() => import("./pages/Index"));
 const About = lazy(() => import("./pages/About"));
@@ -32,6 +35,12 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Check if user has previously consented and load analytics if so
+    const consent = getConsent();
+    if (consent === 'accepted') {
+      loadAllAnalytics();
+    }
+
     // Simulate a loading delay for demonstration
     // In a real app, this might be waiting for data fetching or other initializations
     const timer = setTimeout(() => {
@@ -82,6 +91,7 @@ const App = () => {
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
+          <CookieConsent />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
